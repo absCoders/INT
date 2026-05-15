@@ -1,0 +1,153 @@
+<!DOCTYPE HTML PUBLIC '-//IETF//DTD HTML//EN'>
+<html>
+<head>
+<meta http-equiv='Content-Type'
+content='text/html; charset=iso-8859-1'>
+<meta name='GENERATOR' content='Microsoft FrontPage 6.0'>
+<title>Excess/Obsolete Inventory Report</title>
+<style>@import url(coUA.css);</style>
+<link disabled rel='stylesheet' href='htmlhelp.css'>
+</head>
+<body>
+<table border="0" width="100%" id="table1" cellspacing="0">
+	<tr>
+		<td bgcolor="#66FFFF" width="777"><b><font face="Verdana" size="1">
+		ABSolution - Wholesale Fragrance Distribution</font></b></td>
+		<td bgcolor="#66FFFF">
+		<p align="right"><b><font size="1" face="Verdana">
+		<a href="http://www.absolution.com">www.absolution.com</a></font></b></td>
+		<td bgcolor="#66FFFF" width="31">&nbsp;</td>
+	</tr>
+</table>
+<h1><font face="Verdana" size="3">MRTABCP1 : ABC Parameters</font></h1>
+<hr size='1'>
+<p><font size='2' face='Verdana'>
+This table is used to store Planning Parameters related to ABC Rankings, for use 
+in setting default values to Items after calculating an item's ABC value.</font></p>
+<p><font size='2' face='Verdana'>
+Please review <a href="../STD/004.htm">General Notes for Single-Record Table 
+Maintenance</a> for features which are common to all Single-Record Table 
+Maintenance functions.
+</font></p>
+<hr size='1'>
+<h4><font face='Verdana' size='2'>Overview</font></h4>
+<p><font face="Verdana" size="2">Each record in this table represents a 
+consecutive range of items which have been ranked using Run-Time Options 
+selected when running the ABC Classification Report.&nbsp; Usually, the ranking 
+criteria is &quot;Cost Throughput&quot;, where the total demand (forecasted plus 
+production) is extended by the item's standard cost, and then all items are 
+ranked according to their cost throughput (usually within brand) with the item 
+having the highest cost throughput appearing on the top of the list (for each 
+brand).&nbsp; The running total for the items is calculated from the 1st through 
+the last item (within brand), and the report is segmented when the running total 
+is greater or equal to the percentage of the total for cost throughput reflected 
+by the percentage attributed to the A items, then next to B items, and so forth, 
+until each item in the list is assigned an ABC ranking.</font></p>
+<p><font face="Verdana" size="2">There may be more than just 3 records in this 
+table (i.e., 6 classes may be defined by A,B,C,D,E &amp; F).&nbsp; The codes are 
+alphanumerically sorted to determine their relative priority, and the Pct Range 
+is used to determine how much of the total cost throughput belongs to that code.</font></p>
+<p><font face="Verdana" size="2">If the sum of the %'ages in each of the Pct 
+Range fields adds up to more than 100, the total is prorated back to 100% and 
+the rounding remainder (if any) is apportioned to the 1st code.</font></p>
+<p>&nbsp;</p>
+<h4><font face="Verdana" size="2">Sample Screen</font></h4>
+<p>&nbsp;<img src='../gif/MRTABCP1.GIF'></p>
+<h4><font face="Verdana" size="2">Table Columns</font></h4>
+<!--msimagelist--><table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<!--msimagelist--><tr>
+		<!--msimagelist--><td valign="baseline" width="42">
+		<img src="../BMP/img.gif" width="18" height="18" hspace="12" alt="bullet"></td>
+		<td valign="top" width="100%"><font size='2' face='Verdana'>
+ABC Code (ABC_CODE, alpha, 1 character)</font><!--msimagelist--></td>
+	</tr>
+	<!--msimagelist--></table>
+<blockquote>
+<p><font face="Verdana" size="2">Usually, this field will contain an A, B, or C, 
+but other values may be used to extend the ABC classification beyond just 3 
+ranked groups.</font></p>
+</blockquote>
+<!--msimagelist--><table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<!--msimagelist--><tr>
+		<!--msimagelist--><td valign="baseline" width="42">
+		<img src="../BMP/img.gif" width="18" height="18" hspace="12" alt="bullet"></td>
+		<td valign="top" width="100%"><font size='2' face='Verdana'>
+Description (ABC_DESC, alphanumeric, 20 characters)</font><!--msimagelist--></td>
+	</tr>
+	<!--msimagelist--></table>
+<blockquote>
+<p><font size='2' face='Verdana'>
+Contains the description for a particular ABC Code.&nbsp; Usually, this field 
+contains an unimaginative description (such as &quot;A items&quot;, &quot;B Items&quot;, etc.).&nbsp; 
+A items are sometimes referred to as the &quot;Turners and Burners&quot;
+</font></p>
+</blockquote>
+<!--msimagelist--><table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<!--msimagelist--><tr>
+		<!--msimagelist--><td valign="baseline" width="42">
+		<img src="../BMP/img.gif" width="18" height="18" hspace="12" alt="bullet"></td>
+		<td valign="top" width="100%"><font face="Verdana" size="2">Max Position (ABC_MAX_POS, numeric, formatted 
+99, range from 0 thru 99)</font><!--msimagelist--></td>
+	</tr>
+	<!--msimagelist--></table>
+<blockquote>
+<p><font size='2' face='Verdana'>
+Contains the value for Max Position that will be assigned to items belonging to 
+the ABC Code, defined above, during the update which follows the ABC 
+Classification Report.&nbsp; Once assigned to all items in the ABC class, this 
+value may be changed for individual items using Item Master File Maintenance or 
+the Planning Inquiry.</font></p>
+</blockquote>
+<!--msimagelist--><table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<!--msimagelist--><tr>
+		<!--msimagelist--><td valign="baseline" width="42">
+		<img src="../BMP/img.gif" width="18" height="18" hspace="12" alt="bullet"></td>
+		<td valign="top" width="100%"><font face="Verdana" size="2">Min Position (ABC_MIN_POS, numeric, formatted 
+99, range from 0 thru 99)</font><!--msimagelist--></td>
+	</tr>
+	<!--msimagelist--></table>
+<blockquote>
+<p><font size='2' face='Verdana'>
+Contains the value for Min Position that will be assigned to items belonging to 
+the ABC Code, defined above, during the update which follows the ABC 
+Classification Report.&nbsp; Once assigned to all items in the ABC class, this 
+value may be changed for individual items using Item Master File Maintenance or 
+the Planning Inquiry.</font></p>
+</blockquote>
+<!--msimagelist--><table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<!--msimagelist--><tr>
+		<!--msimagelist--><td valign="baseline" width="42">
+		<img src="../BMP/img.gif" width="18" height="18" hspace="12" alt="bullet"></td>
+		<td valign="top" width="100%"><font size='2' face='Verdana'>
+Pct Range (ABC_PCT_RANGE, numeric, formatted 999, range from 0 thru 100)</font><!--msimagelist--></td>
+	</tr>
+	<!--msimagelist--></table>
+<blockquote>
+<p><font face="Verdana" size="2">Contains the size of the percent range 
+belonging to the ABC Code, defined above.&nbsp; For example, if this value is 
+&quot;20&quot; for ABC Code &quot;A&quot;, then then &quot;A&quot; items are defined as the items listed in 
+the top 20% of the total cost throughput, when running the ABC Classification 
+Report; if this value is &quot;30&quot; for ABC Code &quot;B&quot;, then the &quot;B&quot; items are defined 
+as the items listed in the next 30% of the total cost throughput, when running 
+the ABC Classification Report.</font></p>
+</blockquote>
+<!--msimagelist--><table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<!--msimagelist--><tr>
+		<!--msimagelist--><td valign="baseline" width="42">
+		<img src="../BMP/img.gif" width="18" height="18" hspace="12" alt="bullet"></td>
+		<td valign="top" width="100%"><font size='2' face='Verdana'>
+Minimum Days of Supply (ABC_MIN_DAYS_SUPPLY, numeric, formatted 999, range from 
+0 thru 999)</font><!--msimagelist--></td>
+	</tr>
+	<!--msimagelist--></table>
+<blockquote>
+<p><font size='2' face='Verdana'>
+Contains the value for Minimum Days of Supply that will be assigned to items 
+belonging to the ABC Code, defined above, during the update which follows the 
+ABC Classification Report.&nbsp; Once assigned to all items in the ABC class, 
+this value may be changed for individual items using Item Master File 
+Maintenance or the Planning Inquiry.</font>&nbsp; This value may be either 
+working days, or calendar days, as defined yb the MR Parameters Record.</p>
+</blockquote>
+</body>
+</html>

@@ -1,0 +1,1 @@
+document.write('There is an update procedure associated with this function, offered after the report(s) have been prepared.&nbsp; You must click the Update button to perform the update procedure.');

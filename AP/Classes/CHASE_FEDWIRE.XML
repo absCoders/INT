@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Document xmlns="urn:iso:std:iso:20022:tech:xsd:pain.001.001.03" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<CstmrCdtTrfInitn>
+		<GrpHdr>
+			<MsgId>9000110001234</MsgId>
+			<CreDtTm>2012-04-13T09:30:01</CreDtTm>
+			<NbOfTxs>4</NbOfTxs>
+			<CtrlSum>30000.00</CtrlSum>
+			<InitgPty>
+				<Nm>JPM CLIENT NAME</Nm>
+			</InitgPty>
+		</GrpHdr>
+		<PmtInf>
+			<PmtInfId>BATCHREFERENCE00001</PmtInfId>
+			<PmtMtd>TRF</PmtMtd>
+			<NbOfTxs>2</NbOfTxs>
+			<CtrlSum>25000.00</CtrlSum>
+			<PmtTpInf>
+				<SvcLvl>
+					<Cd>URGP</Cd>
+				</SvcLvl>
+			</PmtTpInf>
+			<ReqdExctnDt>2012-04-13</ReqdExctnDt>
+			<Dbtr>
+				<Nm>YOUR COMPANY NAME</Nm>
+				<PstlAdr>
+					<Ctry>US</Ctry>
+				</PstlAdr>
+			</Dbtr>
+			<DbtrAcct>
+				<Id>
+					<Othr>
+						<Id>123456789</Id>
+					</Othr>
+				</Id>
+				<Ccy>USD</Ccy>
+			</DbtrAcct>
+			<DbtrAgt>
+				<FinInstnId>
+					<BIC>CHASUS33</BIC>
+					<ClrSysMmbId>
+						<MmbId>021000021</MmbId>
+					</ClrSysMmbId>
+					<PstlAdr>
+						<Ctry>US</Ctry>
+					</PstlAdr>
+				</FinInstnId>
+			</DbtrAgt>
+			<UltmtDbtr>
+				<Nm>ULTIMATE DEBTOR NAME</Nm>
+				<PstlAdr>
+					<StrtNm>125 MAIN STREET</StrtNm>
+					<PstCd>01234</PstCd>
+					<TwnNm>ANY TOWN</TwnNm>
+					<CtrySubDvsn>MO</CtrySubDvsn>
+					<Ctry>US</Ctry>
+				</PstlAdr>
+				<Id>
+					<OrgId>
+						<Othr>
+							<Id>443321</Id>
+						</Othr>
+					</OrgId>
+				</Id>
+			</UltmtDbtr>
+			<CdtTrfTxInf>
+				<PmtId>
+					<InstrId>DIV00100000120001</InstrId>
+					<EndToEndId>17876291789001</EndToEndId>
+				</PmtId>
+				<Amt>
+					<InstdAmt Ccy="USD">15000.00</InstdAmt>
+				</Amt>
+				<CdtrAgt>
+					<FinInstnId>
+						<ClrSysMmbId>
+							<MmbId>021000089</MmbId>
+						</ClrSysMmbId>
+						<Nm>CITIBANK N.A.</Nm>
+						<PstlAdr>
+							<Ctry>US</Ctry>
+						</PstlAdr>
+					</FinInstnId>
+				</CdtrAgt>
+				<Cdtr>
+					<Nm>CREDITOR NAME</Nm>
+					<PstlAdr>
+						<StrtNm>17 WASHINGTON STREET</StrtNm>
+						<PstCd>02125</PstCd>
+						<TwnNm>NEW YORK CITY</TwnNm>
+						<CtrySubDvsn>NY</CtrySubDvsn>
+						<Ctry>US</Ctry>
+					</PstlAdr>
+				</Cdtr>
+				<CdtrAcct>
+					<Id>
+						<Othr>
+							<Id>1234567890</Id>
+						</Othr>
+					</Id>
+				</CdtrAcct>
+				<Purp>
+					<Prtry>REPLINE123456</Prtry>
+				</Purp>
+				<RmtInf>
+					<Ustrd>RENT MAY 2012 PROPERTY 12 - INV NBR 123456789</Ustrd>
+				</RmtInf>
+			</CdtTrfTxInf>
+			<CdtTrfTxInf>
+				<PmtId>
+					<InstrId>DIV00100000120002</InstrId>
+					<EndToEndId>17876291789002</EndToEndId>
+				</PmtId>
+				<Amt>
+					<InstdAmt Ccy="USD">10000.00</InstdAmt>
+				</Amt>
+				<CdtrAgt>
+					<FinInstnId>
+						<ClrSysMmbId>
+							<MmbId>021000089</MmbId>
+						</ClrSysMmbId>
+						<Nm>CITIBANK N.A.</Nm>
+						<PstlAdr>
+							<Ctry>US</Ctry>
+						</PstlAdr>
+					</FinInstnId>
+				</CdtrAgt>
+				<Cdtr>
+					<Nm>CREDITOR NAME</Nm>
+					<PstlAdr>
+						<Ctry>US</Ctry>
+						<AdrLine>17 WASHINGTON STREET</AdrLine>
+						<AdrLine>NY, NY 02125</AdrLine>
+					</PstlAdr>
+				</Cdtr>
+				<CdtrAcct>
+					<Id>
+						<Othr>
+							<Id>1987654321</Id>
+						</Othr>
+					</Id>
+				</CdtrAcct>
+				<InstrForDbtrAgt>/REC/CONFIRM UPON RECEIPT 212-555-1212</InstrForDbtrAgt>
+				<RmtInf>
+					<Ustrd>MONTHLY MAINTENANCE FEE, REGAL INDUSTRIAL COMPLEX, PROPERTY 141</Ustrd>
+				</RmtInf>
+			</CdtTrfTxInf>
+		</PmtInf>
+		<PmtInf>
+			<PmtInfId>BATCHREFERENCE00002</PmtInfId>
+			<PmtMtd>TRF</PmtMtd>
+			<NbOfTxs>2</NbOfTxs>
+			<CtrlSum>5000.00</CtrlSum>
+			<PmtTpInf>
+				<SvcLvl>
+					<Cd>URGP</Cd>
+				</SvcLvl>
+			</PmtTpInf>
+			<ReqdExctnDt>2012-04-16</ReqdExctnDt>
+			<Dbtr>
+				<Nm>YOUR COMPANY NAME</Nm>
+				<PstlAdr>
+					<Ctry>US</Ctry>
+				</PstlAdr>
+			</Dbtr>
+			<DbtrAcct>
+				<Id>
+					<Othr>
+						<Id>123456789</Id>
+					</Othr>
+				</Id>
+				<Ccy>USD</Ccy>
+			</DbtrAcct>
+			<DbtrAgt>
+				<FinInstnId>
+					<BIC>CHASUS33</BIC>
+					<ClrSysMmbId>
+						<MmbId>021000021</MmbId>
+					</ClrSysMmbId>
+					<PstlAdr>
+						<Ctry>US</Ctry>
+					</PstlAdr>
+				</FinInstnId>
+			</DbtrAgt>
+			<UltmtDbtr>
+				<Nm>ULTIMATE DEBTOR NAME</Nm>
+				<PstlAdr>
+					<StrtNm>125 MAIN STREET</StrtNm>
+					<PstCd>01234</PstCd>
+					<TwnNm>ANY TOWN</TwnNm>
+					<CtrySubDvsn>MO</CtrySubDvsn>
+					<Ctry>US</Ctry>
+				</PstlAdr>
+				<Id>
+					<OrgId>
+						<Othr>
+							<Id>443321</Id>
+						</Othr>
+					</OrgId>
+				</Id>
+			</UltmtDbtr>
+			<CdtTrfTxInf>
+				<PmtId>
+					<InstrId>DIV00100000120127</InstrId>
+					<EndToEndId>17876291789419</EndToEndId>
+				</PmtId>
+				<Amt>
+					<InstdAmt Ccy="USD">2000.00</InstdAmt>
+				</Amt>
+				<CdtrAgt>
+					<FinInstnId>
+						<ClrSysMmbId>
+							<MmbId>021000089</MmbId>
+						</ClrSysMmbId>
+						<Nm>CITIBANK N.A.</Nm>
+						<PstlAdr>
+							<Ctry>US</Ctry>
+						</PstlAdr>
+					</FinInstnId>
+				</CdtrAgt>
+				<Cdtr>
+					<Nm>CREDITOR NAME</Nm>
+					<PstlAdr>
+						<StrtNm>17 WASHINGTON STREET</StrtNm>
+						<PstCd>02125</PstCd>
+						<TwnNm>NEW YORK CITY</TwnNm>
+						<CtrySubDvsn>NY</CtrySubDvsn>
+						<Ctry>US</Ctry>
+					</PstlAdr>
+				</Cdtr>
+				<CdtrAcct>
+					<Id>
+						<Othr>
+							<Id>1234567890</Id>
+						</Othr>
+					</Id>
+				</CdtrAcct>
+				<RmtInf>
+					<Ustrd>INV NBR 12233345</Ustrd>
+				</RmtInf>
+			</CdtTrfTxInf>
+			<CdtTrfTxInf>
+				<PmtId>
+					<InstrId>DIV00100000120128</InstrId>
+					<EndToEndId>17876291789420</EndToEndId>
+				</PmtId>
+				<Amt>
+					<InstdAmt Ccy="USD">3000.00</InstdAmt>
+				</Amt>
+				<CdtrAgt>
+					<FinInstnId>
+						<ClrSysMmbId>
+							<MmbId>021000089</MmbId>
+						</ClrSysMmbId>
+						<Nm>CITIBANK N.A.</Nm>
+						<PstlAdr>
+							<Ctry>US</Ctry>
+						</PstlAdr>
+					</FinInstnId>
+				</CdtrAgt>
+				<Cdtr>
+					<Nm>CREDITOR NAME</Nm>
+					<PstlAdr>
+						<Ctry>US</Ctry>
+						<AdrLine>17 WASHINGTON STREET</AdrLine>
+						<AdrLine>NY, NY 02125</AdrLine>
+					</PstlAdr>
+				</Cdtr>
+				<CdtrAcct>
+					<Id>
+						<Othr>
+							<Id>1987654321</Id>
+						</Othr>
+					</Id>
+				</CdtrAcct>
+				<RmtInf>
+					<Ustrd>MONTHLY MAINTENANCE FEE, REGAL INDUSTRIAL COMPLEX, PROPERTY 141</Ustrd>
+				</RmtInf>
+			</CdtTrfTxInf>
+		</PmtInf>
+	</CstmrCdtTrfInitn>
+</Document>

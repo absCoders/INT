@@ -1,0 +1,627 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{77E0AECB-C99C-40AC-9CEC-04A59D82AE90}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>AR</RootNamespace>
+    <AssemblyName>AR</AssemblyName>
+    <MyType>Windows</MyType>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <PublishUrl>http://localhost/AR/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>AR.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>AR.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DocumentationFile>AR.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DocumentationFile>AR.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DocumentationFile>AR.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DocumentationFile>AR.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Infragistics4.Win.v25.1, Version=25.1.20251.26, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files (x86)\Infragistics\2025.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.v25.1.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinToolbars.v25.1, Version=25.1.20251.26, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files (x86)\Infragistics\2025.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.UltraWinToolbars.v25.1.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinTabControl.v25.1, Version=25.1.20251.26, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files (x86)\Infragistics\2025.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.UltraWinTabControl.v25.1.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinSchedule.v25.1, Version=25.1.20251.26, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files (x86)\Infragistics\2025.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.UltraWinSchedule.v25.1.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinMaskedEdit.v25.1, Version=25.1.20251.26, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files (x86)\Infragistics\2025.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.UltraWinMaskedEdit.v25.1.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinGrid.v25.1, Version=25.1.20251.26, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files (x86)\Infragistics\2025.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.UltraWinGrid.v25.1.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinExplorerBar.v25.1, Version=25.1.20251.26, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files (x86)\Infragistics\2025.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.UltraWinExplorerBar.v25.1.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinEditors.v25.1, Version=25.1.20251.26, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files (x86)\Infragistics\2025.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.UltraWinEditors.v25.1.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinChart.v25.1, Version=25.1.20251.26, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.Misc.v25.1, Version=25.1.20251.26, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files (x86)\Infragistics\2025.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.Misc.v25.1.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Infragistics4.Shared.v25.1, Version=25.1.20251.26, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files (x86)\Infragistics\2025.1\Windows Forms\CLR4.0\Bin\Infragistics4.Shared.v25.1.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Infragistics4.Documents.Excel.v25.1, Version=25.1.20251.26, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files (x86)\Infragistics\2025.1\Windows Forms\CLR4.0\Bin\Infragistics4.Documents.Excel.v25.1.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Infragistics4.Documents.Core.v25.1, Version=25.1.20251.26, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files (x86)\Infragistics\2025.1\Windows Forms\CLR4.0\Bin\Infragistics4.Documents.Core.v25.1.dll</HintPath>
+      <Name>Infragistics4.Documents.Core.v25.1</Name>
+    </Reference>
+    <Reference Include="Dropbox.Api, Version=7.0.0.0, Culture=neutral, PublicKeyToken=310f0e82fbb45d01, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dropbox.Api.7.0.0\lib\netstandard2.0\Dropbox.Api.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="nsoftware.InPay, Version=6.0.5329.0, Culture=neutral, PublicKeyToken=cdc168f89cffe9cf, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Program Files\nsoftware\DLLs\nsoftware.InPay.dll</HintPath>
+    </Reference>
+    <Reference Include="SpreadsheetGear2023.Core">
+      <HintPath>..\DLLs\SpreadsheetGear2023.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="SpreadsheetGear2023.Drawing">
+      <HintPath>..\DLLs\SpreadsheetGear2023.Drawing.dll</HintPath>
+    </Reference>
+    <Reference Include="SpreadsheetGear2023.Windows.Forms">
+      <HintPath>..\DLLs\SpreadsheetGear2023.Windows.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="ABSolution" />
+    <Import Include="Infragistics.Win" />
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="TAC" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Forms\ARFCINQ1.Designer.vb">
+      <DependentUpon>ARFCINQ1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ARFCINQ1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ARFCOLL1.Designer.vb">
+      <DependentUpon>ARFCOLL1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ARFCOLL1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ARFCRDC1.Designer.vb">
+      <DependentUpon>ARFCRDC1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ARFCRDC1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ARFCREC1.Designer.vb">
+      <DependentUpon>ARFCREC1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ARFCREC1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ARFCUSTX.Designer.vb">
+      <DependentUpon>ARFCUSTX.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ARFCUSTX.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ARFGLAR1.Designer.vb">
+      <DependentUpon>ARFGLAR1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ARFGLAR1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ARFMEMO1.Designer.vb">
+      <DependentUpon>ARFMEMO1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ARFMEMO1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ARFPYMT1.Designer.vb">
+      <DependentUpon>ARFPYMT1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ARFPYMT1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ARFPYMT2.Designer.vb">
+      <DependentUpon>ARFPYMT2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ARFPYMT2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ARFCBDA1.Designer.vb">
+      <DependentUpon>ARFCBDA1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ARFCBDA1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ARFCCTR1.Designer.vb">
+      <DependentUpon>ARFCCTR1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ARFCCTR1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ARFOMTC1.Designer.vb">
+      <DependentUpon>ARFOMTC1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ARFOMTC1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ARFCUSF1.Designer.vb">
+      <DependentUpon>ARFCUSF1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ARFCUSF1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\ARRARAR1.Designer.vb">
+      <DependentUpon>ARRARAR1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ARRARAR1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\ARRATBR1.Designer.vb">
+      <DependentUpon>ARRATBR1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ARRATBR1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\ARRCBDA1.Designer.vb">
+      <DependentUpon>ARRCBDA1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ARRCBDA1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\ARRCUSL1.Designer.vb">
+      <DependentUpon>ARRCUSL1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ARRCUSL1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\ARRPYMT1.Designer.vb">
+      <DependentUpon>ARRPYMT1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ARRPYMT1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\ARRPYMT2.Designer.vb">
+      <DependentUpon>ARRPYMT2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ARRPYMT2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\ARROIWO1.Designer.vb">
+      <DependentUpon>ARROIWO1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ARROIWO1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\ARRFXAC1.Designer.vb">
+      <DependentUpon>ARRFXAC1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ARRFXAC1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\ARTCCPRC.Designer.vb">
+      <DependentUpon>ARTCCPRC.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\ARTCCPRC.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\ARRDEDA1.Designer.vb">
+      <DependentUpon>ARRDEDA1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ARRDEDA1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\ARTCLAS2.Designer.vb">
+      <DependentUpon>ARTCLAS2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\ARTCLAS2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\ARTCLAS1.Designer.vb">
+      <DependentUpon>ARTCLAS1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\ARTCLAS1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\ARTCRED1.Designer.vb">
+      <DependentUpon>ARTCRED1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\ARTCRED1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\ARTCUST8.Designer.vb">
+      <DependentUpon>ARTCUST8.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\ARTCUST8.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\ARTPARM1.Designer.vb">
+      <DependentUpon>ARTPARM1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\ARTPARM1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\ARTCUST1.Designer.vb">
+      <DependentUpon>ARTCUST1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\ARTCUST1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Tables\ARTCUST2.Designer.vb">
+      <DependentUpon>ARTCUST2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\ARTCUST2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\ARTPOST1.Designer.vb">
+      <DependentUpon>ARTPOST1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\ARTPOST1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\ARTMALL1.Designer.vb">
+      <DependentUpon>ARTMALL1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\ARTMALL1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\ARTREAS1.Designer.vb">
+      <DependentUpon>ARTREAS1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\ARTREAS1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\ARTREASR.Designer.vb">
+      <DependentUpon>ARTREASR.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\ARTREASR.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\ARTSTAX1.Designer.vb">
+      <DependentUpon>ARTSTAX1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\ARTSTAX1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\ARTCUSTZ.Designer.vb">
+      <DependentUpon>ARTCUSTZ.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\ARTCUSTZ.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\ARFCINQ1.resx">
+      <DependentUpon>ARFCINQ1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ARFCOLL1.resx">
+      <DependentUpon>ARFCOLL1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ARFCRDC1.resx">
+      <DependentUpon>ARFCRDC1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ARFCREC1.resx">
+      <DependentUpon>ARFCREC1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ARFCUSTX.resx">
+      <DependentUpon>ARFCUSTX.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ARFGLAR1.resx">
+      <DependentUpon>ARFGLAR1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ARFMEMO1.resx">
+      <DependentUpon>ARFMEMO1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ARFPYMT1.resx">
+      <DependentUpon>ARFPYMT1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ARFPYMT2.resx">
+      <DependentUpon>ARFPYMT2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ARFCBDA1.resx">
+      <DependentUpon>ARFCBDA1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ARFCCTR1.resx">
+      <DependentUpon>ARFCCTR1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ARFOMTC1.resx">
+      <DependentUpon>ARFOMTC1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ARFCUSF1.resx">
+      <DependentUpon>ARFCUSF1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ARRARAR1.resx">
+      <DependentUpon>ARRARAR1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ARRATBR1.resx">
+      <DependentUpon>ARRATBR1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ARRCBDA1.resx">
+      <DependentUpon>ARRCBDA1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ARRCUSL1.resx">
+      <DependentUpon>ARRCUSL1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ARRPYMT1.resx">
+      <DependentUpon>ARRPYMT1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ARRPYMT2.resx">
+      <DependentUpon>ARRPYMT2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ARROIWO1.resx">
+      <DependentUpon>ARROIWO1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ARRFXAC1.resx">
+      <DependentUpon>ARRFXAC1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\ARTCCPRC.resx">
+      <DependentUpon>ARTCCPRC.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ARRDEDA1.resx">
+      <DependentUpon>ARRDEDA1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\ARTCLAS2.resx">
+      <DependentUpon>ARTCLAS2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\ARTCLAS1.resx">
+      <DependentUpon>ARTCLAS1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\ARTCRED1.resx">
+      <DependentUpon>ARTCRED1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\ARTCUST8.resx">
+      <DependentUpon>ARTCUST8.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\ARTPARM1.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ARTPARM1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\ARTCUST1.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ARTCUST1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\licenses.licx" />
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\ARTCUST2.resx">
+      <DependentUpon>ARTCUST2.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\ARTPOST1.resx">
+      <DependentUpon>ARTPOST1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\ARTMALL1.resx">
+      <DependentUpon>ARTMALL1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\ARTREAS1.resx">
+      <DependentUpon>ARTREAS1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\ARTREASR.resx">
+      <DependentUpon>ARTREASR.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\ARTSTAX1.resx">
+      <DependentUpon>ARTSTAX1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\ARTCUSTZ.resx">
+      <DependentUpon>ARTCUSTZ.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{5AD368F8-9AD3-4E4C-97D8-1F4F1C124158}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ABSCS\ABSCS.csproj">
+      <Project>{FEDE76DB-DB57-4642-A943-748898F4CC9E}</Project>
+      <Name>ABSCS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ABSX\ABSX.vbproj">
+      <Project>{BAA59583-9614-4718-BCA5-FA3A1D7638A7}</Project>
+      <Name>ABSX</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ABS\ABS.vbproj">
+      <Project>{8AC20144-AD3B-4B63-B4CE-E14FAA115DD2}</Project>
+      <Name>ABS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CC\CC.vbproj">
+      <Project>{62a964f3-c36d-46de-938f-1d04daa80c45}</Project>
+      <Name>CC</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TAC\TAC.vbproj">
+      <Project>{F8DA3299-4A2C-473D-9AEE-C00295788E43}</Project>
+      <Name>TAC</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Classes\" />
+    <Folder Include="DataSets\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

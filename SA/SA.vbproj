@@ -1,0 +1,644 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{971DDC73-5021-4B37-92ED-86217375187D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>SA</RootNamespace>
+    <AssemblyName>SA</AssemblyName>
+    <MyType>Windows</MyType>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <PublishUrl>http://localhost/SA/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>SA.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>SA.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DocumentationFile>SA.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DocumentationFile>SA.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DocumentationFile>SA.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DocumentationFile>SA.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Infragistics4.Documents.Excel.v25.1, Version=25.1.20251.26, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.v25.1, Version=25.1.20251.26, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files (x86)\Infragistics\2025.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.v25.1.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinToolbars.v25.1, Version=25.1.20251.26, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files (x86)\Infragistics\2025.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.UltraWinToolbars.v25.1.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinTabControl.v25.1, Version=25.1.20251.26, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files (x86)\Infragistics\2025.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.UltraWinTabControl.v25.1.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinSchedule.v25.1, Version=25.1.20251.26, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files (x86)\Infragistics\2025.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.UltraWinSchedule.v25.1.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinGrid.v25.1, Version=25.1.20251.26, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files (x86)\Infragistics\2025.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.UltraWinGrid.v25.1.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinExplorerBar.v25.1, Version=25.1.20251.26, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files (x86)\Infragistics\2025.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.UltraWinExplorerBar.v25.1.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinEditors.v25.1, Version=25.1.20251.26, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files (x86)\Infragistics\2025.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.UltraWinEditors.v25.1.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Infragistics4.Win.Misc.v25.1, Version=25.1.20251.26, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files (x86)\Infragistics\2025.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.Misc.v25.1.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Infragistics4.Shared.v25.1, Version=25.1.20251.26, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files (x86)\Infragistics\2025.1\Windows Forms\CLR4.0\Bin\Infragistics4.Shared.v25.1.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinChart.v25.1, Version=25.1.20251.26, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files (x86)\Infragistics\2025.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.UltraWinChart.v25.1.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinTree.v25.1, Version=25.1.20251.26, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.UltraWinMaskedEdit.v25.1, Version=25.1.20251.26, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Documents.Core.v25.1, Version=25.1.20251.26, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files (x86)\Infragistics\2025.1\Windows Forms\CLR4.0\Bin\Infragistics4.Documents.Core.v25.1.dll</HintPath>
+      <Name>Infragistics4.Documents.Core.v25.1</Name>
+    </Reference>
+    <Reference Include="GemBox.Spreadsheet, Version=33.3.40.1062, Culture=neutral, PublicKeyToken=b1b72c69714d4847, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Program Files (x86)\GemBox Software\GemBox.Spreadsheet 3.7\Bin\NET3X4X\GemBox.Spreadsheet.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="SpreadsheetGear2023.Core">
+      <HintPath>..\DLLs\SpreadsheetGear2023.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="SpreadsheetGear2023.Drawing">
+      <HintPath>..\DLLs\SpreadsheetGear2023.Drawing.dll</HintPath>
+    </Reference>
+    <Reference Include="SpreadsheetGear2023.Windows.Forms">
+      <HintPath>..\DLLs\SpreadsheetGear2023.Windows.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="ABSolution" />
+    <Import Include="Infragistics.UltraChart.Resources" />
+    <Import Include="Infragistics.UltraChart.Shared.Styles" />
+    <Import Include="Infragistics.Win" />
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="TAC" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Forms\SAFCSTK1.Designer.vb">
+      <DependentUpon>SAFCSTK1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SAFCSTK1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SAFMKOP1.Designer.vb">
+      <DependentUpon>SAFMKOP1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SAFMKOP1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SAFSTKR1.Designer.vb">
+      <DependentUpon>SAFSTKR1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SAFSTKR1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SAFFBUD1.Designer.vb">
+      <DependentUpon>SAFFBUD1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SAFFBUD1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SAFCSAN1.Designer.vb">
+      <DependentUpon>SAFCSAN1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SAFCSAN1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SAFBUDG1.Designer.vb">
+      <DependentUpon>SAFBUDG1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SAFBUDG1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SAFSEXP1.Designer.vb">
+      <DependentUpon>SAFSEXP1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SAFSEXP1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SAFBUSR1.Designer.vb">
+      <DependentUpon>SAFBUSR1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SAFBUSR1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SAFSCGS1.Designer.vb">
+      <DependentUpon>SAFSCGS1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SAFSCGS1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SAFSLSA1.Designer.vb">
+      <DependentUpon>SAFSLSA1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SAFSLSA1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SAFMMAN1.Designer.vb">
+      <DependentUpon>SAFMMAN1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SAFMMAN1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SAFSLSX2.Designer.vb">
+      <DependentUpon>SAFSLSX2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SAFSLSX2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SAFSLSX1.Designer.vb">
+      <DependentUpon>SAFSLSX1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SAFSLSX1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SAFANAL2.Designer.vb">
+      <DependentUpon>SAFANAL2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SAFANAL2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SAFISLS1.Designer.vb">
+      <DependentUpon>SAFISLS1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SAFISLS1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SAFBUDW1.Designer.vb">
+      <DependentUpon>SAFBUDW1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SAFBUDW1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SAFGRNR1.Designer.vb">
+      <DependentUpon>SAFGRNR1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SAFGRNR1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SAFANAL1.Designer.vb">
+      <DependentUpon>SAFANAL1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SAFANAL1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SAFSLSW1.Designer.vb">
+      <DependentUpon>SAFSLSW1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SAFSLSW1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SAFSLSC1.Designer.vb">
+      <DependentUpon>SAFSLSC1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SAFSLSC1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SAFSLSI1.Designer.vb">
+      <DependentUpon>SAFSLSI1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SAFSLSI1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SAFCSLS1.Designer.vb">
+      <DependentUpon>SAFCSLS1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SAFCSLS1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SAFAUTH1.Designer.vb">
+      <DependentUpon>SAFAUTH1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SAFAUTH1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Reports\SARCFTR1.Designer.vb">
+      <DependentUpon>SARCFTR1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\SARCFTR1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\SAR12MO2.Designer.vb">
+      <DependentUpon>SAR12MO2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\SAR12MO2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\SARALLC1.Designer.vb">
+      <DependentUpon>SARALLC1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\SARALLC1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\SARSEXP1.Designer.vb">
+      <DependentUpon>SARSEXP1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\SARSEXP1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\SARMMAL1.Designer.vb">
+      <DependentUpon>SARMMAL1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\SARMMAL1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\SAR12MO1.Designer.vb">
+      <DependentUpon>SAR12MO1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\SAR12MO1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\SARCOMP1.Designer.vb">
+      <DependentUpon>SARCOMP1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\SARCOMP1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\SARMIXB1.Designer.vb">
+      <DependentUpon>SARMIXB1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\SARMIXB1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\SARMIXB2.Designer.vb">
+      <DependentUpon>SARMIXB2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\SARMIXB2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\SARSLSJ1.Designer.vb">
+      <DependentUpon>SARSLSJ1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\SARSLSJ1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\SARCSUM1.Designer.vb">
+      <DependentUpon>SARCSUM1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\SARCSUM1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\SATPARM1.Designer.vb">
+      <DependentUpon>SATPARM1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\SATPARM1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\SATFBUDC.Designer.vb">
+      <DependentUpon>SATFBUDC.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\SATFBUDC.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\SATAEBM1.Designer.vb">
+      <DependentUpon>SATAEBM1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\SATAEBM1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\SAFCSTK1.resx">
+      <DependentUpon>SAFCSTK1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SAFMKOP1.resx">
+      <DependentUpon>SAFMKOP1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SAFSTKR1.resx">
+      <DependentUpon>SAFSTKR1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SAFFBUD1.resx">
+      <DependentUpon>SAFFBUD1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SAFCSAN1.resx">
+      <DependentUpon>SAFCSAN1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SAFBUDG1.resx">
+      <DependentUpon>SAFBUDG1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SAFSEXP1.resx">
+      <DependentUpon>SAFSEXP1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SAFBUSR1.resx">
+      <DependentUpon>SAFBUSR1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SAFSCGS1.resx">
+      <DependentUpon>SAFSCGS1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SAFSLSA1.resx">
+      <DependentUpon>SAFSLSA1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SAFMMAN1.resx">
+      <DependentUpon>SAFMMAN1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SAFSLSX2.resx">
+      <DependentUpon>SAFSLSX2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SAFSLSX1.resx">
+      <DependentUpon>SAFSLSX1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SAFANAL2.resx">
+      <DependentUpon>SAFANAL2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SAFISLS1.resx">
+      <DependentUpon>SAFISLS1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SAFBUDW1.resx">
+      <DependentUpon>SAFBUDW1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SAFGRNR1.resx">
+      <DependentUpon>SAFGRNR1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SAFANAL1.resx">
+      <DependentUpon>SAFANAL1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SAFSLSW1.resx">
+      <DependentUpon>SAFSLSW1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SAFSLSC1.resx">
+      <DependentUpon>SAFSLSC1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SAFSLSI1.resx">
+      <DependentUpon>SAFSLSI1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SAFCSLS1.resx">
+      <DependentUpon>SAFCSLS1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SAFAUTH1.resx">
+      <DependentUpon>SAFAUTH1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\licenses.licx" />
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\SARCFTR1.resx">
+      <DependentUpon>SARCFTR1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\SAR12MO2.resx">
+      <DependentUpon>SAR12MO2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\SARALLC1.resx">
+      <DependentUpon>SARALLC1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\SARSEXP1.resx">
+      <DependentUpon>SARSEXP1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\SARMMAL1.resx">
+      <DependentUpon>SARMMAL1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\SAR12MO1.resx">
+      <DependentUpon>SAR12MO1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\SARCOMP1.resx">
+      <DependentUpon>SARCOMP1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\SARMIXB1.resx">
+      <DependentUpon>SARMIXB1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\SARMIXB2.resx">
+      <DependentUpon>SARMIXB2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\SARSLSJ1.resx">
+      <DependentUpon>SARSLSJ1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\SARCSUM1.resx">
+      <DependentUpon>SARCSUM1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\SATPARM1.resx">
+      <DependentUpon>SATPARM1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\SATFBUDC.resx">
+      <DependentUpon>SATFBUDC.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\SATAEBM1.resx">
+      <DependentUpon>SATAEBM1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{5AD368F8-9AD3-4E4C-97D8-1F4F1C124158}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ABSCS\ABSCS.csproj">
+      <Project>{FEDE76DB-DB57-4642-A943-748898F4CC9E}</Project>
+      <Name>ABSCS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ABSC\ABSC.vbproj">
+      <Project>{FAF62E09-6F1D-4545-ABD5-E95F3FD93F9A}</Project>
+      <Name>ABSC</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ABSX\ABSX.vbproj">
+      <Project>{BAA59583-9614-4718-BCA5-FA3A1D7638A7}</Project>
+      <Name>ABSX</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ABS\ABS.vbproj">
+      <Project>{8AC20144-AD3B-4B63-B4CE-E14FAA115DD2}</Project>
+      <Name>ABS</Name>
+      <Private>True</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\TAC\TAC.vbproj">
+      <Project>{F8DA3299-4A2C-473D-9AEE-C00295788E43}</Project>
+      <Name>TAC</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Classes\" />
+    <Folder Include="DataSets\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

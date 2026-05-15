@@ -1,0 +1,1 @@
+document.write('Hey Walt.  You can use Javascript like this. This is a sample of stuff to put in an include');

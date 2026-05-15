@@ -1,0 +1,191 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+
+<head>
+<meta http-equiv="Content-Type"
+content="text/html; charset=iso-8859-1">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<title>Monthly Sales &amp; CGS Journal</title>
+<style>@import url(coUA.css);</style>
+<link disabled rel="stylesheet" href="htmlhelp.css">
+</head>
+
+<body>
+
+<h1><font size="5">Monthly Sales &amp; CGS Journal </font>
+</h1>
+
+<p>This function produces several reports providing sales shipment and sales 
+returns activity, by item classification, for a single (user specified) period.&nbsp; </p>
+
+<p>There is an update procedure associated with this function, offered after the 
+report(s) have been prepared.&nbsp; You must click the Update button to perform 
+the update procedure.</p>
+
+<p>The update is offered only when running for the current period, as long as all entities 
+have been selected, and only during Period-End Processing.</p>
+
+<p>make the next section one that explodes only after you click the heading line</p>
+
+<p>During the Period-End Process (i.e., after Period-End Initialization and 
+before Period-End Finalization) you will be warned if you attempt to run this 
+function after it has already been updated, in order to avoid duplicate entries 
+in the General Ledger.&nbsp; Also, at Period-End Finalization, you should check 
+that this function is listed among those that have been update during the 
+Period-End Process.</p>
+
+<p>The update includes the following automated entries into the General Ledger:</p>
+
+<ul>
+<li>Sales Journal<li>Cost of Goods Sold Journal<li>Inter-Company Shipments</ul>
+
+<!--#include file="..\std\001.htm"-->
+
+<p>&nbsp;</p> 
+
+<p>The function may be run at any time, with the following general observations:</p> 
+
+<ul>
+<li>Standard Costs for a period are not locked in until Period-End 
+Initialization had been performed and the Item Cost Re-Valuation Report has been 
+updated; therefore, running these reports in the current period will reflect 
+item standard costs from the prior period.<li>This function is part of the list 
+of reports prepared during Period-End.&nbsp; There is no update associated with 
+this function except when running it as part of the Period End process.</ul>
+
+<!--#include file="..\std\001.htm"-->
+
+<include file="..\std\001.htm">
+<h3><embed src="../std/001.htm" width="128" height="128"></h3>
+
+<p>Please review the <a href="../STD/003.htm">General Notes for Reports</a>, for 
+a description of capabilities which are common to all report functions.</p>
+
+<p>The reports produced are:</p> 
+
+<ul>
+<li>First item of bulleted list with a <a href="example.htm">link</a> in it.
+<li>Second item in bulleted list.
+<li>Third item in bulleted list.
+</ul>
+
+<p>This function may be run at any time.&nbsp; It is typically run during 
+Period-End Processing, and is the source for the Sales Journal and Cost of Goods 
+Sold Journal.</p>
+
+<p>There is an Update associated with this function.&nbsp; However, the update 
+is offered only when running for the current period, as long as all entities 
+have been selected, and only during Period-End Processing.</p>
+
+<p>&nbsp;</p>
+
+<p><b>User Interface</b></p>
+
+<h3><img src="../BMP/SORCGSJ1x.gif" width="535" height="397"></h3>
+
+<p>&nbsp;</p>
+
+<p><b>Run-Time Options</b></p>
+
+<p>Report Period</p>
+
+<p>Any prior period within the last 5 years may be selected.</p>
+
+<p>If you select the current operations period, then the report will reflect the 
+current month-to-date shipments; note that the final costs for the current month 
+are not updated until Period End Processing had begun. </p>
+<p>Selecting a prior period will render the prior period's shipments and returns 
+for that month in total, using the costs which were in effect during that 
+period. </p>
+<p>This function uses the current relationships of customers to trade classes to 
+markets, and items to brand to sales divisions. If any of those relationships 
+are altered, a report printed after a period has been closed will use the new 
+relationships, rather than those that were in place at the time that the Period 
+was closed. </p>
+
+<p>&nbsp;</p>
+
+<p>Costing Method</p>
+
+<ul>
+<li>Standard Cost<li>Marketing Cost<li>SCP Cost</ul>
+
+<!--#include file="..\std\001.htm"-->
+
+<p>Report Sorting</p>
+
+<p>There are no run-time sorting options.&nbsp; Report sorts have been fixed 
+programmatically.</p>
+
+<p>Report Filtering</p>
+
+<p>You may filter the report by indicating the inclusion of all, selected, or 
+(all) except the following entities:</p> 
+
+<ul>
+<li><a href="../Entities/Sales%20Division.htm">Sales Division</a>
+<li><a href="example.htm">Customer</a>
+</ul>
+
+
+Warnings about filtering on Sales Division - or else take it out<p>Explanation 
+of Relationship between a Customer -&gt; Trade Class -&gt; Segment 3</p>
+<p>Explanation of Relationship between an Item -&gt; Brand -&gt; Segment 4</p>
+<p>&nbsp;</p>
+<p>This function produces a report, as follows: Data Content: Units, Sales and 
+Cost of Sales information for shipments and returns occurring in the Period 
+Selected Sort Sequence: by Market, by Trade Class, by Brand, by Item 
+Selectivity: Shipments &amp; Returns within Period Selected at Run Time&nbsp; </p>
+<p>There is no update process associated with this function, except when run 
+during Period End (i.e., after Period End Initialization, but before Period End 
+Finalization), at which time there is an option to update the General Ledger. A 
+General Ledger summary will also print. This report may be run at any time. </p>
+
+
+<h4>What do you want to do?</h4>
+
+<table border="0" cellpadding="0" cellspacing="0">
+
+<tr><td valign="top"><a href="httag2.htm">
+<img src="proced.gif" alt="Topic link" border="0"></a></td><td>
+<a href="httag2.htm">Add the most common HTML character formatting tags to your file</a>
+</td></tr><tr><td>&nbsp;</td><td>&nbsp;</td></tr>
+
+<tr><td valign="top"><a href="httag3.htm">
+<img src="proced.gif" alt="Topic link" border="0"></a></td><td>
+<a href="httag3.htm">Store HTML tags or text for later use </a>
+</td></tr><tr><td>&nbsp;</td><td>&nbsp;</td></tr>
+
+<tr><td valign="top"><a href="htaxin.htm">
+<img src="proced.gif" alt="Topic link" border="0"></a></td><td>
+<a href="htaxin.htm">Insert the HTML Help ActiveX control into a file</a>
+</td></tr><tr><td>&nbsp;</td><td>&nbsp;</td></tr>
+
+<tr><td valign="top"><a href="httag4.htm">
+<img src="proced.gif" alt="Topic link" border="0"></a></td><td>
+<a href="httag4.htm">Add Related Topics links to a file</a>
+</td></tr><tr><td>&nbsp;</td><td>&nbsp;</td></tr>
+
+<tr><td valign="top"><a href="shortcut.htm">
+<img src="proced.gif" alt="Topic link" border="0"></a></td><td>
+<a href="shortcut.htm">Create a shortcut in a help topic</a>
+</td></tr><tr><td>&nbsp;</td><td>&nbsp;</td></tr>
+
+<tr> <td valign="top"><a href="overht.htm"><img src="home.gif" alt="Home page link" border="0"></a>
+</td><td><a href="overht.htm">About creating HTML topic files</A>
+</td></tr>
+<tr><td>&nbsp;</td></tr>
+</table>
+
+
+
+
+<p>&nbsp;</p> 
+
+<p>A paragraph with a <a href="example.htm">link</a> looks like this.</p> 
+
+
+
+
+</body>
+</html>

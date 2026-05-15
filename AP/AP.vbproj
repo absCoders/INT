@@ -1,0 +1,573 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9611728C-3A18-4E69-A125-48DBD23944B8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>AP</RootNamespace>
+    <AssemblyName>AP</AssemblyName>
+    <MyType>Windows</MyType>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>AP.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>AP.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DocumentationFile>AP.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DocumentationFile>AP.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DocumentationFile>AP.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DocumentationFile>AP.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Infragistics4.Win.v25.1, Version=25.1.20251.26, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files (x86)\Infragistics\2025.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.v25.1.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinToolbars.v25.1, Version=25.1.20251.26, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files (x86)\Infragistics\2025.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.UltraWinToolbars.v25.1.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinTabControl.v25.1, Version=25.1.20251.26, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files (x86)\Infragistics\2025.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.UltraWinTabControl.v25.1.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinGrid.v25.1, Version=25.1.20251.26, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files (x86)\Infragistics\2025.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.UltraWinGrid.v25.1.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinExplorerBar.v25.1, Version=25.1.20251.26, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files (x86)\Infragistics\2025.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.UltraWinExplorerBar.v25.1.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinEditors.v25.1, Version=25.1.20251.26, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files (x86)\Infragistics\2025.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.UltraWinEditors.v25.1.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Infragistics4.Win.Misc.v25.1, Version=25.1.20251.26, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files (x86)\Infragistics\2025.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.Misc.v25.1.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Infragistics4.Shared.v25.1, Version=25.1.20251.26, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files (x86)\Infragistics\2025.1\Windows Forms\CLR4.0\Bin\Infragistics4.Shared.v25.1.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinMaskedEdit.v25.1, Version=25.1.20251.26, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files (x86)\Infragistics\2025.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.UltraWinMaskedEdit.v25.1.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Infragistics4.Documents.Excel.v25.1, Version=25.1.20251.26, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files (x86)\Infragistics\2025.1\Windows Forms\CLR4.0\Bin\Infragistics4.Documents.Excel.v25.1.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Infragistics4.Documents.Core.v25.1, Version=25.1.20251.26, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files (x86)\Infragistics\2025.1\Windows Forms\CLR4.0\Bin\Infragistics4.Documents.Core.v25.1.dll</HintPath>
+      <Name>Infragistics4.Documents.Core.v25.1</Name>
+    </Reference>
+    <Reference Include="CC">
+      <HintPath>..\CC\bin\x86\Debug\CC.dll</HintPath>
+    </Reference>
+    <Reference Include="nsoftware.IPWorksEncrypt, Version=9.0.5329.0, Culture=neutral, PublicKeyToken=cdc168f89cffe9cf, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Program Files\nsoftware\IPWorks Encrypt 2020 .NET Edition\lib\nsoftware.IPWorksEncrypt.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="ABSolution" />
+    <Import Include="Infragistics.Win" />
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="TAC" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\chase.vb" />
+    <Compile Include="Classes\ChaseFromXML.vb" />
+    <Compile Include="Forms\APF1099S.Designer.vb">
+      <DependentUpon>APF1099S.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\APF1099S.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\APF1099U.Designer.vb">
+      <DependentUpon>APF1099U.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\APF1099U.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\APFCHCKA.Designer.vb">
+      <DependentUpon>APFCHCKA.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\APFCHCKA.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\APFCHCKN.Designer.vb">
+      <DependentUpon>APFCHCKN.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\APFCHCKN.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\APFGLAP1.Designer.vb">
+      <DependentUpon>APFGLAP1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\APFGLAP1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\APFINVH1.Designer.vb">
+      <DependentUpon>APFINVH1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\APFINVH1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\APFPYMT1.Designer.vb">
+      <DependentUpon>APFPYMT1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\APFPYMT1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\APFVINQ1.Designer.vb">
+      <DependentUpon>APFVINQ1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\APFVINQ1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\APFVOID1.Designer.vb">
+      <DependentUpon>APFVOID1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\APFVOID1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\APFCHCK0.Designer.vb">
+      <DependentUpon>APFCHCK0.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\APFCHCK0.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\APFACRB1.Designer.vb">
+      <DependentUpon>APFACRB1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\APFACRB1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\APFINVHR.Designer.vb">
+      <DependentUpon>APFINVHR.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\APFINVHR.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Reports\APR1099E.Designer.vb">
+      <DependentUpon>APR1099E.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\APR1099E.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\APRAEXP1.Designer.vb">
+      <DependentUpon>APRAEXP1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\APRAEXP1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\APRAEXP2.Designer.vb">
+      <DependentUpon>APRAEXP2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\APRAEXP2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\APRATBR1.Designer.vb">
+      <DependentUpon>APRATBR1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\APRATBR1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\APRCHKP1.Designer.vb">
+      <DependentUpon>APRCHKP1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\APRCHKP1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\APRCHKR1.Designer.vb">
+      <DependentUpon>APRCHKR1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\APRCHKR1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\APRINVP1.Designer.vb">
+      <DependentUpon>APRINVP1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\APRINVP1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\APRINVR1.Designer.vb">
+      <DependentUpon>APRINVR1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\APRINVR1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\APRINVRR.Designer.vb">
+      <DependentUpon>APRINVRR.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\APRINVRR.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\APRLIST1.Designer.vb">
+      <DependentUpon>APRLIST1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\APRLIST1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\APRMCHK1.Designer.vb">
+      <DependentUpon>APRMCHK1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\APRMCHK1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\APRPODL1.Designer.vb">
+      <DependentUpon>APRPODL1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\APRPODL1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\APRACRC1.Designer.vb">
+      <DependentUpon>APRACRC1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\APRACRC1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\APRACRX1.Designer.vb">
+      <DependentUpon>APRACRX1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\APRACRX1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\APTATTR1.Designer.vb">
+      <DependentUpon>APTATTR1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\APTATTR1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\APTCLAS1.Designer.vb">
+      <DependentUpon>APTCLAS1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\APTCLAS1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\APTPARM1.Designer.vb">
+      <DependentUpon>APTPARM1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\APTPARM1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\APTPOST1.Designer.vb">
+      <DependentUpon>APTPOST1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\APTPOST1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\APTACRM1.Designer.vb">
+      <DependentUpon>APTACRM1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\APTACRM1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\APTREAS1.Designer.vb">
+      <DependentUpon>APTREAS1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\APTREAS1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\APTVEND1.Designer.vb">
+      <DependentUpon>APTVEND1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\APTVEND1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\APTVEND2.Designer.vb">
+      <DependentUpon>APTVEND2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\APTVEND2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\APTXCAT1.Designer.vb">
+      <DependentUpon>APTXCAT1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\APTXCAT1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\APTPARMA.Designer.vb">
+      <DependentUpon>APTPARMA.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\APTPARMA.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\APF1099S.resx">
+      <DependentUpon>APF1099S.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\APF1099U.resx">
+      <DependentUpon>APF1099U.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\APFCHCKA.resx">
+      <DependentUpon>APFCHCKA.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\APFCHCKN.resx">
+      <DependentUpon>APFCHCKN.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\APFGLAP1.resx">
+      <DependentUpon>APFGLAP1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\APFINVH1.resx">
+      <DependentUpon>APFINVH1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\APFPYMT1.resx">
+      <DependentUpon>APFPYMT1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\APFVINQ1.resx">
+      <DependentUpon>APFVINQ1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\APFVOID1.resx">
+      <DependentUpon>APFVOID1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\APFCHCK0.resx">
+      <DependentUpon>APFCHCK0.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\APFACRB1.resx">
+      <DependentUpon>APFACRB1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\APFINVHR.resx">
+      <DependentUpon>APFINVHR.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\licenses.licx" />
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\APR1099E.resx">
+      <DependentUpon>APR1099E.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\APRAEXP1.resx">
+      <DependentUpon>APRAEXP1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\APRAEXP2.resx">
+      <DependentUpon>APRAEXP2.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\APRATBR1.resx">
+      <DependentUpon>APRATBR1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\APRCHKP1.resx">
+      <DependentUpon>APRCHKP1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\APRINVP1.resx">
+      <DependentUpon>APRINVP1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\APRINVR1.resx">
+      <DependentUpon>APRINVR1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\APRINVRR.resx">
+      <DependentUpon>APRINVRR.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\APRLIST1.resx">
+      <DependentUpon>APRLIST1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\APRMCHK1.resx">
+      <DependentUpon>APRMCHK1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\APRPODL1.resx">
+      <DependentUpon>APRPODL1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\APRACRC1.resx">
+      <DependentUpon>APRACRC1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\APRACRX1.resx">
+      <DependentUpon>APRACRX1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\APTATTR1.resx">
+      <DependentUpon>APTATTR1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\APTCLAS1.resx">
+      <DependentUpon>APTCLAS1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\APTPARM1.resx">
+      <DependentUpon>APTPARM1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\APTPOST1.resx">
+      <DependentUpon>APTPOST1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\APTACRM1.resx">
+      <DependentUpon>APTACRM1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\APTREAS1.resx">
+      <DependentUpon>APTREAS1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\APTVEND1.resx">
+      <DependentUpon>APTVEND1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\APTVEND2.resx">
+      <DependentUpon>APTVEND2.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\APTXCAT1.resx">
+      <DependentUpon>APTXCAT1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\APTPARMA.resx">
+      <DependentUpon>APTPARMA.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Classes\chase.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ABSCS\ABSCS.csproj">
+      <Project>{FEDE76DB-DB57-4642-A943-748898F4CC9E}</Project>
+      <Name>ABSCS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ABSX\ABSX.vbproj">
+      <Project>{BAA59583-9614-4718-BCA5-FA3A1D7638A7}</Project>
+      <Name>ABSX</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ABS\ABS.vbproj">
+      <Project>{8AC20144-AD3B-4B63-B4CE-E14FAA115DD2}</Project>
+      <Name>ABS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TAC\TAC.vbproj">
+      <Project>{F8DA3299-4A2C-473D-9AEE-C00295788E43}</Project>
+      <Name>TAC</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DataSets\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

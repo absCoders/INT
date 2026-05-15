@@ -1,0 +1,1062 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8D5FC60D-762B-4FF0-877E-689951DAAE1F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>SO</RootNamespace>
+    <AssemblyName>SO</AssemblyName>
+    <MyType>Windows</MyType>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <PublishUrl>http://localhost/SO/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>SO.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>SO.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DocumentationFile>SO.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DocumentationFile>SO.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DocumentationFile>SO.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DocumentationFile>SO.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Infragistics4.Documents.Core.v25.1, Version=25.1.20251.26, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files (x86)\Infragistics\2025.1\Windows Forms\CLR4.0\Bin\Infragistics4.Documents.Core.v25.1.dll</HintPath>
+      <Name>Infragistics4.Documents.Core.v25.1</Name>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinChart.v25.1, Version=25.1.20251.26, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.v25.1, Version=25.1.20251.26, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files (x86)\Infragistics\2025.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.v25.1.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinTree.v25.1, Version=25.1.20251.26, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.UltraWinToolbars.v25.1, Version=25.1.20251.26, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files (x86)\Infragistics\2025.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.UltraWinToolbars.v25.1.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinTabControl.v25.1, Version=25.1.20251.26, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files (x86)\Infragistics\2025.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.UltraWinTabControl.v25.1.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinSchedule.v25.1, Version=25.1.20251.26, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files (x86)\Infragistics\2025.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.UltraWinSchedule.v25.1.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinMaskedEdit.v25.1, Version=25.1.20251.26, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files (x86)\Infragistics\2025.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.UltraWinMaskedEdit.v25.1.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinGrid.v25.1, Version=25.1.20251.26, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files (x86)\Infragistics\2025.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.UltraWinGrid.v25.1.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinFormattedText.WordWriter.v25.1, Version=25.1.20251.26, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.UltraWinExplorerBar.v25.1, Version=25.1.20251.26, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files (x86)\Infragistics\2025.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.UltraWinExplorerBar.v25.1.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinEditors.v25.1, Version=25.1.20251.26, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files (x86)\Infragistics\2025.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.UltraWinEditors.v25.1.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Infragistics4.Win.Misc.v25.1, Version=25.1.20251.26, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files (x86)\Infragistics\2025.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.Misc.v25.1.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Infragistics4.Shared.v25.1, Version=25.1.20251.26, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files (x86)\Infragistics\2025.1\Windows Forms\CLR4.0\Bin\Infragistics4.Shared.v25.1.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Infragistics4.Documents.IO.v25.1, Version=25.1.20251.26, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Documents.Excel.v25.1, Version=25.1.20251.26, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Infragistics\2025.1\Windows Forms\CLR4.0\Bin\Infragistics4.Documents.Excel.v25.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DPayments.DShippingSDK, Version=24.3.9215.0, Culture=neutral, PublicKeyToken=cdc168f89cffe9cf, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLLs\DPayments.DShippingSDK.dll</HintPath>
+    </Reference>
+    <Reference Include="GemBox.Spreadsheet, Version=37.3.30.1088, Culture=neutral, PublicKeyToken=b1b72c69714d4847, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="SpreadsheetGear2023.Core">
+      <HintPath>..\DLLs\SpreadsheetGear2023.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="SpreadsheetGear2023.Drawing">
+      <HintPath>..\DLLs\SpreadsheetGear2023.Drawing.dll</HintPath>
+    </Reference>
+    <Reference Include="SpreadsheetGear2023.Windows.Forms">
+      <HintPath>..\DLLs\SpreadsheetGear2023.Windows.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="UIAutomationTypes" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="ABSolution" />
+    <Import Include="Infragistics.Win" />
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="TAC" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Forms\SOFSPLIT.Designer.vb">
+      <DependentUpon>SOFSPLIT.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SOFSPLIT.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SOFDIFX1.Designer.vb">
+      <DependentUpon>SOFDIFX1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SOFDIFX1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SOFDSCI1.Designer.vb">
+      <DependentUpon>SOFDSCI1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SOFDSCI1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SOF3PLER.Designer.vb">
+      <DependentUpon>SOF3PLER.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SOF3PLER.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SOFALLO2.Designer.vb">
+      <DependentUpon>SOFALLO2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SOFALLO2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SOFORDE1.Designer.vb">
+      <DependentUpon>SOFORDE1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SOFORDE1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SOFORDRC.Designer.vb">
+      <DependentUpon>SOFORDRC.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SOFORDRC.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SOFORDF1.Designer.vb">
+      <DependentUpon>SOFORDF1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SOFORDF1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SOFORDR1.Designer.vb">
+      <DependentUpon>SOFORDR1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SOFORDR1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SOFCART1.Designer.vb">
+      <DependentUpon>SOFCART1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SOFCART1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SOFORELC.Designer.vb">
+      <DependentUpon>SOFORELC.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SOFORELC.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SOFPICKW.Designer.vb">
+      <DependentUpon>SOFPICKW.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SOFPICKW.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SOFCSTO1.Designer.vb">
+      <DependentUpon>SOFCSTO1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SOFCSTO1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SOFPPRC1.Designer.vb">
+      <DependentUpon>SOFPPRC1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SOFPPRC1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SOFSHIPB.Designer.vb">
+      <DependentUpon>SOFSHIPB.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SOFSHIPB.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SOFCRED1.Designer.vb">
+      <DependentUpon>SOFCRED1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SOFCRED1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SOFPICK0.Designer.vb">
+      <DependentUpon>SOFPICK0.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SOFPICK0.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SOFSHIP0.Designer.vb">
+      <DependentUpon>SOFSHIP0.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SOFSHIP0.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SOFSHIP1.Designer.vb">
+      <DependentUpon>SOFSHIP1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SOFSHIP1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SOFSHIPE.Designer.vb">
+      <DependentUpon>SOFSHIPE.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SOFSHIPE.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SOFCUST2.Designer.vb">
+      <DependentUpon>SOFCUST2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SOFCUST2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SOFSHIPT.Designer.vb">
+      <DependentUpon>SOFSHIPT.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SOFSHIPT.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SOFWEBQ1.Designer.vb">
+      <DependentUpon>SOFWEBQ1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SOFWEBQ1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SOFWHOD1.Designer.vb">
+      <DependentUpon>SOFWHOD1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SOFWHOD1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SOFCORD1.Designer.vb">
+      <DependentUpon>SOFCORD1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SOFCORD1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SOFRMAF1.Designer.vb">
+      <DependentUpon>SOFRMAF1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SOFRMAF1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SOFRSRV1.Designer.vb">
+      <DependentUpon>SOFRSRV1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SOFRSRV1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SOFRTRN1.Designer.vb">
+      <DependentUpon>SOFRTRN1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SOFRTRN1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SOFSCOM1.Designer.vb">
+      <DependentUpon>SOFSCOM1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SOFSCOM1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SOFPRIC1.Designer.vb">
+      <DependentUpon>SOFPRIC1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SOFPRIC1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SOFALLO1.Designer.vb">
+      <DependentUpon>SOFALLO1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SOFALLO1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SOFWORK1.Designer.vb">
+      <DependentUpon>SOFWORK1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SOFWORK1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\UltraExplorerBarContainerControl1.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Reports\SORCANC1.Designer.vb">
+      <DependentUpon>SORCANC1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\SORCANC1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\SORCART1.Designer.vb">
+      <DependentUpon>SORCART1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\SORCART1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\SORCPOL1.Designer.vb">
+      <DependentUpon>SORCPOL1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\SORCPOL1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\SORPOLOG.Designer.vb">
+      <DependentUpon>SORPOLOG.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\SORPOLOG.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\SORCONF1.Designer.vb">
+      <DependentUpon>SORCONF1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\SORCONF1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\SOROPNO1.Designer.vb">
+      <DependentUpon>SOROPNO1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\SOROPNO1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\SORSHIPC.Designer.vb">
+      <DependentUpon>SORSHIPC.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\SORSHIPC.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\SORSLSX1.Designer.vb">
+      <DependentUpon>SORSLSX1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\SORSLSX1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\SORALLO1.Designer.vb">
+      <DependentUpon>SORALLO1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\SORALLO1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\SORDREL1.Designer.vb">
+      <DependentUpon>SORDREL1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\SORDREL1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\SORINVP1.Designer.vb">
+      <DependentUpon>SORINVP1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\SORINVP1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\SORLOST1.Designer.vb">
+      <DependentUpon>SORLOST1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\SORLOST1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\SORPCKR1.Designer.vb">
+      <DependentUpon>SORPCKR1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\SORPCKR1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\SORRTRN1.Designer.vb">
+      <DependentUpon>SORRTRN1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\SORRTRN1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\SORSLSJ1.Designer.vb">
+      <DependentUpon>SORSLSJ1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\SORSLSJ1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\SORTREO1.Designer.vb">
+      <DependentUpon>SORTREO1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\SORTREO1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\SORSLSB1.Designer.vb">
+      <DependentUpon>SORSLSB1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\SORSLSB1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\SOROREL0.Designer.vb">
+      <DependentUpon>SOROREL0.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\SOROREL0.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\SOROPEN1.Designer.vb">
+      <DependentUpon>SOROPEN1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\SOROPEN1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\SOROREL1.Designer.vb">
+      <DependentUpon>SOROREL1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\SOROREL1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\SORSCOM1.Designer.vb">
+      <DependentUpon>SORSCOM1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\SORSCOM1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\SORSORD1.Designer.vb">
+      <DependentUpon>SORSORD1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\SORSORD1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\SORRMAR1.Designer.vb">
+      <DependentUpon>SORRMAR1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\SORRMAR1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\SOTORDED.Designer.vb">
+      <DependentUpon>SOTORDED.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\SOTORDED.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\SOTCITM1.Designer.vb">
+      <DependentUpon>SOTCITM1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\SOTCITM1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\SOTCSTP2.Designer.vb">
+      <DependentUpon>SOTCSTP2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\SOTCSTP2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\SOTFORM1.Designer.vb">
+      <DependentUpon>SOTFORM1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\SOTFORM1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\SOTCHAN1.Designer.vb">
+      <DependentUpon>SOTCHAN1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\SOTCHAN1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\SOTALLOG.Designer.vb">
+      <DependentUpon>SOTALLOG.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\SOTALLOG.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\SOTPARMG.Designer.vb">
+      <DependentUpon>SOTPARMG.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\SOTPARMG.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\SOTPPRC1.Designer.vb">
+      <DependentUpon>SOTPPRC1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\SOTPPRC1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\SOTSDSC1.Designer.vb">
+      <DependentUpon>SOTSDSC1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\SOTSDSC1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\SOTTYPE1.Designer.vb">
+      <DependentUpon>SOTTYPE1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\SOTTYPE1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\SOTUCCL1.Designer.vb">
+      <DependentUpon>SOTUCCL1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\SOTUCCL1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\SOTMISC1.Designer.vb">
+      <DependentUpon>SOTMISC1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\SOTMISC1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\SOTCARR1.Designer.vb">
+      <DependentUpon>SOTCARR1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\SOTCARR1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\SOTPARMP.Designer.vb">
+      <DependentUpon>SOTPARMP.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\SOTPARMP.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\SOTPRIC1.Designer.vb">
+      <DependentUpon>SOTPRIC1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\SOTPRIC1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\SOTREAS1.Designer.vb">
+      <DependentUpon>SOTREAS1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\SOTREAS1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\SOTROUT1.Designer.vb">
+      <DependentUpon>SOTROUT1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\SOTROUT1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\SOTPARM1.Designer.vb">
+      <DependentUpon>SOTPARM1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\SOTPARM1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\SOTEVNT1.Designer.vb">
+      <DependentUpon>SOTEVNT1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\SOTEVNT1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\SOTMKTC1.Designer.vb">
+      <DependentUpon>SOTMKTC1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\SOTMKTC1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\SOTPCLS1.Designer.vb">
+      <DependentUpon>SOTPCLS1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\SOTPCLS1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\SOTSDIV1.Designer.vb">
+      <DependentUpon>SOTSDIV1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\SOTSDIV1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\SOTSELL1.Designer.vb">
+      <DependentUpon>SOTSELL1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\SOTSELL1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\SOTSREG1.Designer.vb">
+      <DependentUpon>SOTSREG1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\SOTSREG1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\SOTSREP1.Designer.vb">
+      <DependentUpon>SOTSREP1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\SOTSREP1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\SOTSVIA1.Designer.vb">
+      <DependentUpon>SOTSVIA1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\SOTSVIA1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\SOTSVPS1.Designer.vb">
+      <DependentUpon>SOTSVPS1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\SOTSVPS1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\SOTTCLS1.Designer.vb">
+      <DependentUpon>SOTTCLS1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\SOTTCLS1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\SOFSPLIT.resx">
+      <DependentUpon>SOFSPLIT.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SOFDIFX1.resx">
+      <DependentUpon>SOFDIFX1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SOFDSCI1.resx">
+      <DependentUpon>SOFDSCI1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SOF3PLER.resx">
+      <DependentUpon>SOF3PLER.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SOFALLO2.resx">
+      <DependentUpon>SOFALLO2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SOFORDE1.resx">
+      <DependentUpon>SOFORDE1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SOFORDRC.resx">
+      <DependentUpon>SOFORDRC.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SOFORDF1.resx">
+      <DependentUpon>SOFORDF1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SOFORDR1.resx">
+      <DependentUpon>SOFORDR1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SOFCART1.resx">
+      <DependentUpon>SOFCART1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SOFORELC.resx">
+      <DependentUpon>SOFORELC.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SOFPICKW.resx">
+      <DependentUpon>SOFPICKW.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SOFCSTO1.resx">
+      <DependentUpon>SOFCSTO1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SOFPPRC1.resx">
+      <DependentUpon>SOFPPRC1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SOFSHIPB.resx">
+      <DependentUpon>SOFSHIPB.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SOFCRED1.resx">
+      <DependentUpon>SOFCRED1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SOFPICK0.resx">
+      <DependentUpon>SOFPICK0.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SOFSHIP0.resx">
+      <DependentUpon>SOFSHIP0.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SOFSHIP1.resx">
+      <DependentUpon>SOFSHIP1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SOFSHIPE.resx">
+      <DependentUpon>SOFSHIPE.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SOFCUST2.resx">
+      <DependentUpon>SOFCUST2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SOFSHIPT.resx">
+      <DependentUpon>SOFSHIPT.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SOFWEBQ1.resx">
+      <DependentUpon>SOFWEBQ1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SOFWHOD1.resx">
+      <DependentUpon>SOFWHOD1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SOFCORD1.resx">
+      <DependentUpon>SOFCORD1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SOFRMAF1.resx">
+      <DependentUpon>SOFRMAF1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SOFRSRV1.resx">
+      <DependentUpon>SOFRSRV1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SOFRTRN1.resx">
+      <DependentUpon>SOFRTRN1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SOFSCOM1.resx">
+      <DependentUpon>SOFSCOM1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SOFPRIC1.resx">
+      <DependentUpon>SOFPRIC1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SOFALLO1.resx">
+      <DependentUpon>SOFALLO1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SOFWORK1.resx">
+      <DependentUpon>SOFWORK1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\licenses.licx" />
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\SORCANC1.resx">
+      <DependentUpon>SORCANC1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\SORCART1.resx">
+      <DependentUpon>SORCART1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\SORCPOL1.resx">
+      <DependentUpon>SORCPOL1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\SORPOLOG.resx">
+      <DependentUpon>SORPOLOG.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\SORCONF1.resx">
+      <DependentUpon>SORCONF1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\SOROPNO1.resx">
+      <DependentUpon>SOROPNO1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\SORSHIPC.resx">
+      <DependentUpon>SORSHIPC.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\SORSLSX1.resx">
+      <DependentUpon>SORSLSX1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\SORALLO1.resx">
+      <DependentUpon>SORALLO1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\SORDREL1.resx">
+      <DependentUpon>SORDREL1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\SORINVP1.resx">
+      <DependentUpon>SORINVP1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\SORLOST1.resx">
+      <DependentUpon>SORLOST1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\SORPCKR1.resx">
+      <DependentUpon>SORPCKR1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\SORRTRN1.resx">
+      <DependentUpon>SORRTRN1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\SORSLSJ1.resx">
+      <DependentUpon>SORSLSJ1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\SORTREO1.resx">
+      <DependentUpon>SORTREO1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\SORSLSB1.resx">
+      <DependentUpon>SORSLSB1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\SOROREL0.resx">
+      <DependentUpon>SOROREL0.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\SOROPEN1.resx">
+      <DependentUpon>SOROPEN1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\SOROREL1.resx">
+      <DependentUpon>SOROREL1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\SORSCOM1.resx">
+      <DependentUpon>SORSCOM1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\SORSORD1.resx">
+      <DependentUpon>SORSORD1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\SORRMAR1.resx">
+      <DependentUpon>SORRMAR1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\SOTORDED.resx">
+      <DependentUpon>SOTORDED.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\SOTCITM1.resx">
+      <DependentUpon>SOTCITM1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\SOTCSTP2.resx">
+      <DependentUpon>SOTCSTP2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\SOTFORM1.resx">
+      <DependentUpon>SOTFORM1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\SOTCHAN1.resx">
+      <DependentUpon>SOTCHAN1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\SOTALLOG.resx">
+      <DependentUpon>SOTALLOG.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\SOTPARMG.resx">
+      <DependentUpon>SOTPARMG.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\SOTPPRC1.resx">
+      <DependentUpon>SOTPPRC1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\SOTSDSC1.resx">
+      <DependentUpon>SOTSDSC1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\SOTTYPE1.resx">
+      <DependentUpon>SOTTYPE1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\SOTUCCL1.resx">
+      <DependentUpon>SOTUCCL1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\SOTMISC1.resx">
+      <DependentUpon>SOTMISC1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\SOTCARR1.resx">
+      <DependentUpon>SOTCARR1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\SOTPARMP.resx">
+      <DependentUpon>SOTPARMP.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\SOTPRIC1.resx">
+      <DependentUpon>SOTPRIC1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\SOTREAS1.resx">
+      <DependentUpon>SOTREAS1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\SOTROUT1.resx">
+      <DependentUpon>SOTROUT1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\SOTPARM1.resx">
+      <DependentUpon>SOTPARM1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\SOTEVNT1.resx">
+      <DependentUpon>SOTEVNT1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\SOTMKTC1.resx">
+      <DependentUpon>SOTMKTC1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\SOTPCLS1.resx">
+      <DependentUpon>SOTPCLS1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\SOTSDIV1.resx">
+      <DependentUpon>SOTSDIV1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\SOTSELL1.resx">
+      <DependentUpon>SOTSELL1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\SOTSREG1.resx">
+      <DependentUpon>SOTSREG1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\SOTSREP1.resx">
+      <DependentUpon>SOTSREP1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\SOTSVIA1.resx">
+      <DependentUpon>SOTSVIA1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\SOTSVPS1.resx">
+      <DependentUpon>SOTSVPS1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\SOTTCLS1.resx">
+      <DependentUpon>SOTTCLS1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{5AD368F8-9AD3-4E4C-97D8-1F4F1C124158}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ABSCS\ABSCS.csproj">
+      <Project>{FEDE76DB-DB57-4642-A943-748898F4CC9E}</Project>
+      <Name>ABSCS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ABSX\ABSX.vbproj">
+      <Project>{BAA59583-9614-4718-BCA5-FA3A1D7638A7}</Project>
+      <Name>ABSX</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ABS\ABS.vbproj">
+      <Project>{8AC20144-AD3B-4B63-B4CE-E14FAA115DD2}</Project>
+      <Name>ABS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TAC\TAC.vbproj">
+      <Project>{F8DA3299-4A2C-473D-9AEE-C00295788E43}</Project>
+      <Name>TAC</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Classes\" />
+    <Folder Include="DataSets\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

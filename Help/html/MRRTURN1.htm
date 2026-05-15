@@ -1,0 +1,268 @@
+<!DOCTYPE HTML PUBLIC '-//IETF//DTD HTML//EN'>
+<html>
+<head>
+<meta http-equiv='Content-Type'
+content='text/html; charset=iso-8859-1'>
+<meta name='GENERATOR' content='Microsoft FrontPage 6.0'>
+<title>Inventory Turnover Report</title>
+<style>@import url(coUA.css);</style>
+<link disabled rel='stylesheet' href='htmlhelp.css'>
+</head>
+<body>
+<h1><font size='3' face='Verdana'>Inventory Turnover Report</font></h1>
+<hr size='1'>
+<p><font size='2' face='Verdana'>
+Produces a report showing the monthly turnover calculations for selected items.
+</font></p>
+<p><font size='2' face='Verdana'>
+This menu-item may be selected and run
+at any time.&nbsp;
+There is no update process associated with this function.
+</font></p>
+<p><font size='2' face='Verdana'>
+Please review the <a href='../STD/003.htm'>General Notes for Reports</a>, for features which are common to all menu-driven reports.
+</font></p>
+<hr size='1'>
+<h4><font face='Verdana' size='2'>Overview</font></h4>
+<p><font size='2' face='Verdana'>
+Beginning-of-Month Unit on Hand and Sales Order Shipments History data are used 
+to calculate Inventory Turnover.&nbsp; Since Inventory Turnover is a ratio that 
+is calculated as of a point in time, the report will calculate the Inventory 
+Turnover ratio for each of the 13 months ending on the Report Period specified, 
+so that you can see trends in Inventory Turnover for an Item.
+</font></p>
+<h4>&nbsp;</h4>
+<h4><font size='2' face='Verdana'>Report Columns</font></h4>
+<p><font size='2' face='Verdana'>
+Please note that some of these columns may have modified definitions depending upon the values specified for some of the run-time options, described below.
+</font></p>
+<p><font size='2' face='Verdana'>Item Master & General</font></p>
+<table border='1' cellpadding='5' cellspacing='0' style='border-collapse: collapse' bordercolor='#808080' width='85%' id='AutoNumber2' height='50' bgcolor='#CCFFFF'>
+<tr>
+<td width='7%' height='22'>
+<p align='center'><font size='2' face='Verdana'>A</font></td>
+<td width='20%' height='22'><font size='2' face='Verdana'>Item</font></td>
+<td width='73%' height='22'><font size='2' face='Verdana'>Item Code & Description (Item Master)</font></td>
+</tr>
+<tr>
+<td width='7%' height='22'>
+<p align='center'><font face="Verdana" size="2">B</font></td>
+<td width='20%' height='22'><font face="Verdana" size="2">Standard Cost</font></td>
+<td width='73%' height='22'><font size='2' face='Verdana'>The Item's Current Standard Cost (Item Master)</font></td>
+</tr>
+</table>
+<p><font face="Verdana" size="2">Supply/Demand Metrics</font></p>
+<table border='1' cellpadding='5' cellspacing='0' style='border-collapse: collapse' bordercolor='#808080' width='85%' id='AutoNumber2' height='50' bgcolor='#CCFFFF'>
+<tr>
+<td width='7%' height='22'>
+<p align='center'><font face="Verdana" size="2">C</font></td>
+<td width='20%' height='22'><font face="Verdana" size="2">Average Months</font></td>
+<td width='73%' height='22'><font face="Verdana" size="2">The number of months 
+that were actually used in the calculation of the Months of Supply.&nbsp; This 
+number will be between 0 and the number of months (of history) selected at 
+run-time.&nbsp; Months with 0's in either the Beginning on Hand or the number of 
+Units Shipped are discarded.</font></td>
+</tr>
+<tr>
+<td width='7%' height='22'>
+<p align='center'><font face="Verdana" size="2">D</font></td>
+<td width='20%' height='22'><font face="Verdana" size="2">Months of Supply</font></td>
+<td width='73%' height='22'><font face="Verdana" size="2">The beginning on hand 
+(in units) for the last month shown on the report divided by the average number 
+of units shipped per month.&nbsp; The average number of units shipped is the 
+total number of units shipped in the number of months of history selected at 
+run-time - however, months with 0's for beginning on hand or units are discarded 
+(see Average Months, above).</font></td>
+</tr>
+</table>
+<p><font face="Verdana" size="2">Inventory Turnover Statistics by Month, for 
+each of the 13 Months ending on the Period Selected</font></p>
+<table border='1' cellpadding='5' cellspacing='0' style='border-collapse: collapse' bordercolor='#808080' width='85%' id='AutoNumber2' height='50' bgcolor='#CCFFFF'>
+<tr>
+<td width='7%' height='22'>
+<p align='center'><font face="Verdana" size="2">E</font></td>
+<td width='20%' height='22'><font face="Verdana" size="2">Beginning On Hand</font></td>
+<td width='73%' height='22'><font face="Verdana" size="2">The Beginning On Hand, 
+in Units, for each month, in all warehouses combined excluding non-MRP 
+warehouses.</font></td>
+</tr>
+<tr>
+<td width='7%' height='22'>
+<p align='center'><font face="Verdana" size="2">F</font></td>
+<td width='20%' height='22'><font face="Verdana" size="2">Monthly Shipments</font></td>
+<td width='73%' height='22'><font face="Verdana" size="2">The total number of 
+units shipped (Sales Order Shipments) for each month, in all warehouses 
+combined.</font></td>
+</tr>
+<tr>
+<td width='7%' height='22'>
+<p align='center'><font face="Verdana" size="2">G</font></td>
+<td width='20%' height='22'><font face="Verdana" size="2">Turnover</font></td>
+<td width='73%' height='22'><font face="Verdana" size="2">Annualized (12-month) 
+Units Shipped divided by the Average Monthly (Beginning) Units on Hand, 
+calculated for each month shown on the report.&nbsp; Note that depending on the 
+number of months of history specified, you may not be able to calculate the 
+Turnover Ratio yourself from the data shown on the report, as some months 
+(especially the earlier months) will be using historical values that are not 
+shown on the report.</font></td>
+</tr>
+</table>
+<p><font face="Verdana" size="2">Sample Calculation of Turnover - for this 
+example, let's say that you chose to use 3 months of history to calculate the 
+Turnover, and the Beginning on Hand and Shipments history for a 6 month period 
+is as follows:</font></p>
+<table border='1' cellpadding='5' cellspacing='0' style='border-collapse: collapse' bordercolor='#808080' width='32%' id='table1' height='50' bgcolor='#CCFFFF'>
+<tr>
+<td width='13%' height='22' align="right">
+<p align='center'><font face="Verdana" size="2">Jan</font></td>
+<td width='13%' height='22' align="right"><font face="Verdana" size="2">Feb</font></td>
+<td width='15%' height='22' align="right"><font face="Verdana" size="2">Mar</font></td>
+<td width='9%' height='22' align="right"><font face="Verdana" size="2">Apr</font></td>
+<td width='13%' height='22' align="right"><font face="Verdana" size="2">May</font></td>
+<td width='15%' height='22' align="right"><font face="Verdana" size="2">Jun</font></td>
+<td width='15%' height='22' align="right"><font face="Verdana" size="2">Jun</font></td>
+</tr>
+<tr>
+<td width='13%' height='22' align="right">
+<p align='center'><font face="Verdana" size="2">Beg</font></td>
+<td width='13%' height='22' align="right"><font face="Verdana" size="2">100</font></td>
+<td width='15%' height='22' align="right"><font face="Verdana" size="2">100</font></td>
+<td width='9%' height='22' align="right"><font face="Verdana" size="2">0</font></td>
+<td width='13%' height='22' align="right"><font face="Verdana" size="2">100</font></td>
+<td width='15%' height='22' align="right"><font face="Verdana" size="2">100</font></td>
+<td width='15%' height='22' align="right"><font face="Verdana" size="2">100</font></td>
+</tr>
+<tr>
+<td width='13%' height='22' align="right">
+<p align='center'><font face="Verdana" size="2">Shp</font></td>
+<td width='13%' height='22' align="right"><font face="Verdana" size="2">10</font></td>
+<td width='15%' height='22' align="right"><font face="Verdana" size="2">20</font></td>
+<td width='9%' height='22' align="right"><font face="Verdana" size="2">10</font></td>
+<td width='13%' height='22' align="right"><font face="Verdana" size="2">20</font></td>
+<td width='15%' height='22' align="right"><font face="Verdana" size="2">10</font></td>
+<td width='15%' height='22' align="right"><font face="Verdana" size="2">20</font></td>
+</tr>
+</table>
+<p><font face="Verdana" size="2">The Calculation of the Turnover for the month 
+if May would be:</font></p>
+<p><font face="Verdana" size="2">12 * (Avg Sales for the 3 month period Mar thru 
+May, discarding months with 0's) / (Avg Beg, same period)</font></p>
+<p><font face="Verdana" size="2">12 * ((20 + 20) / 2) / ((100 + 100) / 2) = 12 * 
+(20 / 100) = 2.4</font></p>
+<p><font face="Verdana" size="2">Sample Calculation of Turnover - for this 
+example, let's say that you chose to use 3 months of history to</font> </p>
+<h4><font size='2' face='Verdana'>Report Totals</font></h4>
+<p><font face="Verdana" size="2">There are no Report Totals or Sub-Totals, as 
+this report shows individual Item Performance on a Unit Basis only.</font></p>
+<h4><font size='2' face='Verdana'>Sample Screen</font><font face='Verdana'>&nbsp;&nbsp;&nbsp;
+</font></h4>
+<h4><img border="0" src="../bmp/MRRTUR1.jpg"></h4>
+<h4><font size='2' face='Verdana'>Run-Time Options</font></h4>
+<p><span style='font-weight: 400'><font size='2' face='Verdana'>
+A page 0 will print (before the report) which summarizes all of the Report Sorting, Filtering, and other run-time options selected.&nbsp; Some of the run-time options may be reflected in the heading area of the page.</font></span></p>
+<!--msimagelist--><table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<!--msimagelist--><tr>
+		<!--msimagelist--><td valign="baseline" width="42">
+		<img src="../BMP/img.gif" width="18" height="18" hspace="12" alt="bullet"></td>
+		<td valign="top" width="100%"><font size='2' face='Verdana'>Report Sorting</font><!--msimagelist--></td>
+	</tr>
+	<!--msimagelist--></table>
+<blockquote>
+<p><font size='2' face='Verdana'>
+You may sort the report by any of the following:
+</font></p>
+<ul>
+<li><font size='2' face='Verdana'>Division</font>
+<li><font size='2' face='Verdana'>Brand</font>
+<li><font size='2' face='Verdana'>Cost Category</font>
+<li><font size='2' face='Verdana'>S/N/U</font>
+<li><font size='2' face='Verdana'>Basic/Promo</font>
+</ul>
+<p><font size='2' face='Verdana'>
+Please note that this report will always show Item as if it were the last entity 
+sorted.
+</font></p>
+</blockquote>
+<!--msimagelist--><table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<!--msimagelist--><tr>
+		<!--msimagelist--><td valign="baseline" width="42">
+		<img src="../BMP/img.gif" width="18" height="18" hspace="12" alt="bullet"></td>
+		<td valign="top" width="100%"><font size='2' face='Verdana'>Report Filtering</font><!--msimagelist--></td>
+	</tr>
+	<!--msimagelist--></table>
+<blockquote>
+<p><font size='2' face='Verdana'>
+You may filter the report to include all, selected, or (all) except specific values of the following:
+</font></p>
+<ul>
+<li><font size='2' face='Verdana'>Division</font>
+<li><font size='2' face='Verdana'>Brand</font>
+<li><font size='2' face='Verdana'>Cost Category</font>
+<li><font size='2' face='Verdana'>S/N/U</font>
+<li><font size='2' face='Verdana'>Basic/Promo</font>
+<li><font size='2' face='Verdana'>Item Code</font>
+</ul>
+</blockquote>
+<!--msimagelist--><table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<!--msimagelist--><tr>
+		<!--msimagelist--><td valign="baseline" width="42">
+		<img src="../BMP/img.gif" width="18" height="18" hspace="12" alt="bullet"></td>
+		<td valign="top" width="100%"><font size='2' face='Verdana'>
+Number of Months of Usage History to Average to Calculate 12-Month Turnover
+</font><!--msimagelist--></td>
+	</tr>
+	<!--msimagelist--></table>
+<blockquote>
+<p><font size='2' face='Verdana'>
+Enter the number of months of shipment history to be used in the calculation of 
+the Turnover Ratio.&nbsp; The default value is 12.
+</font></p>
+</blockquote>
+<!--msimagelist--><table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<!--msimagelist--><tr>
+		<!--msimagelist--><td valign="baseline" width="42">
+		<img src="../BMP/img.gif" width="18" height="18" hspace="12" alt="bullet"></td>
+		<td valign="top" width="100%"><font face="Verdana" size="2">Include 
+		Inactive Items </font><!--msimagelist--></td>
+	</tr>
+	<!--msimagelist--></table>
+<blockquote>
+<p><font size='2' face='Verdana'>
+By default, the report will exclude Inactive Items.&nbsp; Check the box in order 
+to include Inactive Items on the report.&nbsp; An Active Item is an Item with 
+Item Status Code of &quot;A&quot; (in the Item Master File); an Inactive Item is an item 
+which is not coded with an Item Status Code of &quot;A&quot;.
+
+</font></p>
+</blockquote>
+<!--msimagelist--><table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<!--msimagelist--><tr>
+		<!--msimagelist--><td valign="baseline" width="42">
+		<img src="../BMP/img.gif" width="18" height="18" hspace="12" alt="bullet"></td>
+		<td valign="top" width="100%"><font size='2' face='Verdana'>
+		Shipments (Gross/Net)
+</font><!--msimagelist--></td>
+	</tr>
+	<!--msimagelist--></table>
+<blockquote>
+<p><font size='2' face='Verdana'>
+Select whether to use Gross or Net shipments.&nbsp; Net shipments are Gross 
+Shipments less Returns.</font></p>
+</blockquote>
+<!--msimagelist--><table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<!--msimagelist--><tr>
+		<!--msimagelist--><td valign="baseline" width="42">
+		<img src="../BMP/img.gif" width="18" height="18" hspace="12" alt="bullet"></td>
+		<td valign="top" width="100%"><font size='2' face='Verdana'>
+		Report Period</font><!--msimagelist--></td>
+	</tr>
+	<!--msimagelist--></table>
+<blockquote>
+<p><font size='2' face='Verdana'>
+Select the Period which will define the end of the 12 month timeframe that the 
+report will show Inventory Turnover data for.&nbsp; The default is the last 
+period closed.
+</font></p>
+</blockquote>
+</body>
+</html>

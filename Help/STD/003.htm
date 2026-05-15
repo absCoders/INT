@@ -1,0 +1,226 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+
+<head>
+<meta http-equiv="Content-Type"
+content="text/html; charset=iso-8859-1">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<!- <meta name="GENERATOR" content="Microsoft HTML Help Workshop 4.0">
+<title>ABSolution Report Features</title>
+<style>@import url(coUA.css);</style>
+<link disabled rel="stylesheet" href="htmlhelp.css">
+
+<script language="JavaScript" src="master.js"></script>
+
+</head>
+
+<BODY background="blue.jpg" STYLE="background-repeat:no-repeat;">
+
+<img src="hhwani.gif" align = right border="0" width="60"
+height="60">
+
+<h1><font size="4">Features Common to All ABSolution Reports</font></h1>
+
+<p>The following capabilities are found in all Report Functions:</p>
+
+
+<ul>
+  <li>All Generated Reports are Saved on the Server, for Print Job Re-Submission</li>
+  <li>Download associated Report Data into Excel</li>
+  <li>email Reports using pre-determined or ad-hoc distribution lists</li>
+  <li>Save/Retrieve Run-Time Report Option Settings</li>
+  <li>Crystal Reports Export Options</li>
+</ul>
+
+<p><b>User Interface</b></p>
+
+<img src="../bmp/001.bmp" width="792" height="48">
+
+
+<table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="89%" id="AutoNumber1">
+  <tr>
+    <td width="15%">New</td>
+    <td width="85%">While selecting values for the run-time options, click this 
+    button to reset the run-time report options back to the default values.&nbsp; 
+    After clicking proceed, this button is unavailable as the function proceeds 
+    to its task.&nbsp; You will see &quot;Process Complete&quot; in the status window when 
+    it is done.&nbsp; At that time, you may click this button to run this 
+    function again with the 
+    same or similar run-time option settings.&nbsp; After clicking &quot;New&quot; you 
+    will be able to change the settings as you require.&nbsp; Clicking &quot;New&quot; a 
+    2nd time will reset the run-time report options back to the default.</td>
+  </tr>
+  <tr>
+    <td width="15%">Update</td>
+    <td width="85%">Continue with the associated update procedure (offered only 
+    after reports are prepared, and only if the function includes an update)</td>
+  </tr>
+  <tr>
+    <td width="15%">Cancel</td>
+    <td width="85%">Cancel the report (offered while the report is generating).&nbsp; 
+    If an Update is offered, click the Cancel button to indicate that you do not 
+    want to proceed with the update.</td>
+  </tr>
+  <tr>
+    <td width="15%">Excel</td>
+    <td width="85%">Download all tables in the report's prepared MS Access 
+    database to Excel</td>
+  </tr>
+  <tr>
+    <td width="15%">Proceed</td>
+    <td width="85%">Proceed with the generation of the report.&nbsp; Do not 
+    attempt to navigate back to the menu while a report is being prepared.&nbsp; 
+    Leave your session idle until the report is completely prepared.</td>
+  </tr>
+  <tr>
+    <td width="15%">email</td>
+    <td width="85%">email the reports to a pre-loaded distribution list, or to 
+    ad-hoc recipients.</td>
+  </tr>
+  <tr>
+    <td width="15%">Save</td>
+    <td width="85%">Save the current run-time report option settings for use at 
+    a later time.&nbsp; Use the setting &quot;Default&quot; to set up the options you 
+    would like to come up by default in the future.</td>
+  </tr>
+  <tr>
+    <td width="15%">Retrieve</td>
+    <td width="85%">Retrieve a previously saved set of run-time report option 
+    settings.</td>
+  </tr>
+  <tr>
+    <td width="15%">Exit</td>
+    <td width="85%">Exit the function (close the screen), and return to the main 
+    menu.</td>
+  </tr>
+</table>
+
+
+<p>&nbsp;</p>
+
+
+
+<p><b>Explanation of Report Headings</b></p>
+<p>At the top of the page of a report, you will see the following</p>
+<img src="../bmp/002.bmp" width="792" height="48">
+
+
+
+<table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="80%" id="AutoNumber2">
+  <tr>
+    <td width="7%">Col</td>
+    <td width="6%">Row</td>
+    <td width="87%">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="7%">1</td>
+    <td width="6%">1,2</td>
+    <td width="87%">The actual date and time that the report was prepared.&nbsp; 
+    If you reprint the report by selecting it in the Print Jobs Re-Submission 
+    function, the date and time will be the same as the values from the original 
+    report.</td>
+  </tr>
+  <tr>
+    <td width="7%">2</td>
+    <td width="6%">2</td>
+    <td width="87%">The User ID (sue) of the person who generated the report</td>
+  </tr>
+  <tr>
+    <td width="7%">2</td>
+    <td width="6%">2</td>
+    <td width="87%">The Company that the user was logged into (CCU)</td>
+  </tr>
+  <tr>
+    <td width="7%">3</td>
+    <td width="6%">3</td>
+    <td width="87%">The version of ABSolution that was running (2.0.289) when 
+    the report was generated.&nbsp; Note that every time a compile is done, that 
+    the version number changes.&nbsp; Most often, the 3rd number (i.e., the 289) 
+    will change and be increased by 1 every time a newly compiled version of 
+    ABSolution is issued.</td>
+  </tr>
+  <tr>
+    <td width="7%">3</td>
+    <td width="6%">3</td>
+    <td width="87%">The Oracle Session Number assigned to the user when 
+    preparing this report.&nbsp; This session number is also the name of the MS 
+    Access MDB that is used to drive the Crystal Report (3022287.mdb), and it 
+    may be found in the .\Program Files\ABSolution\{Windows Login Name}\MDB 
+    after the report is prepared.</td>
+  </tr>
+  <tr>
+    <td width="7%">4</td>
+    <td width="6%">1</td>
+    <td width="87%">Company Name</td>
+  </tr>
+  <tr>
+    <td width="7%">4</td>
+    <td width="6%">2</td>
+    <td width="87%">Report Title</td>
+  </tr>
+  <tr>
+    <td width="7%">5</td>
+    <td width="6%">1</td>
+    <td width="87%">Crystal Report Name</td>
+  </tr>
+  <tr>
+    <td width="7%">5</td>
+    <td width="6%">2</td>
+    <td width="87%">Execution Number. Each time the report function is 
+    generated, this number will be increased by 1.&nbsp; If there are several 
+    actual reports that are issued by a single report function, all of the 
+    reports prepared at the same time will have the same Execution Number.</td>
+  </tr>
+  <tr>
+    <td width="7%">6</td>
+    <td width="6%">2</td>
+    <td width="87%">Operations Period pertaining to the report.&nbsp; If the 
+    Operations Period is followed by an &quot;I&quot;, then the report was prepared after 
+    Period-End Initialization, but before Period-End Finalization.&nbsp; If the 
+    Operations Period is followed by an &quot;F&quot;, then the period was finalized by 
+    the time the report was prepared.&nbsp; If neither an &quot;I&quot; nor an &quot;F&quot; follows 
+    the Operations Period (as is the case in the example above) then the 
+    Operations Period shown was the current operations period at the time the 
+    report was prepared.</td>
+  </tr>
+</table>
+
+
+
+<p>&nbsp;</p>
+<p>The Crystal Report has the following built-in features:</p>
+<ul>
+  <li>Print to any Printer</li>
+</ul>
+<blockquote>
+  <p>Change the printer by clicking the icon with the printer and the wrench.&nbsp; 
+  Print the report by clicking the icon with the printer.&nbsp; You may print 
+  several copies at once.</p>
+</blockquote>
+<ul>
+  <li>Export to Spreadsheet, RTF, PDF, and many other Windows-application 
+  formats</li>
+</ul>
+<blockquote>
+  <p>Cick the icon with the envelope.&nbsp; Select the Windows application 
+  format, and then select the destination.&nbsp; If exporting to Excel, choose 
+  from the many versions of excel (Excel 8.0 extended is recommended).&nbsp; For 
+  destination, choose &quot;Application&quot; if you want to launch excel with the 
+  exported report appearing in the workbook, or else choose &quot;Disk File&quot; if you 
+  simply want to save the report as a workbook on your disk.</p>
+</blockquote>
+<ul>
+  <li>Find a textual expression anywhere in the report</li>
+</ul>
+<blockquote>
+  <p>Enter the text that you would like to search for, and click the icon with 
+  the binoculars.&nbsp; The first occurrence found will be shown in the report 
+  pane; click the icon again for the next occurrence. </p>
+</blockquote>
+<ul>
+  <li>Go to next page, previous page, last page, first page</li>
+</ul>
+
+
+</body>
+</html>

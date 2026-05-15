@@ -1,0 +1,722 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AF68C405-0F35-47D4-8C97-AE261B5EADFE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>RS</RootNamespace>
+    <AssemblyName>RS</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Windows</MyType>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>Off</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>RS.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>RS.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DocumentationFile>RS.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DocumentationFile>RS.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DocumentationFile>RS.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DocumentationFile>RS.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Infragistics4.Win.v25.1, Version=25.1.20251.26, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files (x86)\Infragistics\2025.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.v25.1.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinTree.v25.1, Version=25.1.20251.26, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.UltraWinToolbars.v25.1, Version=25.1.20251.26, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files (x86)\Infragistics\2025.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.UltraWinToolbars.v25.1.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinTabControl.v25.1, Version=25.1.20251.26, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files (x86)\Infragistics\2025.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.UltraWinTabControl.v25.1.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinGrid.v25.1, Version=25.1.20251.26, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files (x86)\Infragistics\2025.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.UltraWinGrid.v25.1.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinExplorerBar.v25.1, Version=25.1.20251.26, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files (x86)\Infragistics\2025.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.UltraWinExplorerBar.v25.1.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinEditors.v25.1, Version=25.1.20251.26, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files (x86)\Infragistics\2025.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.UltraWinEditors.v25.1.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinDataSource.v25.1, Version=25.1.20251.26, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.UltraWinChart.v25.1, Version=25.1.20251.26, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files (x86)\Infragistics\2025.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.UltraWinChart.v25.1.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Infragistics4.Win.Misc.v25.1, Version=25.1.20251.26, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files (x86)\Infragistics\2025.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.Misc.v25.1.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Infragistics4.Shared.v25.1, Version=25.1.20251.26, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files (x86)\Infragistics\2025.1\Windows Forms\CLR4.0\Bin\Infragistics4.Shared.v25.1.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Infragistics4.Documents.Excel.v25.1, Version=25.1.20251.26, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files (x86)\Infragistics\2025.1\Windows Forms\CLR4.0\Bin\Infragistics4.Documents.Excel.v25.1.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Infragistics4.Documents.Core.v25.1, Version=25.1.20251.26, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files (x86)\Infragistics\2025.1\Windows Forms\CLR4.0\Bin\Infragistics4.Documents.Core.v25.1.dll</HintPath>
+      <Name>Infragistics4.Documents.Core.v25.1</Name>
+    </Reference>
+    <Reference Include="Google.Apis, Version=1.70.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.1.70.0\lib\net462\Google.Apis.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Auth, Version=1.70.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.Auth.1.70.0\lib\net462\Google.Apis.Auth.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Core, Version=1.70.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.Core.1.70.0\lib\net462\Google.Apis.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Gmail.v1, Version=1.70.0.3833, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.Gmail.v1.1.70.0.3833\lib\net462\Google.Apis.Gmail.v1.dll</HintPath>
+    </Reference>
+    <Reference Include="GemBox.Spreadsheet, Version=33.3.40.1062, Culture=neutral, PublicKeyToken=b1b72c69714d4847, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Program Files (x86)\GemBox Software\GemBox.Spreadsheet 3.7\Bin\NET3X4X\GemBox.Spreadsheet.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\bin\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.1.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Program Files (x86)\Microsoft Visual Studio\Shared\SDKs\Azure\v2.9\bin\plugins\Diagnostics\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="nsoftware.IPWorks, Version=9.0.5157.0, Culture=neutral, PublicKeyToken=cdc168f89cffe9cf, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Program Files\nsoftware\IPWorks 2020 .NET Edition\lib\nsoftware.IPWorks.dll</HintPath>
+    </Reference>
+    <Reference Include="nsoftware.IPWorksEDI">
+      <HintPath>..\..\..\Program Files\nsoftware\IPWorks EDI 2020 .NET Edition\lib\net40\nsoftware.IPWorksEDI.dll</HintPath>
+    </Reference>
+    <Reference Include="nsoftware.IPWorksZip, Version=20.0.8161.0, Culture=neutral, PublicKeyToken=cdc168f89cffe9cf, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Program Files\nsoftware\IPWorks ZIP 2020 .NET Edition\lib\net40\nsoftware.IPWorksZip.dll</HintPath>
+    </Reference>
+    <Reference Include="office, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\bin\office.dll</HintPath>
+    </Reference>
+    <Reference Include="SpreadsheetGear2023.Core">
+      <HintPath>..\DLLs\SpreadsheetGear2023.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="SpreadsheetGear2023.Drawing">
+      <HintPath>..\DLLs\SpreadsheetGear2023.Drawing.dll</HintPath>
+    </Reference>
+    <Reference Include="SpreadsheetGear2023.Windows.Forms">
+      <HintPath>..\DLLs\SpreadsheetGear2023.Windows.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="UIAutomationTypes" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="ABSolution" />
+    <Import Include="Infragistics.Win" />
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="TAC" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\ABSDomain.vb" />
+    <Compile Include="Classes\ImportSheet.vb" />
+    <Compile Include="Classes\RetailExport.vb" />
+    <Compile Include="Classes\RSCFTPC1.vb" />
+    <Compile Include="Classes\RSCPRMDB.vb" />
+    <Compile Include="Forms\RSFRETLJ.Designer.vb">
+      <DependentUpon>RSFRETLJ.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\RSFRETLJ.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RSFANAL1.Designer.vb">
+      <DependentUpon>RSFANAL1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\RSFANAL1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RSFBUDRU.Designer.vb">
+      <DependentUpon>RSFBUDRU.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\RSFBUDRU.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RSFBUDRW.Designer.vb">
+      <DependentUpon>RSFBUDRW.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\RSFBUDRW.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RSFSCLS1.Designer.vb">
+      <DependentUpon>RSFSCLS1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\RSFSCLS1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RSFBUDF1.Designer.vb">
+      <DependentUpon>RSFBUDF1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\RSFBUDF1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RSFRETLI.Designer.vb">
+      <DependentUpon>RSFRETLI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\RSFRETLI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RSFSSPC1.Designer.vb">
+      <DependentUpon>RSFSSPC1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\RSFSSPC1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RSFSSPL1.Designer.vb">
+      <DependentUpon>RSFSSPL1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\RSFSSPL1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RSFCUST1.Designer.vb">
+      <DependentUpon>RSFCUST1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\RSFCUST1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RSFSYNC1.Designer.vb">
+      <DependentUpon>RSFSYNC1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\RSFSYNC1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RSFWLDI1.Designer.vb">
+      <DependentUpon>RSFWLDI1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\RSFWLDI1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RSFSIST1.Designer.vb">
+      <DependentUpon>RSFSIST1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\RSFSIST1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RSFRETLA.Designer.vb">
+      <DependentUpon>RSFRETLA.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\RSFRETLA.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RSFINBD1.designer.vb">
+      <DependentUpon>RSFINBD1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\RSFINBD1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RSFNMTMP.Designer.vb">
+      <DependentUpon>RSFNMTMP.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\RSFNMTMP.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RSFSLSA1.Designer.vb">
+      <DependentUpon>RSFSLSA1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\RSFSLSA1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RSFLGIDL.Designer.vb">
+      <DependentUpon>RSFLGIDL.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\RSFLGIDL.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RSFRETL1.Designer.vb">
+      <DependentUpon>RSFRETL1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\RSFRETL1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RSFBUDR2.Designer.vb">
+      <DependentUpon>RSFBUDR2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\RSFBUDR2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RSFSLOH1.Designer.vb">
+      <DependentUpon>RSFSLOH1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\RSFSLOH1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RSFBUDR1.Designer.vb">
+      <DependentUpon>RSFBUDR1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\RSFBUDR1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RSFCSKU1.Designer.vb">
+      <DependentUpon>RSFCSKU1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\RSFCSKU1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Reports\RSRWSUP1.Designer.vb">
+      <DependentUpon>RSRWSUP1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RSRWSUP1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\RSRBOWS1.Designer.vb">
+      <DependentUpon>RSRBOWS1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RSRBOWS1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\RSRBREV1.Designer.vb">
+      <DependentUpon>RSRBREV1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RSRBREV1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\RSRYTDW1.Designer.vb">
+      <DependentUpon>RSRYTDW1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RSRYTDW1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\RSRGOAL1.Designer.vb">
+      <DependentUpon>RSRGOAL1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RSRGOAL1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\RSRVISW1.Designer.vb">
+      <DependentUpon>RSRVISW1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RSRVISW1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\RSRRBPL1.Designer.vb">
+      <DependentUpon>RSRRBPL1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RSRRBPL1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\RSRSPRO1.Designer.vb">
+      <DependentUpon>RSRSPRO1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RSRSPRO1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\RSRYOYM1.Designer.vb">
+      <DependentUpon>RSRYOYM1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RSRYOYM1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\RSRYTDA1.Designer.vb">
+      <DependentUpon>RSRYTDA1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RSRYTDA1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\RSR13WK1.Designer.vb">
+      <DependentUpon>RSR13WK1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RSR13WK1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\RSRCOMP1.Designer.vb">
+      <DependentUpon>RSRCOMP1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RSRCOMP1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\RSRCOMPQ.Designer.vb">
+      <DependentUpon>RSRCOMPQ.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RSRCOMPQ.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\RSRFLSH1.Designer.vb">
+      <DependentUpon>RSRFLSH1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RSRFLSH1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\RSRSSTW1.Designer.vb">
+      <DependentUpon>RSRSSTW1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RSRSSTW1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\RSRBUDA1.Designer.vb">
+      <DependentUpon>RSRBUDA1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RSRBUDA1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\RSTPARM1.Designer.vb">
+      <DependentUpon>RSTPARM1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\RSTPARM1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\RSTSSPLX.Designer.vb">
+      <DependentUpon>RSTSSPLX.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\RSTSSPLX.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\RSTASIN1.Designer.vb">
+      <DependentUpon>RSTASIN1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\RSTASIN1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\RSFRETLJ.resx">
+      <DependentUpon>RSFRETLJ.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RSFANAL1.resx">
+      <DependentUpon>RSFANAL1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RSFBUDRU.resx">
+      <DependentUpon>RSFBUDRU.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RSFBUDRW.resx">
+      <DependentUpon>RSFBUDRW.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RSFSCLS1.resx">
+      <DependentUpon>RSFSCLS1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RSFBUDF1.resx">
+      <DependentUpon>RSFBUDF1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RSFRETLI.resx">
+      <DependentUpon>RSFRETLI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RSFSSPC1.resx">
+      <DependentUpon>RSFSSPC1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RSFSSPL1.resx">
+      <DependentUpon>RSFSSPL1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RSFCUST1.resx">
+      <DependentUpon>RSFCUST1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RSFSYNC1.resx">
+      <DependentUpon>RSFSYNC1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RSFWLDI1.resx">
+      <DependentUpon>RSFWLDI1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RSFSIST1.resx">
+      <DependentUpon>RSFSIST1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RSFRETLA.resx">
+      <DependentUpon>RSFRETLA.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RSFINBD1.resx">
+      <DependentUpon>RSFINBD1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RSFNMTMP.resx">
+      <DependentUpon>RSFNMTMP.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RSFSLSA1.resx">
+      <DependentUpon>RSFSLSA1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RSFLGIDL.resx">
+      <DependentUpon>RSFLGIDL.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RSFRETL1.resx">
+      <DependentUpon>RSFRETL1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RSFBUDR2.resx">
+      <DependentUpon>RSFBUDR2.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RSFSLOH1.resx">
+      <DependentUpon>RSFSLOH1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RSFBUDR1.resx">
+      <DependentUpon>RSFBUDR1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RSFCSKU1.resx">
+      <DependentUpon>RSFCSKU1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\licenses.licx" />
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RSRWSUP1.resx">
+      <DependentUpon>RSRWSUP1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RSRBOWS1.resx">
+      <DependentUpon>RSRBOWS1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RSRBREV1.resx">
+      <DependentUpon>RSRBREV1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RSRYTDW1.resx">
+      <DependentUpon>RSRYTDW1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RSRGOAL1.resx">
+      <DependentUpon>RSRGOAL1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RSRVISW1.resx">
+      <DependentUpon>RSRVISW1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RSRRBPL1.resx">
+      <DependentUpon>RSRRBPL1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RSRSPRO1.resx">
+      <DependentUpon>RSRSPRO1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RSRYOYM1.resx">
+      <DependentUpon>RSRYOYM1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RSRYTDA1.resx">
+      <DependentUpon>RSRYTDA1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RSR13WK1.resx">
+      <DependentUpon>RSR13WK1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RSRCOMP1.resx">
+      <DependentUpon>RSRCOMP1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RSRCOMPQ.resx">
+      <DependentUpon>RSRCOMPQ.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RSRFLSH1.resx">
+      <DependentUpon>RSRFLSH1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RSRSSTW1.resx">
+      <DependentUpon>RSRSSTW1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RSRBUDA1.resx">
+      <DependentUpon>RSRBUDA1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\RSTPARM1.resx">
+      <DependentUpon>RSTPARM1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\RSTSSPLX.resx">
+      <DependentUpon>RSTSSPLX.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\RSTASIN1.resx">
+      <DependentUpon>RSTASIN1.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ABSCS\ABSCS.csproj">
+      <Project>{FEDE76DB-DB57-4642-A943-748898F4CC9E}</Project>
+      <Name>ABSCS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ABSC\ABSC.vbproj">
+      <Project>{faf62e09-6f1d-4545-abd5-e95f3fd93f9a}</Project>
+      <Name>ABSC</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ABSX\ABSX.vbproj">
+      <Project>{BAA59583-9614-4718-BCA5-FA3A1D7638A7}</Project>
+      <Name>ABSX</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ABS\ABS.vbproj">
+      <Project>{8AC20144-AD3B-4B63-B4CE-E14FAA115DD2}</Project>
+      <Name>ABS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TAC\TAC.vbproj">
+      <Project>{F8DA3299-4A2C-473D-9AEE-C00295788E43}</Project>
+      <Name>TAC</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DataSets\" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

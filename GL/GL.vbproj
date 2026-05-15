@@ -1,0 +1,651 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1FF166EC-995A-433C-AA50-AF7E07134767}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>GL</RootNamespace>
+    <AssemblyName>GL</AssemblyName>
+    <MyType>Windows</MyType>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>GL.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>GL.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DocumentationFile>GL.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DocumentationFile>GL.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DocumentationFile>GL.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DocumentationFile>GL.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Infragistics4.Win.v25.1, Version=25.1.20251.26, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files (x86)\Infragistics\2025.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.v25.1.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinTree.v25.1, Version=25.1.20251.26, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files (x86)\Infragistics\2025.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.UltraWinTree.v25.1.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinToolbars.v25.1, Version=25.1.20251.26, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files (x86)\Infragistics\2025.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.UltraWinToolbars.v25.1.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinTabControl.v25.1, Version=25.1.20251.26, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files (x86)\Infragistics\2025.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.UltraWinTabControl.v25.1.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinMaskedEdit.v25.1, Version=25.1.20251.26, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files (x86)\Infragistics\2025.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.UltraWinMaskedEdit.v25.1.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinGrid.v25.1, Version=25.1.20251.26, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files (x86)\Infragistics\2025.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.UltraWinGrid.v25.1.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinExplorerBar.v25.1, Version=25.1.20251.26, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files (x86)\Infragistics\2025.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.UltraWinExplorerBar.v25.1.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinEditors.v25.1, Version=25.1.20251.26, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files (x86)\Infragistics\2025.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.UltraWinEditors.v25.1.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Infragistics4.Win.Misc.v25.1, Version=25.1.20251.26, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files (x86)\Infragistics\2025.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.Misc.v25.1.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Infragistics4.Shared.v25.1, Version=25.1.20251.26, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files (x86)\Infragistics\2025.1\Windows Forms\CLR4.0\Bin\Infragistics4.Shared.v25.1.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Infragistics4.Documents.Excel.v25.1, Version=25.1.20251.26, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files (x86)\Infragistics\2025.1\Windows Forms\CLR4.0\Bin\Infragistics4.Documents.Excel.v25.1.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Infragistics4.Documents.Core.v25.1, Version=25.1.20251.26, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files (x86)\Infragistics\2025.1\Windows Forms\CLR4.0\Bin\Infragistics4.Documents.Core.v25.1.dll</HintPath>
+      <Name>Infragistics4.Documents.Core.v25.1</Name>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\bin\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json.Bson, Version=1.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.Bson.1.0.2\lib\net45\Newtonsoft.Json.Bson.dll</HintPath>
+    </Reference>
+    <Reference Include="SpreadsheetGear2023.Core">
+      <HintPath>..\DLLs\SpreadsheetGear2023.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="SpreadsheetGear2023.Drawing">
+      <HintPath>..\DLLs\SpreadsheetGear2023.Drawing.dll</HintPath>
+    </Reference>
+    <Reference Include="SpreadsheetGear2023.Windows.Forms">
+      <HintPath>..\DLLs\SpreadsheetGear2023.Windows.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=6.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.6.0.0\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.3\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="ABSolution" />
+    <Import Include="Infragistics.Win" />
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="TAC" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\GLCJPMC1.vb" />
+    <Compile Include="Classes\GLCMAIN1.vb" />
+    <Compile Include="Forms\GLFBREC1.Designer.vb">
+      <DependentUpon>GLFBREC1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\GLFBREC1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\GLFBUDM1.Designer.vb">
+      <DependentUpon>GLFBUDM1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\GLFBUDM1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\GLFANAL1.Designer.vb">
+      <DependentUpon>GLFANAL1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\GLFANAL1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\GLFFINM1.Designer.vb">
+      <DependentUpon>GLFFINM1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\GLFFINM1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\GLFGPAN1.Designer.vb">
+      <DependentUpon>GLFGPAN1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\GLFGPAN1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\GLFDIST1.Designer.vb">
+      <DependentUpon>GLFDIST1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\GLFDIST1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\GLFXACP1.Designer.vb">
+      <DependentUpon>GLFXACP1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\GLFXACP1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\GLRADTL1.Designer.vb">
+      <DependentUpon>GLRADTL1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\GLRADTL1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\GLRASUM1.Designer.vb">
+      <DependentUpon>GLRASUM1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\GLRASUM1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\GLRCREC1.Designer.vb">
+      <DependentUpon>GLRCREC1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\GLRCREC1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\GLRJRNL1.Designer.vb">
+      <DependentUpon>GLRJRNL1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\GLRJRNL1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\GLRLIST1.Designer.vb">
+      <DependentUpon>GLRLIST1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\GLRLIST1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\GLRPROF0.Designer.vb">
+      <DependentUpon>GLRPROF0.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\GLRPROF0.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\GLRSTMT1.Designer.vb">
+      <DependentUpon>GLRSTMT1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\GLRSTMT1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\GLRPROF1.Designer.vb">
+      <DependentUpon>GLRPROF1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\GLRPROF1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\GLRTBAL1.Designer.vb">
+      <DependentUpon>GLRTBAL1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\GLRTBAL1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\GLRDTLA1.Designer.vb">
+      <DependentUpon>GLRDTLA1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\GLRDTLA1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\GLTACCT1.Designer.vb">
+      <DependentUpon>GLTACCT1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\GLTACCT1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\GLTBANK1.Designer.vb">
+      <DependentUpon>GLTBANK1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\GLTBANK1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\GLTCALC1.Designer.vb">
+      <DependentUpon>GLTCALC1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\GLTCALC1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\GLTCLAS1.Designer.vb">
+      <DependentUpon>GLTCLAS1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\GLTCLAS1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\GLTCLAY1.Designer.vb">
+      <DependentUpon>GLTCLAY1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\GLTCLAY1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\GLTDIST1.Designer.vb">
+      <DependentUpon>GLTDIST1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\GLTDIST1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\GLTPARM1.Designer.vb">
+      <DependentUpon>GLTPARM1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\GLTPARM1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\GLTSEGM1.Designer.vb">
+      <DependentUpon>GLTSEGM1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\GLTSEGM1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\GLTPROF2.Designer.vb">
+      <DependentUpon>GLTPROF2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\GLTPROF2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\GLTPROF1.Designer.vb">
+      <DependentUpon>GLTPROF1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\GLTPROF1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\GLTCCTR1.Designer.vb">
+      <DependentUpon>GLTCCTR1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\GLTCCTR1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\GLTTYPE1.Designer.vb">
+      <DependentUpon>GLTTYPE1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\GLTTYPE1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\GLFACTI1.Designer.vb">
+      <DependentUpon>GLFACTI1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\GLFACTI1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\GLFJRNL1.Designer.vb">
+      <DependentUpon>GLFJRNL1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\GLFJRNL1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\GLFPEND1.Designer.vb">
+      <DependentUpon>GLFPEND1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\GLFPEND1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\GLFTBAL1.Designer.vb">
+      <DependentUpon>GLFTBAL1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\GLFTBAL1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Tables\GLTSEGG1.Designer.vb">
+      <DependentUpon>GLTSEGG1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\GLTSEGG1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\GLTDSTR1.Designer.vb">
+      <DependentUpon>GLTDSTR1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\GLTDSTR1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\GLFBREC1.resx">
+      <DependentUpon>GLFBREC1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\GLFBUDM1.resx">
+      <DependentUpon>GLFBUDM1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\GLFANAL1.resx">
+      <DependentUpon>GLFANAL1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\GLFFINM1.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>GLFFINM1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\GLFGPAN1.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>GLFGPAN1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\GLFDIST1.resx">
+      <DependentUpon>GLFDIST1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\GLFXACP1.resx">
+      <DependentUpon>GLFXACP1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\GLRADTL1.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>GLRADTL1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\GLRASUM1.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>GLRASUM1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\GLRCREC1.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>GLRCREC1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\GLRJRNL1.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>GLRJRNL1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\GLRLIST1.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>GLRLIST1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\GLRPROF0.resx">
+      <DependentUpon>GLRPROF0.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\GLRSTMT1.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>GLRSTMT1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\GLRPROF1.resx">
+      <DependentUpon>GLRPROF1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\GLRTBAL1.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>GLRTBAL1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\GLRDTLA1.resx">
+      <DependentUpon>GLRDTLA1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\GLTACCT1.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>GLTACCT1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\GLTBANK1.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>GLTBANK1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\GLTCALC1.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>GLTCALC1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\GLTCLAS1.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>GLTCLAS1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\GLTCLAY1.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>GLTCLAY1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\GLTDIST1.resx">
+      <DependentUpon>GLTDIST1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\GLTPARM1.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>GLTPARM1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\GLTSEGM1.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>GLTSEGM1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\GLTPROF2.resx">
+      <DependentUpon>GLTPROF2.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\GLTPROF1.resx">
+      <DependentUpon>GLTPROF1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\GLTCCTR1.resx">
+      <DependentUpon>GLTCCTR1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\GLTTYPE1.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>GLTTYPE1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\GLFACTI1.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>GLFACTI1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\GLFJRNL1.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>GLFJRNL1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\GLFPEND1.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>GLFPEND1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\GLFTBAL1.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>GLFTBAL1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\licenses.licx" />
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\GLTSEGG1.resx">
+      <DependentUpon>GLTSEGG1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\GLTDSTR1.resx">
+      <DependentUpon>GLTDSTR1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{5AD368F8-9AD3-4E4C-97D8-1F4F1C124158}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Resources\branch_element.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ABSCS\ABSCS.csproj">
+      <Project>{FEDE76DB-DB57-4642-A943-748898F4CC9E}</Project>
+      <Name>ABSCS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ABSX\ABSX.vbproj">
+      <Project>{BAA59583-9614-4718-BCA5-FA3A1D7638A7}</Project>
+      <Name>ABSX</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ABS\ABS.vbproj">
+      <Project>{8AC20144-AD3B-4B63-B4CE-E14FAA115DD2}</Project>
+      <Name>ABS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TAC\TAC.vbproj">
+      <Project>{F8DA3299-4A2C-473D-9AEE-C00295788E43}</Project>
+      <Name>TAC</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DataSets\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

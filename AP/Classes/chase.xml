@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Document xmlns="urn:iso:std:iso:20022:tech:xsd:pain.001.001.03" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<CstmrCdtTrfInitn>
+		<GrpHdr>
+			<MsgId>YOURFILECONTROLNUMBER001</MsgId>
+			<CreDtTm>2022-06-05T08:45:51</CreDtTm>
+			<NbOfTxs>2</NbOfTxs>
+			<CtrlSum>2300.00</CtrlSum>
+			<InitgPty>
+				<Nm>YOUR COMPANY NAME</Nm>
+			</InitgPty>
+		</GrpHdr>
+		<PmtInf>
+			<PmtInfId>BATCHREF1</PmtInfId>
+			<PmtMtd>TRF</PmtMtd>
+			<NbOfTxs>2</NbOfTxs>
+			<CtrlSum>2300.00</CtrlSum>
+			<PmtTpInf>
+				<SvcLvl>
+					<Cd>NURG</Cd>
+				</SvcLvl>
+				<LclInstrm>
+					<Cd>PPD</Cd>
+				</LclInstrm>
+                <CtgyPurp>
+                    <Prtry>ACCTVERIFY</Prtry>
+                </CtgyPurp>
+			</PmtTpInf>
+			<ReqdExctnDt>2022-06-06</ReqdExctnDt>
+			<Dbtr>
+				<Nm>YOUR COMPANY NAME</Nm>
+				<PstlAdr>
+					<Ctry>US</Ctry>
+				</PstlAdr>
+				<Id>
+					<OrgId>
+						<Othr>
+							<Id>11133445</Id>
+							<SchmeNm>
+								<Prtry>JPMCOID</Prtry>
+							</SchmeNm>
+						</Othr>
+					</OrgId>
+				</Id>
+			</Dbtr>
+			<DbtrAcct>
+				<Id>
+					<Othr>
+						<Id>1234567890</Id>
+					</Othr>
+				</Id>
+				<Ccy>USD</Ccy>
+			</DbtrAcct>
+			<DbtrAgt>
+				<FinInstnId>
+					<BIC>CHASUS33</BIC>
+					<ClrSysMmbId>
+						<MmbId>021000021</MmbId>
+					</ClrSysMmbId>
+					<PstlAdr>
+						<Ctry>US</Ctry>
+					</PstlAdr>
+				</FinInstnId>
+			</DbtrAgt>
+			<CdtTrfTxInf>
+				<PmtId>
+					<InstrId>YOURSYSTEMINSTRUCTIONIDPMT1</InstrId>
+					<EndToEndId>YOURPAYMENTREFERENCENBR1</EndToEndId>
+				</PmtId>
+				<Amt>
+					<InstdAmt Ccy="USD">1250.00</InstdAmt>
+				</Amt>
+				<CdtrAgt>
+					<FinInstnId>
+						<ClrSysMmbId>
+							<MmbId>322070019</MmbId>
+						</ClrSysMmbId>
+						<Nm>CITIBANK NA</Nm>
+						<PstlAdr>
+							<TwnNm>LOS ANGELES</TwnNm>
+							<CtrySubDvsn>CA</CtrySubDvsn>
+							<Ctry>US</Ctry>
+						</PstlAdr>
+					</FinInstnId>
+				</CdtrAgt>
+				<Cdtr>
+					<Nm>PETER PIPER</Nm>
+					<PstlAdr>
+						<Ctry>US</Ctry>
+						<AdrLine>14 MAIN STREET</AdrLine>
+						<AdrLine>SUITE 141</AdrLine>
+						<AdrLine>LOS ANGELES, CA</AdrLine>
+					</PstlAdr>
+				</Cdtr>
+				<CdtrAcct>
+					<Id>
+						<Othr>
+							<Id>987654321</Id>
+						</Othr>
+					</Id>
+					<Tp>
+						<Cd>SVGS</Cd>
+					</Tp>
+				</CdtrAcct>
+			</CdtTrfTxInf>
+			<CdtTrfTxInf>
+				<PmtId>
+					<InstrId>YOURSYSTEMINSTRUCTIONIDPMT2</InstrId>
+					<EndToEndId>YOURPAYMENTREFERENCENBR2</EndToEndId>
+				</PmtId>
+				<PmtTpInf>
+					<LclInstrm>
+						<Cd>CCD</Cd>
+					</LclInstrm>
+				</PmtTpInf>
+				<Amt>
+					<InstdAmt Ccy="USD">1050.00</InstdAmt>
+				</Amt>
+				<CdtrAgt>
+					<FinInstnId>
+						<ClrSysMmbId>
+							<MmbId>121000248</MmbId>
+						</ClrSysMmbId>
+						<Nm>WELLS FARGO BANK NA</Nm>
+						<PstlAdr>
+							<TwnNm>LOS ANGELES</TwnNm>
+							<CtrySubDvsn>CA</CtrySubDvsn>
+							<Ctry>US</Ctry>
+						</PstlAdr>
+					</FinInstnId>
+				</CdtrAgt>
+				<Cdtr>
+					<Nm>ACCOUNTS PAYABLE VENDOR1</Nm>
+					<PstlAdr>
+						<Ctry>US</Ctry>
+						<AdrLine>TECHNOLOGY PARK</AdrLine>
+						<AdrLine>BUILDING 12</AdrLine>
+						<AdrLine>LOS ANGELES, CA</AdrLine>
+					</PstlAdr>
+				</Cdtr>
+				<CdtrAcct>
+					<Id>
+						<Othr>
+							<Id>1234123111</Id>
+						</Othr>
+					</Id>
+					<Tp>
+						<Cd>CASH</Cd>
+					</Tp>
+				</CdtrAcct>
+				<RmtInf>
+					<Ustrd>OPTNL REMITTANCE - JPM USES 1ST 71 CHARACTERS ON CCD+ AND PPD+ PAYMENTS</Ustrd>
+				</RmtInf>
+			</CdtTrfTxInf>
+		</PmtInf>
+	</CstmrCdtTrfInitn>
+</Document>

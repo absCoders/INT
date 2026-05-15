@@ -1,0 +1,1011 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{84957AC3-4F28-4557-B9BA-457041397E67}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <StartupObject>
+    </StartupObject>
+    <RootNamespace>IC</RootNamespace>
+    <AssemblyName>IC</AssemblyName>
+    <MyType>Windows</MyType>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>IC.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>IC.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DocumentationFile>IC.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DocumentationFile>IC.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Text</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DocumentationFile>IC.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DocumentationFile>IC.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Infragistics4.Win.v25.1, Version=25.1.20251.26, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files (x86)\Infragistics\2025.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.v25.1.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinTree.v25.1, Version=25.1.20251.26, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.UltraWinToolbars.v25.1, Version=25.1.20251.26, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files (x86)\Infragistics\2025.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.UltraWinToolbars.v25.1.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinTabControl.v25.1, Version=25.1.20251.26, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files (x86)\Infragistics\2025.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.UltraWinTabControl.v25.1.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinPivotGrid.v25.1, Version=25.1.20251.26, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.UltraWinMaskedEdit.v25.1, Version=25.1.20251.26, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files (x86)\Infragistics\2025.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.UltraWinMaskedEdit.v25.1.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinGrid.v25.1, Version=25.1.20251.26, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files (x86)\Infragistics\2025.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.UltraWinGrid.v25.1.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinExplorerBar.v25.1, Version=25.1.20251.26, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files (x86)\Infragistics\2025.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.UltraWinExplorerBar.v25.1.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinEditors.v25.1, Version=25.1.20251.26, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files (x86)\Infragistics\2025.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.UltraWinEditors.v25.1.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinDataSource.v25.1, Version=25.1.20251.26, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.UltraWinChart.v25.1, Version=25.1.20251.26, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files (x86)\Infragistics\2025.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.UltraWinChart.v25.1.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Infragistics4.Win.Misc.v25.1, Version=25.1.20251.26, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files (x86)\Infragistics\2025.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.Misc.v25.1.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Infragistics4.Shared.v25.1, Version=25.1.20251.26, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files (x86)\Infragistics\2025.1\Windows Forms\CLR4.0\Bin\Infragistics4.Shared.v25.1.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Infragistics4.Olap.DataSource.Xmla.v25.1, Version=25.1.20251.26, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Olap.DataSource.v25.1, Version=25.1.20251.26, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Olap.DataSource.Mdx.v25.1, Version=25.1.20251.26, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Olap.DataProvider.Adomd.v25.1, Version=25.1.20251.26, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Olap.Core.v25.1, Version=25.1.20251.26, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Documents.Excel.v25.1, Version=25.1.20251.26, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files (x86)\Infragistics\2025.1\Windows Forms\CLR4.0\Bin\Infragistics4.Documents.Excel.v25.1.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Infragistics4.Documents.Core.v25.1, Version=25.1.20251.26, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files (x86)\Infragistics\2025.1\Windows Forms\CLR4.0\Bin\Infragistics4.Documents.Core.v25.1.dll</HintPath>
+      <Name>Infragistics4.Documents.Core.v25.1</Name>
+    </Reference>
+    <Reference Include="Dropbox.Api, Version=7.0.0.0, Culture=neutral, PublicKeyToken=310f0e82fbb45d01, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dropbox.Api.7.0.0\lib\netstandard2.0\Dropbox.Api.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="SpreadsheetGear2023.Core">
+      <HintPath>..\DLLs\SpreadsheetGear2023.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="SpreadsheetGear2023.Drawing">
+      <HintPath>..\DLLs\SpreadsheetGear2023.Drawing.dll</HintPath>
+    </Reference>
+    <Reference Include="SpreadsheetGear2023.Windows.Forms">
+      <HintPath>..\DLLs\SpreadsheetGear2023.Windows.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="UIAutomationTypes" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="ABSolution" />
+    <Import Include="Infragistics.Win" />
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="TAC" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Forms\ICFCOSTP.Designer.vb">
+      <DependentUpon>ICFCOSTP.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ICFCOSTP.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ICFCSTW1.Designer.vb">
+      <DependentUpon>ICFCSTW1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ICFCSTW1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ICFREASW.Designer.vb">
+      <DependentUpon>ICFREASW.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ICFREASW.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ICFITEMM.Designer.vb">
+      <DependentUpon>ICFITEMM.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ICFITEMM.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ICFRETL1.Designer.vb">
+      <DependentUpon>ICFRETL1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ICFRETL1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ICFGLIC1.Designer.vb">
+      <DependentUpon>ICFGLIC1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ICFGLIC1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ICFIADJ1.Designer.vb">
+      <DependentUpon>ICFIADJ1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ICFIADJ1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ICFINVA1.Designer.vb">
+      <DependentUpon>ICFINVA1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ICFINVA1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ICFIRTV1.Designer.vb">
+      <DependentUpon>ICFIRTV1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ICFIRTV1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ICFIRTVF.Designer.vb">
+      <DependentUpon>ICFIRTVF.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ICFIRTVF.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ICFPINV1.Designer.vb">
+      <DependentUpon>ICFPINV1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ICFPINV1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ICFIREC1.Designer.vb">
+      <DependentUpon>ICFIREC1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ICFIREC1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ICFPHYS1.Designer.vb">
+      <DependentUpon>ICFPHYS1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ICFPHYS1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ICFPHYC1.Designer.vb">
+      <DependentUpon>ICFPHYC1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ICFPHYC1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ICFITEMX.Designer.vb">
+      <DependentUpon>ICFITEMX.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ICFITEMX.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ICFCOST1.Designer.vb">
+      <DependentUpon>ICFCOST1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ICFCOST1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ICFIXFR1.Designer.vb">
+      <DependentUpon>ICFIXFR1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ICFIXFR1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ICFSHIP1.Designer.vb">
+      <DependentUpon>ICFSHIP1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ICFSHIP1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ICFSTAT1.Designer.vb">
+      <DependentUpon>ICFSTAT1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ICFSTAT1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ICFINVTY.Designer.vb">
+      <DependentUpon>ICFINVTY.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ICFINVTY.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ICFVARS1.Designer.vb">
+      <DependentUpon>ICFVARS1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ICFVARS1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ICFXFR3P.Designer.vb">
+      <DependentUpon>ICFXFR3P.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ICFXFR3P.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ICFSLPI1.Designer.vb">
+      <DependentUpon>ICFSLPI1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ICFSLPI1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\ICRIRTV1.Designer.vb">
+      <DependentUpon>ICRIRTV1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ICRIRTV1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\ICRLIST1.Designer.vb">
+      <DependentUpon>ICRLIST1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ICRLIST1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\ICRIXFR1.Designer.vb">
+      <DependentUpon>ICRIXFR1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ICRIXFR1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\ICRLOTH1.Designer.vb">
+      <DependentUpon>ICRLOTH1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ICRLOTH1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\ICRPHYV1.Designer.vb">
+      <DependentUpon>ICRPHYV1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ICRPHYV1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\ICRIADJ1.Designer.vb">
+      <DependentUpon>ICRIADJ1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ICRIADJ1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\ICRIREC1.Designer.vb">
+      <DependentUpon>ICRIREC1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ICRIREC1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\ICRISTA1.Designer.vb">
+      <DependentUpon>ICRISTA1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ICRISTA1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\ICRITEM1.Designer.vb">
+      <DependentUpon>ICRITEM1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ICRITEM1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\ICRRVAL1.Designer.vb">
+      <DependentUpon>ICRRVAL1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ICRRVAL1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\ICRIVAR1.Designer.vb">
+      <DependentUpon>ICRIVAR1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ICRIVAR1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\ICRRVAR1.Designer.vb">
+      <DependentUpon>ICRRVAR1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ICRRVAR1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\ICRVDEF1.Designer.vb">
+      <DependentUpon>ICRVDEF1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ICRVDEF1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\ICT3PLB2.Designer.vb">
+      <DependentUpon>ICT3PLB2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\ICT3PLB2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\ICTARTI1.Designer.vb">
+      <DependentUpon>ICTARTI1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\ICTARTI1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\ICTCOMM1.Designer.vb">
+      <DependentUpon>ICTCOMM1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\ICTCOMM1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\ICTHMAT1.Designer.vb">
+      <DependentUpon>ICTHMAT1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\ICTHMAT1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\ICTITEMA.Designer.vb">
+      <DependentUpon>ICTITEMA.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\ICTITEMA.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\ICTFRTC1.Designer.vb">
+      <DependentUpon>ICTFRTC1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\ICTFRTC1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\ICTMATLC.Designer.vb">
+      <DependentUpon>ICTMATLC.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\ICTMATLC.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\ICTMATLB.Designer.vb">
+      <DependentUpon>ICTMATLB.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\ICTMATLB.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\ICTMATLA.Designer.vb">
+      <DependentUpon>ICTMATLA.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\ICTMATLA.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\ICTCOLL0.Designer.vb">
+      <DependentUpon>ICTCOLL0.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\ICTCOLL0.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\ICTCOLRN.Designer.vb">
+      <DependentUpon>ICTCOLRN.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\ICTCOLRN.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\ICTCOST1.Designer.vb">
+      <DependentUpon>ICTCOST1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\ICTCOST1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\ICTDEPT1.Designer.vb">
+      <DependentUpon>ICTDEPT1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\ICTDEPT1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\ICRIVAL1.Designer.vb">
+      <DependentUpon>ICRIVAL1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ICRIVAL1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\ICTBRAN1.Designer.vb">
+      <DependentUpon>ICTBRAN1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\ICTBRAN1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\ICTCATG1.Designer.vb">
+      <DependentUpon>ICTCATG1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\ICTCATG1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\ICTCLAS1.Designer.vb">
+      <DependentUpon>ICTCLAS1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\ICTCLAS1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\ICTCOLL1.Designer.vb">
+      <DependentUpon>ICTCOLL1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\ICTCOLL1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\ICTCOLR1.Designer.vb">
+      <DependentUpon>ICTCOLR1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\ICTCOLR1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\ICTITEM1.Designer.vb">
+      <DependentUpon>ICTITEM1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\ICTITEM1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\ICTMATL1.Designer.vb">
+      <DependentUpon>ICTMATL1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\ICTMATL1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\ICTMATL2.Designer.vb">
+      <DependentUpon>ICTMATL2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\ICTMATL2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\ICTNEWS1.Designer.vb">
+      <DependentUpon>ICTNEWS1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\ICTNEWS1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\ICTPARM1.Designer.vb">
+      <DependentUpon>ICTPARM1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\ICTPARM1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\ICT3PLB1.Designer.vb">
+      <DependentUpon>ICT3PLB1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\ICT3PLB1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\ICTPORT1.Designer.vb">
+      <DependentUpon>ICTPORT1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\ICTPORT1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\ICTPROD0.Designer.vb">
+      <DependentUpon>ICTPROD0.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\ICTPROD0.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\ICTPROD1.Designer.vb">
+      <DependentUpon>ICTPROD1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\ICTPROD1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\ICTPRPT1.Designer.vb">
+      <DependentUpon>ICTPRPT1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\ICTPRPT1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\ICTCATA1.Designer.vb">
+      <DependentUpon>ICTCATA1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\ICTCATA1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\ICTREAS1.Designer.vb">
+      <DependentUpon>ICTREAS1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\ICTREAS1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\ICTSEAS1.Designer.vb">
+      <DependentUpon>ICTSEAS1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\ICTSEAS1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\ICTSIZE1.Designer.vb">
+      <DependentUpon>ICTSIZE1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\ICTSIZE1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\ICTSIZEN.Designer.vb">
+      <DependentUpon>ICTSIZEN.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\ICTSIZEN.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\ICTSLCT1.Designer.vb">
+      <DependentUpon>ICTSLCT1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\ICTSLCT1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\ICTTRFC1.Designer.vb">
+      <DependentUpon>ICTTRFC1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\ICTTRFC1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\ICTTYPE1.Designer.vb">
+      <DependentUpon>ICTTYPE1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\ICTTYPE1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\ICTUOMF1.Designer.vb">
+      <DependentUpon>ICTUOMF1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\ICTUOMF1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\ICTVART1.Designer.vb">
+      <DependentUpon>ICTVART1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\ICTVART1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\ICTVARTS.Designer.vb">
+      <DependentUpon>ICTVARTS.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\ICTVARTS.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\ICTWHSE1.Designer.vb">
+      <DependentUpon>ICTWHSE1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\ICTWHSE1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Tables\ICTCLST1.Designer.vb">
+      <DependentUpon>ICTCLST1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\ICTCLST1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\ICTCCLS1.Designer.vb">
+      <DependentUpon>ICTCCLS1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\ICTCCLS1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\ICFCOSTP.resx">
+      <DependentUpon>ICFCOSTP.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ICFCSTW1.resx">
+      <DependentUpon>ICFCSTW1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ICFREASW.resx">
+      <DependentUpon>ICFREASW.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ICFITEMM.resx">
+      <DependentUpon>ICFITEMM.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ICFRETL1.resx">
+      <DependentUpon>ICFRETL1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ICFGLIC1.resx">
+      <DependentUpon>ICFGLIC1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ICFIADJ1.resx">
+      <DependentUpon>ICFIADJ1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ICFINVA1.resx">
+      <DependentUpon>ICFINVA1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ICFIRTV1.resx">
+      <DependentUpon>ICFIRTV1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ICFIRTVF.resx">
+      <DependentUpon>ICFIRTVF.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ICFPINV1.resx">
+      <DependentUpon>ICFPINV1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ICFIREC1.resx">
+      <DependentUpon>ICFIREC1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ICFPHYS1.resx">
+      <DependentUpon>ICFPHYS1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ICFPHYC1.resx">
+      <DependentUpon>ICFPHYC1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ICFITEMX.resx">
+      <DependentUpon>ICFITEMX.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ICFCOST1.resx">
+      <DependentUpon>ICFCOST1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ICFIXFR1.resx">
+      <DependentUpon>ICFIXFR1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ICFSHIP1.resx">
+      <DependentUpon>ICFSHIP1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ICFSTAT1.resx">
+      <DependentUpon>ICFSTAT1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ICFINVTY.resx">
+      <DependentUpon>ICFINVTY.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ICFVARS1.resx">
+      <DependentUpon>ICFVARS1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ICFXFR3P.resx">
+      <DependentUpon>ICFXFR3P.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ICFSLPI1.resx">
+      <DependentUpon>ICFSLPI1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ICRIRTV1.resx">
+      <DependentUpon>ICRIRTV1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ICRITEM1.resx">
+      <DependentUpon>ICRITEM1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ICRLIST1.resx">
+      <DependentUpon>ICRLIST1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ICRIXFR1.resx">
+      <DependentUpon>ICRIXFR1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ICRLOTH1.resx">
+      <DependentUpon>ICRLOTH1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ICRPHYV1.resx">
+      <DependentUpon>ICRPHYV1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ICRIADJ1.resx">
+      <DependentUpon>ICRIADJ1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ICRIREC1.resx">
+      <DependentUpon>ICRIREC1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ICRISTA1.resx">
+      <DependentUpon>ICRISTA1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ICRRVAL1.resx">
+      <DependentUpon>ICRRVAL1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ICRIVAR1.resx">
+      <DependentUpon>ICRIVAR1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ICRRVAR1.resx">
+      <DependentUpon>ICRRVAR1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ICRVDEF1.resx">
+      <DependentUpon>ICRVDEF1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\ICT3PLB2.resx">
+      <DependentUpon>ICT3PLB2.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\ICTARTI1.resx">
+      <DependentUpon>ICTARTI1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\ICTCOMM1.resx">
+      <DependentUpon>ICTCOMM1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\ICTHMAT1.resx">
+      <DependentUpon>ICTHMAT1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\ICTITEMA.resx">
+      <DependentUpon>ICTITEMA.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\ICTFRTC1.resx">
+      <DependentUpon>ICTFRTC1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\ICTMATLC.resx">
+      <DependentUpon>ICTMATLC.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\ICTMATLB.resx">
+      <DependentUpon>ICTMATLB.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\ICTMATLA.resx">
+      <DependentUpon>ICTMATLA.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\ICTCOLL0.resx">
+      <DependentUpon>ICTCOLL0.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\ICTCOLRN.resx">
+      <DependentUpon>ICTCOLRN.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\ICTCOST1.resx">
+      <DependentUpon>ICTCOST1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\ICTDEPT1.resx">
+      <DependentUpon>ICTDEPT1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ICRIVAL1.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ICRIVAL1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\ICTBRAN1.resx">
+      <DependentUpon>ICTBRAN1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\ICTCATG1.resx">
+      <DependentUpon>ICTCATG1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\ICTCLAS1.resx">
+      <DependentUpon>ICTCLAS1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\ICTCOLL1.resx">
+      <DependentUpon>ICTCOLL1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\ICTCOLR1.resx">
+      <DependentUpon>ICTCOLR1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\ICTITEM1.resx">
+      <DependentUpon>ICTITEM1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\ICTMATL1.resx">
+      <DependentUpon>ICTMATL1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\ICTMATL2.resx">
+      <DependentUpon>ICTMATL2.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\ICTNEWS1.resx">
+      <DependentUpon>ICTNEWS1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\ICTPARM1.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ICTPARM1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\ICT3PLB1.resx">
+      <DependentUpon>ICT3PLB1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\ICTPORT1.resx">
+      <DependentUpon>ICTPORT1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\ICTPROD0.resx">
+      <DependentUpon>ICTPROD0.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\ICTPROD1.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ICTPROD1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\ICTPRPT1.resx">
+      <DependentUpon>ICTPRPT1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\ICTCATA1.resx">
+      <DependentUpon>ICTCATA1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\ICTREAS1.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ICTREAS1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\ICTSEAS1.resx">
+      <DependentUpon>ICTSEAS1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\ICTSIZE1.resx">
+      <DependentUpon>ICTSIZE1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\ICTSIZEN.resx">
+      <DependentUpon>ICTSIZEN.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\ICTSLCT1.resx">
+      <DependentUpon>ICTSLCT1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\ICTTRFC1.resx">
+      <DependentUpon>ICTTRFC1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\ICTTYPE1.resx">
+      <DependentUpon>ICTTYPE1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\ICTUOMF1.resx">
+      <DependentUpon>ICTUOMF1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\ICTVART1.resx">
+      <DependentUpon>ICTVART1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\ICTVARTS.resx">
+      <DependentUpon>ICTVARTS.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\ICTWHSE1.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ICTWHSE1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\licenses.licx" />
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\ICTCLST1.resx">
+      <DependentUpon>ICTCLST1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\ICTCCLS1.resx">
+      <DependentUpon>ICTCCLS1.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ABSCS\ABSCS.csproj">
+      <Project>{FEDE76DB-DB57-4642-A943-748898F4CC9E}</Project>
+      <Name>ABSCS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ABSX\ABSX.vbproj">
+      <Project>{BAA59583-9614-4718-BCA5-FA3A1D7638A7}</Project>
+      <Name>ABSX</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ABS\ABS.vbproj">
+      <Project>{8AC20144-AD3B-4B63-B4CE-E14FAA115DD2}</Project>
+      <Name>ABS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TAC\TAC.vbproj">
+      <Project>{F8DA3299-4A2C-473D-9AEE-C00295788E43}</Project>
+      <Name>TAC</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Classes\" />
+    <Folder Include="DataSets\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

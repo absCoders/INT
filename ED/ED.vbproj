@@ -1,0 +1,482 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9ACAA254-106E-439E-BECB-64EF5C04FCB0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>ED</RootNamespace>
+    <AssemblyName>ED</AssemblyName>
+    <MyType>Windows</MyType>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>ED.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>ED.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DocumentationFile>ED.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DocumentationFile>ED.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DocumentationFile>ED.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DocumentationFile>ED.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Infragistics4.Win.v25.1, Version=25.1.20251.26, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files (x86)\Infragistics\2025.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.v25.1.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinToolbars.v25.1, Version=25.1.20251.26, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files (x86)\Infragistics\2025.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.UltraWinToolbars.v25.1.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinTabControl.v25.1, Version=25.1.20251.26, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files (x86)\Infragistics\2025.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.UltraWinTabControl.v25.1.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinGrid.v25.1, Version=25.1.20251.26, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files (x86)\Infragistics\2025.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.UltraWinGrid.v25.1.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinExplorerBar.v25.1, Version=25.1.20251.26, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files (x86)\Infragistics\2025.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.UltraWinExplorerBar.v25.1.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinEditors.v25.1, Version=25.1.20251.26, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files (x86)\Infragistics\2025.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.UltraWinEditors.v25.1.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Infragistics4.Win.Misc.v25.1, Version=25.1.20251.26, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files (x86)\Infragistics\2025.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.Misc.v25.1.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Infragistics4.Shared.v25.1, Version=25.1.20251.26, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files (x86)\Infragistics\2025.1\Windows Forms\CLR4.0\Bin\Infragistics4.Shared.v25.1.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="nsoftware.IPWorks">
+      <HintPath>..\..\..\..\..\Program Files\nsoftware\IPWorks 2020 .NET Edition\lib\nsoftware.IPWorks.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="ABSolution" />
+    <Import Include="Infragistics.Win" />
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="TAC" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\EDCPRMDB.vb" />
+    <Compile Include="Forms\EDF816T1.Designer.vb">
+      <DependentUpon>EDF816T1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EDF816T1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EDF830T1.Designer.vb">
+      <DependentUpon>EDF830T1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EDF830T1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EDF855O1.Designer.vb">
+      <DependentUpon>EDF855O1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EDF855O1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EDF856O1.Designer.vb">
+      <DependentUpon>EDF856O1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EDF856O1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EDF860T1.Designer.vb">
+      <DependentUpon>EDF860T1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EDF860T1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EDF945T1.designer.vb">
+      <DependentUpon>EDF945T1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EDF945T1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EDFSHIP1.Designer.vb">
+      <DependentUpon>EDFSHIP1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EDFSHIP1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EDFSPDB1.Designer.vb">
+      <DependentUpon>EDFSPDB1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EDFSPDB1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EDF832O1.Designer.vb">
+      <DependentUpon>EDF832O1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EDF832O1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EDFSGRP1.Designer.vb">
+      <DependentUpon>EDFSGRP1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EDFSGRP1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EDF81056.Designer.vb">
+      <DependentUpon>EDF81056.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EDF81056.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EDF850I1.Designer.vb">
+      <DependentUpon>EDF850I1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EDF850I1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EDFMDBIM.Designer.vb">
+      <DependentUpon>EDFMDBIM.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EDFMDBIM.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EDFSQLI1.Designer.vb">
+      <DependentUpon>EDFSQLI1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EDFSQLI1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EDFDOCU1.Designer.vb">
+      <DependentUpon>EDFDOCU1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EDFDOCU1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EDFSTAT1.Designer.vb">
+      <DependentUpon>EDFSTAT1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EDFSTAT1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Reports\EDRMSGR1.Designer.vb">
+      <DependentUpon>EDRMSGR1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\EDRMSGR1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\EDTSLSP1.Designer.vb">
+      <DependentUpon>EDTSLSP1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\EDTSLSP1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\EDTTRPM2.Designer.vb">
+      <DependentUpon>EDTTRPM2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\EDTTRPM2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\EDTCUSX1.Designer.vb">
+      <DependentUpon>EDTCUSX1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\EDTCUSX1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\EDTDOCS1.Designer.vb">
+      <DependentUpon>EDTDOCS1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\EDTDOCS1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\EDTMAPT0.Designer.vb">
+      <DependentUpon>EDTMAPT0.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\EDTMAPT0.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\EDTPARM1.Designer.vb">
+      <DependentUpon>EDTPARM1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\EDTPARM1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\EDTSEGF1.Designer.vb">
+      <DependentUpon>EDTSEGF1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\EDTSEGF1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\EDTSTDS1.Designer.vb">
+      <DependentUpon>EDTSTDS1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\EDTSTDS1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\EDTTRPM1.Designer.vb">
+      <DependentUpon>EDTTRPM1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\EDTTRPM1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\EDTXREF2.Designer.vb">
+      <DependentUpon>EDTXREF2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\EDTXREF2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\EDTXREF1.Designer.vb">
+      <DependentUpon>EDTXREF1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\EDTXREF1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\EDTUPCX1.Designer.vb">
+      <DependentUpon>EDTUPCX1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\EDTUPCX1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\EDF816T1.resx">
+      <DependentUpon>EDF816T1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EDF830T1.resx">
+      <DependentUpon>EDF830T1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EDF855O1.resx">
+      <DependentUpon>EDF855O1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EDF856O1.resx">
+      <DependentUpon>EDF856O1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EDF860T1.resx">
+      <DependentUpon>EDF860T1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EDF945T1.resx">
+      <DependentUpon>EDF945T1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EDFSHIP1.resx">
+      <DependentUpon>EDFSHIP1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EDFSPDB1.resx">
+      <DependentUpon>EDFSPDB1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EDF832O1.resx">
+      <DependentUpon>EDF832O1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EDFSGRP1.resx">
+      <DependentUpon>EDFSGRP1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EDF81056.resx">
+      <DependentUpon>EDF81056.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EDF850I1.resx">
+      <DependentUpon>EDF850I1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EDFMDBIM.resx">
+      <DependentUpon>EDFMDBIM.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EDFSQLI1.resx">
+      <DependentUpon>EDFSQLI1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EDFSTAT1.resx">
+      <DependentUpon>EDFSTAT1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\licenses.licx" />
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\EDRMSGR1.resx">
+      <DependentUpon>EDRMSGR1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\EDTSLSP1.resx">
+      <DependentUpon>EDTSLSP1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\EDTTRPM2.resx">
+      <DependentUpon>EDTTRPM2.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\EDTCUSX1.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>EDTCUSX1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\EDTDOCS1.resx">
+      <DependentUpon>EDTDOCS1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\EDTMAPT0.resx">
+      <DependentUpon>EDTMAPT0.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\EDTPARM1.resx">
+      <DependentUpon>EDTPARM1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\EDTSEGF1.resx">
+      <DependentUpon>EDTSEGF1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\EDTSTDS1.resx">
+      <DependentUpon>EDTSTDS1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\EDTTRPM1.resx">
+      <DependentUpon>EDTTRPM1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\EDTXREF2.resx">
+      <DependentUpon>EDTXREF2.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\EDTXREF1.resx">
+      <DependentUpon>EDTXREF1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\EDTUPCX1.resx">
+      <DependentUpon>EDTUPCX1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ABSCS\ABSCS.csproj">
+      <Project>{FEDE76DB-DB57-4642-A943-748898F4CC9E}</Project>
+      <Name>ABSCS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ABSX\ABSX.vbproj">
+      <Project>{BAA59583-9614-4718-BCA5-FA3A1D7638A7}</Project>
+      <Name>ABSX</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ABS\ABS.vbproj">
+      <Project>{8AC20144-AD3B-4B63-B4CE-E14FAA115DD2}</Project>
+      <Name>ABS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TAC\TAC.vbproj">
+      <Project>{F8DA3299-4A2C-473D-9AEE-C00295788E43}</Project>
+      <Name>TAC</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DataSets\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

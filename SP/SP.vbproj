@@ -1,0 +1,807 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{850B793E-7655-4575-AF88-CA238D7CEEDA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>SP</RootNamespace>
+    <AssemblyName>SP</AssemblyName>
+    <MyType>Windows</MyType>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>SP.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>SP.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DocumentationFile>SP.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DocumentationFile>SP.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DocumentationFile>SP.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DocumentationFile>SP.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Infragistics4.Win.UltraWinMaskedEdit.v25.1, Version=25.1.20251.26, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.UltraWinSchedule.v25.1, Version=25.1.20251.26, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.v25.1, Version=25.1.20251.26, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files (x86)\Infragistics\2025.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.v25.1.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinTree.v25.1, Version=25.1.20251.26, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.UltraWinToolbars.v25.1, Version=25.1.20251.26, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files (x86)\Infragistics\2025.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.UltraWinToolbars.v25.1.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinTabControl.v25.1, Version=25.1.20251.26, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files (x86)\Infragistics\2025.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.UltraWinTabControl.v25.1.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinPivotGrid.v25.1, Version=25.1.20251.26, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.UltraWinGrid.v25.1, Version=25.1.20251.26, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files (x86)\Infragistics\2025.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.UltraWinGrid.v25.1.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinExplorerBar.v25.1, Version=25.1.20251.26, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files (x86)\Infragistics\2025.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.UltraWinExplorerBar.v25.1.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinEditors.v25.1, Version=25.1.20251.26, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files (x86)\Infragistics\2025.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.UltraWinEditors.v25.1.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Infragistics4.Win.Portable.Core.v25.1, Version=25.1.20251.26, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.Misc.v25.1, Version=25.1.20251.26, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files (x86)\Infragistics\2025.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.Misc.v25.1.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Infragistics4.Win.DataVisualization.UltraDataChart.v25.1, Version=25.1.20251.26, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.DataVisualization.Shared.v25.1, Version=25.1.20251.26, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Shared.v25.1, Version=25.1.20251.26, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files (x86)\Infragistics\2025.1\Windows Forms\CLR4.0\Bin\Infragistics4.Shared.v25.1.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Infragistics4.Olap.DataSource.Xmla.v25.1, Version=25.1.20251.26, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Olap.DataSource.v25.1, Version=25.1.20251.26, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Olap.DataSource.Mdx.v25.1, Version=25.1.20251.26, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Olap.DataSource.Flat.v25.1, Version=25.1.20251.26, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Olap.DataProvider.Adomd.v25.1, Version=25.1.20251.26, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Olap.Core.v25.1, Version=25.1.20251.26, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\bin\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="nsoftware.IPWorks, Version=24.0.9376.0, Culture=neutral, PublicKeyToken=cdc168f89cffe9cf, processorArchitecture=MSIL">
+      <HintPath>..\packages\nsoftware.IPWorks.24.0.9376\lib\net40\nsoftware.IPWorks.dll</HintPath>
+    </Reference>
+    <Reference Include="nsoftware.IPWorks.System, Version=24.0.9376.0, Culture=neutral, PublicKeyToken=cdc168f89cffe9cf, processorArchitecture=MSIL">
+      <HintPath>..\packages\nsoftware.IPWorks.24.0.9376\lib\net40\nsoftware.IPWorks.System.dll</HintPath>
+    </Reference>
+    <Reference Include="nsoftware.IPWorksSFTP, Version=24.0.9373.0, Culture=neutral, PublicKeyToken=cdc168f89cffe9cf, processorArchitecture=MSIL">
+      <HintPath>..\packages\nsoftware.IPWorksSFTP.24.0.9373\lib\net40\nsoftware.IPWorksSFTP.dll</HintPath>
+    </Reference>
+    <Reference Include="nsoftware.IPWorksSFTP.System, Version=24.0.9373.0, Culture=neutral, PublicKeyToken=cdc168f89cffe9cf, processorArchitecture=MSIL">
+      <HintPath>..\packages\nsoftware.IPWorksSFTP.24.0.9373\lib\net40\nsoftware.IPWorksSFTP.System.dll</HintPath>
+    </Reference>
+    <Reference Include="nsoftware.IPWorksSSH, Version=24.0.9373.0, Culture=neutral, PublicKeyToken=cdc168f89cffe9cf, processorArchitecture=MSIL">
+      <HintPath>..\packages\nsoftware.IPWorksSSH.24.0.9373\lib\net40\nsoftware.IPWorksSSH.dll</HintPath>
+    </Reference>
+    <Reference Include="nsoftware.IPWorksSSH.System, Version=24.0.9373.0, Culture=neutral, PublicKeyToken=cdc168f89cffe9cf, processorArchitecture=MSIL">
+      <HintPath>..\packages\nsoftware.IPWorksSSH.24.0.9373\lib\net40\nsoftware.IPWorksSSH.System.dll</HintPath>
+    </Reference>
+    <Reference Include="office, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\bin\office.dll</HintPath>
+    </Reference>
+    <Reference Include="SpreadsheetGear2023.Core">
+      <HintPath>..\DLLs\SpreadsheetGear2023.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="SpreadsheetGear2023.Drawing">
+      <HintPath>..\DLLs\SpreadsheetGear2023.Drawing.dll</HintPath>
+    </Reference>
+    <Reference Include="SpreadsheetGear2023.Windows.Forms">
+      <HintPath>..\DLLs\SpreadsheetGear2023.Windows.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="ABSolution" />
+    <Import Include="Infragistics.Win" />
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="TAC" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Forms\SPFCREC1.Designer.vb">
+      <DependentUpon>SPFCREC1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SPFCREC1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SPFFRAM1.Designer.vb">
+      <DependentUpon>SPFFRAM1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SPFFRAM1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SPFATTR1.Designer.vb">
+      <DependentUpon>SPFATTR1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SPFATTR1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SPFAPMT1.Designer.vb">
+      <DependentUpon>SPFAPMT1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SPFAPMT1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SPFMKTG1.Designer.vb">
+      <DependentUpon>SPFMKTG1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SPFMKTG1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SPFSFOC1.Designer.vb">
+      <DependentUpon>SPFSFOC1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SPFSFOC1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SPFCWRXB.Designer.vb">
+      <DependentUpon>SPFCWRXB.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SPFCWRXB.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SPFMXWS1.Designer.vb">
+      <DependentUpon>SPFMXWS1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SPFMXWS1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SPFMBUD1.Designer.vb">
+      <DependentUpon>SPFMBUD1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SPFMBUD1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SPFCWRXG.Designer.vb">
+      <DependentUpon>SPFCWRXG.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SPFCWRXG.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SPFCWRXX.Designer.vb">
+      <DependentUpon>SPFCWRXX.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SPFCWRXX.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SPFDPMT1.Designer.vb">
+      <DependentUpon>SPFDPMT1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SPFDPMT1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SPFCOOPT.designer.vb">
+      <DependentUpon>SPFCOOPT.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SPFCOOPT.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SPFOLAP1.Designer.vb">
+      <DependentUpon>SPFOLAP1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SPFOLAP1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SPFPYMT1.Designer.vb">
+      <DependentUpon>SPFPYMT1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SPFPYMT1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SPFPOSF1.Designer.vb">
+      <DependentUpon>SPFPOSF1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SPFPOSF1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SPFCOOP2.Designer.vb">
+      <DependentUpon>SPFCOOP2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SPFCOOP2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SPFCOOP1.Designer.vb">
+      <DependentUpon>SPFCOOP1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SPFCOOP1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SPFSCHD1.Designer.vb">
+      <DependentUpon>SPFSCHD1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SPFSCHD1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SPFSCHD2.Designer.vb">
+      <DependentUpon>SPFSCHD2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SPFSCHD2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SPFPOSE1.Designer.vb">
+      <DependentUpon>SPFPOSE1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SPFPOSE1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Reports\SPRACOMP.Designer.vb">
+      <DependentUpon>SPRACOMP.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\SPRACOMP.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\SPRAOPN1.Designer.vb">
+      <DependentUpon>SPRAOPN1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\SPRAOPN1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\SPRASUM1.Designer.vb">
+      <DependentUpon>SPRASUM1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\SPRASUM1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\SPRPROD1.Designer.vb">
+      <DependentUpon>SPRPROD1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\SPRPROD1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\SPRACOMA.Designer.vb">
+      <DependentUpon>SPRACOMA.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\SPRACOMA.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\SPRACOMO.Designer.vb">
+      <DependentUpon>SPRACOMO.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\SPRACOMO.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\SPRDCOMO.Designer.vb">
+      <DependentUpon>SPRDCOMO.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\SPRDCOMO.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\SPRMBPL1.Designer.vb">
+      <DependentUpon>SPRMBPL1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\SPRMBPL1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\SPRDCOMP.Designer.vb">
+      <DependentUpon>SPRDCOMP.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\SPRDCOMP.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\SPRDCOMA.Designer.vb">
+      <DependentUpon>SPRDCOMA.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\SPRDCOMA.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\SPRCOPN1.Designer.vb">
+      <DependentUpon>SPRCOPN1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\SPRCOPN1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\SPRSFOC1.Designer.vb">
+      <DependentUpon>SPRSFOC1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\SPRSFOC1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\SPRSDSD1.Designer.vb">
+      <DependentUpon>SPRSDSD1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\SPRSDSD1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\SPRCOOP1.Designer.vb">
+      <DependentUpon>SPRCOOP1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\SPRCOOP1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\SPRPYMT1.Designer.vb">
+      <DependentUpon>SPRPYMT1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\SPRPYMT1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\SPRACCR1.Designer.vb">
+      <DependentUpon>SPRACCR1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\SPRACCR1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\SPRCDTL1.Designer.vb">
+      <DependentUpon>SPRCDTL1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\SPRCDTL1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\SPRCSUM1.Designer.vb">
+      <DependentUpon>SPRCSUM1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\SPRCSUM1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\SPTCWRXP.Designer.vb">
+      <DependentUpon>SPTCWRXP.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\SPTCWRXP.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\SPTCWRXA.Designer.vb">
+      <DependentUpon>SPTCWRXA.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\SPTCWRXA.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\SPTCWRXB.Designer.vb">
+      <DependentUpon>SPTCWRXB.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\SPTCWRXB.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\SPTACOM1.Designer.vb">
+      <DependentUpon>SPTACOM1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\SPTACOM1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\SPTATTR1.Designer.vb">
+      <DependentUpon>SPTATTR1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\SPTATTR1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\SPTENOT1.Designer.vb">
+      <DependentUpon>SPTENOT1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\SPTENOT1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\SPTRSSP1.Designer.vb">
+      <DependentUpon>SPTRSSP1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\SPTRSSP1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\SPTDCOM1.Designer.vb">
+      <DependentUpon>SPTDCOM1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\SPTDCOM1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\SPTEVNT1.Designer.vb">
+      <DependentUpon>SPTEVNT1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\SPTEVNT1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\SPTCWRXC.Designer.vb">
+      <DependentUpon>SPTCWRXC.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\SPTCWRXC.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\SPTMXWS0.Designer.vb">
+      <DependentUpon>SPTMXWS0.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\SPTMXWS0.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\SPTACOM0.Designer.vb">
+      <DependentUpon>SPTACOM0.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\SPTACOM0.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\SPTXCAT1.Designer.vb">
+      <DependentUpon>SPTXCAT1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\SPTXCAT1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\SPTTYPE1.Designer.vb">
+      <DependentUpon>SPTTYPE1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\SPTTYPE1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\SPTTASK0.Designer.vb">
+      <DependentUpon>SPTTASK0.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\SPTTASK0.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\SPTPARM1.Designer.vb">
+      <DependentUpon>SPTPARM1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\SPTPARM1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\SPTAVEH1.Designer.vb">
+      <DependentUpon>SPTAVEH1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\SPTAVEH1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\SPTSPWK1.Designer.vb">
+      <DependentUpon>SPTSPWK1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\SPTSPWK1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\SPTPROM1.Designer.vb">
+      <DependentUpon>SPTPROM1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\SPTPROM1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\SPFCREC1.resx">
+      <DependentUpon>SPFCREC1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SPFFRAM1.resx">
+      <DependentUpon>SPFFRAM1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SPFATTR1.resx">
+      <DependentUpon>SPFATTR1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SPFAPMT1.resx">
+      <DependentUpon>SPFAPMT1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SPFMKTG1.resx">
+      <DependentUpon>SPFMKTG1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SPFSFOC1.resx">
+      <DependentUpon>SPFSFOC1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SPFCWRXB.resx">
+      <DependentUpon>SPFCWRXB.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SPFMXWS1.resx">
+      <DependentUpon>SPFMXWS1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SPFMBUD1.resx">
+      <DependentUpon>SPFMBUD1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SPFCWRXG.resx">
+      <DependentUpon>SPFCWRXG.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SPFCWRXX.resx">
+      <DependentUpon>SPFCWRXX.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SPFDPMT1.resx">
+      <DependentUpon>SPFDPMT1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SPFCOOPT.resx">
+      <DependentUpon>SPFCOOPT.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SPFOLAP1.resx">
+      <DependentUpon>SPFOLAP1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SPFPYMT1.resx">
+      <DependentUpon>SPFPYMT1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SPFPOSF1.resx">
+      <DependentUpon>SPFPOSF1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SPFCOOP2.resx">
+      <DependentUpon>SPFCOOP2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SPFCOOP1.resx">
+      <DependentUpon>SPFCOOP1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SPFSCHD1.resx">
+      <DependentUpon>SPFSCHD1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SPFSCHD2.resx">
+      <DependentUpon>SPFSCHD2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SPFPOSE1.resx">
+      <DependentUpon>SPFPOSE1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\licenses.licx" />
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\SPRACOMP.resx">
+      <DependentUpon>SPRACOMP.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\SPRAOPN1.resx">
+      <DependentUpon>SPRAOPN1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\SPRASUM1.resx">
+      <DependentUpon>SPRASUM1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\SPRPROD1.resx">
+      <DependentUpon>SPRPROD1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\SPRACOMA.resx">
+      <DependentUpon>SPRACOMA.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\SPRACOMO.resx">
+      <DependentUpon>SPRACOMO.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\SPRDCOMO.resx">
+      <DependentUpon>SPRDCOMO.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\SPRMBPL1.resx">
+      <DependentUpon>SPRMBPL1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\SPRDCOMP.resx">
+      <DependentUpon>SPRDCOMP.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\SPRDCOMA.resx">
+      <DependentUpon>SPRDCOMA.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\SPRCOPN1.resx">
+      <DependentUpon>SPRCOPN1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\SPRSFOC1.resx">
+      <DependentUpon>SPRSFOC1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\SPRSDSD1.resx">
+      <DependentUpon>SPRSDSD1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\SPRCOOP1.resx">
+      <DependentUpon>SPRCOOP1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\SPRPYMT1.resx">
+      <DependentUpon>SPRPYMT1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\SPRACCR1.resx">
+      <DependentUpon>SPRACCR1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\SPRCDTL1.resx">
+      <DependentUpon>SPRCDTL1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\SPRCSUM1.resx">
+      <DependentUpon>SPRCSUM1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\SPTCWRXP.resx">
+      <DependentUpon>SPTCWRXP.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\SPTCWRXA.resx">
+      <DependentUpon>SPTCWRXA.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\SPTCWRXB.resx">
+      <DependentUpon>SPTCWRXB.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\SPTACOM1.resx">
+      <DependentUpon>SPTACOM1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\SPTATTR1.resx">
+      <DependentUpon>SPTATTR1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\SPTENOT1.resx">
+      <DependentUpon>SPTENOT1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\SPTRSSP1.resx">
+      <DependentUpon>SPTRSSP1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\SPTDCOM1.resx">
+      <DependentUpon>SPTDCOM1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\SPTEVNT1.resx">
+      <DependentUpon>SPTEVNT1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\SPTCWRXC.resx">
+      <DependentUpon>SPTCWRXC.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\SPTMXWS0.resx">
+      <DependentUpon>SPTMXWS0.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\SPTACOM0.resx">
+      <DependentUpon>SPTACOM0.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\SPTXCAT1.resx">
+      <DependentUpon>SPTXCAT1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\SPTTYPE1.resx">
+      <DependentUpon>SPTTYPE1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\SPTTASK0.resx">
+      <DependentUpon>SPTTASK0.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\SPTPARM1.resx">
+      <DependentUpon>SPTPARM1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\SPTAVEH1.resx">
+      <DependentUpon>SPTAVEH1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\SPTSPWK1.resx">
+      <DependentUpon>SPTSPWK1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\SPTPROM1.resx">
+      <DependentUpon>SPTPROM1.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ABSCS\ABSCS.csproj">
+      <Project>{FEDE76DB-DB57-4642-A943-748898F4CC9E}</Project>
+      <Name>ABSCS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ABSX\ABSX.vbproj">
+      <Project>{BAA59583-9614-4718-BCA5-FA3A1D7638A7}</Project>
+      <Name>ABSX</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ABS\ABS.vbproj">
+      <Project>{8AC20144-AD3B-4B63-B4CE-E14FAA115DD2}</Project>
+      <Name>ABS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TAC\TAC.vbproj">
+      <Project>{F8DA3299-4A2C-473D-9AEE-C00295788E43}</Project>
+      <Name>TAC</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DataSets\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

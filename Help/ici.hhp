@@ -1,0 +1,16 @@
+[OPTIONS]
+Compatibility=1.1 or later
+Compiled file=ici.chm
+Contents file=Table of Contents.hhc
+Default Window=ABSolution
+Display compile progress=No
+Index file=Index.hhk
+Language=0x409 English (United States)
+Title=ABSolution
+
+[WINDOWS]
+ABSolution="ABSolution","Table of Contents.hhc","Index.hhk",".\html\absolution.htm",,,,,,0x2021,6,0x3006,,,,,,,,0
+
+
+[INFOTYPES]
+

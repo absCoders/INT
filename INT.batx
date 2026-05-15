@@ -1,0 +1,36 @@
+rem 
+
+SET P=%0%
+SET P=JHI
+SET D=C:
+
+SET T="Program Files\ABS\%P%\%USERNAME%"
+mkdir %D%\%T%
+
+SET O=ORACLE\PRODUCT\10.2.0\CLIENT_1
+
+xCOPY TNSNAMES.ORA "%D%\%O%\NETWORK\ADMIN" /D /Y
+xCOPY SQLNET.ORA "%D%\%O%\NETWORK\ADMIN" /D /y
+
+MKDIR %D%\%T%\bin
+MKDIR %D%\%T%\Images
+RMDIR /S/Q %D%\%T%\Temp
+MKDIR %D%\%T%\Temp
+RMDIR /S/Q %D%\%T%\DataSets
+MKDIR %D%\%T%\DataSets
+RMDIR /S/Q %D%\%T%\Reports
+MKDIR %D%\%T%\Reports
+RMDIR /S/Q %D%\%T%\Work
+MKDIR %D%\%T%\Work
+
+xcopy bin\. %D%\%T%\bin /D /E /Y 
+xcopy Images\. %D%\%T%\Images /D /E /Y
+rem xcopy bin\nsoftware*.* %D%\%T%\bin
+
+%D%
+CD \%T%
+cd bin
+
+ABS.EXE
+
+EXIT

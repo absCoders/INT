@@ -1,0 +1,369 @@
+<!DOCTYPE HTML PUBLIC '-//IETF//DTD HTML//EN'>
+<html>
+<head>
+<meta http-equiv='Content-Type'
+content='text/html; charset=iso-8859-1'>
+<meta name='GENERATOR' content='Microsoft FrontPage 6.0'>
+<title>Excess/Obsolete Inventory Report</title>
+<style>@import url(coUA.css);</style>
+<link disabled rel='stylesheet' href='htmlhelp.css'>
+</head>
+<body>
+<h1><font size='3' face='Verdana'>Excess/Obsolete Inventory Report</font></h1>
+<hr size='1'>
+<p><font size='2' face='Verdana'>
+Produces a report showing items which have excess supply, or are obsolete.
+</font></p>
+<p><font size='2' face='Verdana'>
+This menu-item may be selected and run
+&nbsp;
+There is an update process associated with this function.
+</font></p>
+<p><font size='2' face='Verdana'>
+Please review the <a href='../STD/003.htm'>General Notes for Reports</a>, for features which are common to all menu-driven reports.
+</font></p>
+<hr size='1'>
+<h4><font face='Verdana' size='2'>Overview</font></h4>
+<p><font size='2' face='Verdana'>
+Supply information consists of the following:
+On Hand (in Warehouse)
+On Order (Purchase Orders and Work Orders)
+Plans (MRP Plans)
+
+Demand information consists of the following:
+Shipment Forecast
+Component Commitments to Make Purchase Orders, Work Orders and Plans
+
+Excess Inventory occurs when supply exceeds demand.  Obsolete Inventory occurs when there is a non-zero supply, and no demand.  An item will either be Excess, Obsolete or neither; it cannot be both Excess and Obsolete.  If an item has no inventory on hand or on order or plans (i.e., has no supply), or if it has forecasted demand that is greater than it's on hand plus incoming orders and plans, then it is neither excess nor obsolete.
+</font></p>
+<h4>&nbsp;</h4>
+<h4><font size='2' face='Verdana'>Report Columns</font></h4>
+<p><font size='2' face='Verdana'>
+Please note that some of these columns may have modified definitions depending upon the values specified for some of the run-time options, described below.
+</font></p>
+<p><font size='2' face='Verdana'>Item Master & General</font></p>
+<table border='1' cellpadding='5' cellspacing='0' style='border-collapse: collapse' bordercolor='#808080' width='85%' id='AutoNumber2' height='50' bgcolor='#CCFFFF'>
+<tr>
+<td width='7%' height='22'>
+<p align='center'><font size='2' face='Verdana'>A</font></td>
+<td width='20%' height='22'><font size='2' face='Verdana'>Item</font></td>
+<td width='73%' height='22'><font size='2' face='Verdana'>Item Code & Description (Item Master)</font></td>
+</tr>
+<tr>
+<td width='7%' height='22'>
+<p align='center'><font size='2' face='Verdana'>B</font></td>
+<td width='20%' height='22'><font size='2' face='Verdana'>Retail</font></td>
+<td width='73%' height='22'><font size='2' face='Verdana'>The Item's Current Retail Price (Item Master)</font></td>
+</tr>
+<tr>
+<td width='7%' height='22'>
+<p align='center'><font size='2' face='Verdana'>C</font></td>
+<td width='20%' height='22'><font size='2' face='Verdana'>Std Cost</font></td>
+<td width='73%' height='22'><font size='2' face='Verdana'>The Item's Current Standard Cost (Item Master)</font></td>
+</tr>
+<tr>
+<td width='7%' height='22'>
+<p align='center'><font size='2' face='Verdana'>D</font></td>
+<td width='20%' height='22'><font size='2' face='Verdana'>Current On Hand</font></td>
+<td width='73%' height='22'><font size='2' face='Verdana'>Total Qty On Hand, in all warehouses, combined</font></td>
+</tr>
+</table>
+<p><font size='2' face='Verdana'>Demand</font></p>
+<table border='1' cellpadding='5' cellspacing='0' style='border-collapse: collapse' bordercolor='#808080' width='85%' id='AutoNumber2' height='50' bgcolor='#CCFFFF'>
+<tr>
+<td width='7%' height='22'>
+<p align='center'><font size='2' face='Verdana'>G</font></td>
+<td width='20%' height='22'><font size='2' face='Verdana'>Forecast</font></td>
+<td width='73%' height='22'><font size='2' face='Verdana'>Units Forecasted to ship in the number of months specified, to all (selected) Markets, combined</font></td>
+</tr>
+<tr>
+<td width='7%' height='22'>
+<p align='center'><font size='2' face='Verdana'>H</font></td>
+<td width='20%' height='22'><font size='2' face='Verdana'>PO Com</font></td>
+<td width='73%' height='22'><font size='2' face='Verdana'>(Make) Purchase Order Commitments, where the component's due date is up thru the last day in the forecast horizon.</font></td>
+</tr>
+<tr>
+<td width='7%' height='22'>
+<p align='center'><font size='2' face='Verdana'>I</font></td>
+<td width='20%' height='22'><font size='2' face='Verdana'>Plan Com</font></td>
+<td width='73%' height='22'><font size='2' face='Verdana'>(Make) Plan Commitments, where the components due date is up thru the last day in the forecast horizon</font></td>
+</tr>
+</table>
+<p><font size='2' face='Verdana'>Excess On Hand</font></p>
+<table border='1' cellpadding='5' cellspacing='0' style='border-collapse: collapse' bordercolor='#808080' width='85%' id='AutoNumber2' height='50' bgcolor='#CCFFFF'>
+<tr>
+<td width='7%' height='22'>
+<p align='center'><font size='2' face='Verdana'>J</font></td>
+<td width='20%' height='22'><font size='2' face='Verdana'>Excess Qty</font></td>
+<td width='73%' height='22'><font size='2' face='Verdana'>Excess Qty on Hand, Units, defined as On Hand less Total Demand: (D - (G - F) + I); if F > G. then 0 is used for (G - F)</font></td>
+</tr>
+<tr>
+<td width='7%' height='22'>
+<p align='center'><font size='2' face='Verdana'>K</font></td>
+<td width='20%' height='22'><font size='2' face='Verdana'>Excess Value</font></td>
+<td width='73%' height='22'><font size='2' face='Verdana'>Excess Value On Hand, Dollars: (J * C)</font></td>
+</tr>
+</table>
+<p><font size='2' face='Verdana'>Supply</font></p>
+<table border='1' cellpadding='5' cellspacing='0' style='border-collapse: collapse' bordercolor='#808080' width='85%' id='AutoNumber2' height='50' bgcolor='#CCFFFF'>
+<tr>
+<td width='7%' height='22'>
+<p align='center'><font size='2' face='Verdana'>L</font></td>
+<td width='20%' height='22'><font size='2' face='Verdana'>On PO</font></td>
+<td width='73%' height='22'><font size='2' face='Verdana'>Total Qty on Open PO's, where the date required is up thru the last day in the forecast horizon</font></td>
+</tr>
+<tr>
+<td width='7%' height='22'>
+<p align='center'><font size='2' face='Verdana'>M</font></td>
+<td width='20%' height='22'><font size='2' face='Verdana'>Plans</font></td>
+<td width='73%' height='22'><font size='2' face='Verdana'>Total Plans from MRP, where the date required is up thru the last day in the forecast horizon</font></td>
+</tr>
+</table>
+<p><font size='2' face='Verdana'>Excess On Order/Plan</font></p>
+<table border='1' cellpadding='5' cellspacing='0' style='border-collapse: collapse' bordercolor='#808080' width='85%' id='AutoNumber2' height='50' bgcolor='#CCFFFF'>
+<tr>
+<td width='7%' height='22'>
+<p align='center'><font size='2' face='Verdana'>N</font></td>
+<td width='20%' height='22'><font size='2' face='Verdana'>Excess Qty</font></td>
+<td width='73%' height='22'><font size='2' face='Verdana'>Excess On Order/Plan, Units</font></td>
+</tr>
+<tr>
+<td width='7%' height='22'>
+<p align='center'><font size='2' face='Verdana'>O</font></td>
+<td width='20%' height='22'><font size='2' face='Verdana'>Excess Value</font></td>
+<td width='73%' height='22'><font size='2' face='Verdana'>Excess Value on Order/Plan, Dollars: (N * C)</font></td>
+</tr>
+</table>
+<h4>&nbsp;</h4>
+<h4><font size='2' face='Verdana'>Report Totals</font></h4>
+<p><font size='2' face='Verdana'>Totals are shown for Excess/Obsolete Values for On Hand and On Order. Totals are produced for each sorted level of the report.&nbsp; Note that if you want separate totals for Excess and Obsolete values, then you must select "Excess/Obsolete" as a sort level.</font></p>
+<h4>&nbsp;</h4>
+<h4><font size='2' face='Verdana'>Sample Screen</font></h4>
+<h3><font face='Verdana'><img src='../BMP/MRREXOB1f.JPG' width='675' height='427'>
+<img src='../gif/MRREXOB1a.JPG'>
+<img src='../gif/MRREXOB1a.gif'>
+<img src='../gif/MRREXOB1_orig.JPG'>
+<img src='../gif/MRREXOB1_orig.gif'>
+</font></h3>
+<h4>&nbsp;</h4>
+<h4><font size='2' face='Verdana'>Run-Time Options</font></h4>
+<p><span style='font-weight: 400'><font size='2' face='Verdana'>
+A page 0 will print (before the report) which summarizes all of the Report Sorting, Filtering, and other run-time options selected.&nbsp; Some of the run-time options may be reflected in the heading area of the page.</font></span></p>
+<!--msimagelist--><table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<!--msimagelist--><tr>
+		<!--msimagelist--><td valign="baseline" width="42">
+		<img src="../BMP/img.gif" width="18" height="18" hspace="12" alt="bullet"></td>
+		<td valign="top" width="100%"><font size='2' face='Verdana'>Report Sorting</font><!--msimagelist--></td>
+	</tr>
+	<!--msimagelist--></table>
+<blockquote>
+<p><font size='2' face='Verdana'>
+You may sort the report by any of the following:
+</font></p>
+<ul>
+<li><font size='2' face='Verdana'>Division</font>
+<li><font size='2' face='Verdana'>Brand</font>
+<li><font size='2' face='Verdana'>Product</font>
+<li><font size='2' face='Verdana'>Cost Category</font>
+<li><font size='2' face='Verdana'>Parent Item</font>
+<li><font size='2' face='Verdana'>S/N/U</font>
+<li><font size='2' face='Verdana'>Basic/Promo</font>
+<li><font size='2' face='Verdana'>Make/Buy</font>
+<li><font size='2' face='Verdana'>Exc/Obs Ind</font>
+<li><font size='2' face='Verdana'>Item Class</font>
+</ul>
+<p><font size='2' face='Verdana'>
+Please note that you must select Excess/Obsolete in order to see separate totals for Excess and Obsolete. Select the Excess/Obsolete sort break at the point that makes sense for the report you would like to create. If you would like to see Excess Inventory by Division with a grand total for Excess, followed by Obsolete Inventory by Division with a grand total for Obsolete, then select Excess/Obsolete first, and Division next. If you would like to see each Division broken down into Excess/Obsolete with Division totals for both, then select Division first, then Excess/Obsolete next.
+</font></p>
+</blockquote>
+<!--msimagelist--><table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<!--msimagelist--><tr>
+		<!--msimagelist--><td valign="baseline" width="42">
+		<img src="../BMP/img.gif" width="18" height="18" hspace="12" alt="bullet"></td>
+		<td valign="top" width="100%"><font size='2' face='Verdana'>Report Filtering</font><!--msimagelist--></td>
+	</tr>
+	<!--msimagelist--></table>
+<blockquote>
+<p><font size='2' face='Verdana'>
+You may filter the report to include all, selected, or (all) except specific values of the following:
+</font></p>
+<ul>
+<li><font size='2' face='Verdana'>Division</font>
+<li><font size='2' face='Verdana'>Brand</font>
+<li><font size='2' face='Verdana'>Product</font>
+<li><font size='2' face='Verdana'>Cost Category</font>
+<li><font size='2' face='Verdana'>Parent Item</font>
+<li><font size='2' face='Verdana'>S/N/U</font>
+<li><font size='2' face='Verdana'>Basic/Promo</font>
+<li><font size='2' face='Verdana'>Make/Buy</font>
+<li><font size='2' face='Verdana'>Exc/Obs Ind</font>
+<li><font size='2' face='Verdana'>Item Class</font>
+</ul>
+</blockquote>
+<!--msimagelist--><table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<!--msimagelist--><tr>
+		<!--msimagelist--><td valign="baseline" width="42">
+		<img src="../BMP/img.gif" width="18" height="18" hspace="12" alt="bullet"></td>
+		<td valign="top" width="100%"><font size='2' face='Verdana'>
+Number of Periods of Demand to Consider
+</font><!--msimagelist--></td>
+	</tr>
+	<!--msimagelist--></table>
+<blockquote>
+<p><font size='2' face='Verdana'>
+Enter the number of months of demand to consider when calculating excess and obsolete values. The current month is counted as the 1st period of demand, so a value of 1 implies the Current Month Only.  If running the report in the middle of the month, then the current month's remaining forecast is used, as well as the present values for quantities on hand, on order, and committed to production. If the current month's shipments exceed the total forecasted demand for the number of months specified, then zero is used for forecast remaining.
+
+The report is rendered in real-time, all date and period math is calculated with reference to the Current Operations Period. All On Hand, On Order, Shipment and Commitment data is produced in real-time, as 
+of the moment the report is printed.
+</font></p>
+</blockquote>
+<!--msimagelist--><table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<!--msimagelist--><tr>
+		<!--msimagelist--><td valign="baseline" width="42">
+		<img src="../BMP/img.gif" width="18" height="18" hspace="12" alt="bullet"></td>
+		<td valign="top" width="100%"><font size='2' face='Verdana'>
+Single Warehouse:
+</font><!--msimagelist--></td>
+	</tr>
+	<!--msimagelist--></table>
+<blockquote>
+<p><font size='2' face='Verdana'>
+You may select a single warehouse to be used in the calculation of Excess and Obsolete values. If you do select a single warehouse, then only the forecasts for those markets associated with that warehouse are used for demand, and only those on hand quantities listed in that warehouse, and on order and plan quantities headed for that warehouse are used for supply. Also, MTD shipments will reflect only the single warehouse.
+
+</font></p>
+</blockquote>
+<!--msimagelist--><table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<!--msimagelist--><tr>
+		<!--msimagelist--><td valign="baseline" width="42">
+		<img src="../BMP/img.gif" width="18" height="18" hspace="12" alt="bullet"></td>
+		<td valign="top" width="100%"><font size='2' face='Verdana'>
+Calculate Demand Using
+</font><!--msimagelist--></td>
+	</tr>
+	<!--msimagelist--></table>
+<blockquote>
+<p><font size='2' face='Verdana'>
+Forecast data is optionally taken from any one of the following, specified at 
+run-time:
+
+* Forecast by Item by Market (includes Past Due Forecast)
+* Sales History for the Most Recent X Months (using the quantity shipped by item, for the last X months, where X is the number of periods selected as the forecast horizon)
+* Sales History for Last Year (using the quantity shipped by item, for the X months starting 12 months ago - note that you should not use a forecast horizon of more than 12 months when using this option)
+
+</font></p>
+</blockquote>
+<!--msimagelist--><table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<!--msimagelist--><tr>
+		<!--msimagelist--><td valign="baseline" width="42">
+		<img src="../BMP/img.gif" width="18" height="18" hspace="12" alt="bullet"></td>
+		<td valign="top" width="100%"><font size='2' face='Verdana'>
+Show Items w/Excess/Obsolete On Hand, On Order, or Either
+</font><!--msimagelist--></td>
+	</tr>
+	<!--msimagelist--></table>
+<blockquote>
+<p><font size='2' face='Verdana'>
+You may request to see items with Excess/Obsolete On Hand, On Order, or either.
+</font></p>
+</blockquote>
+<!--msimagelist--><table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<!--msimagelist--><tr>
+		<!--msimagelist--><td valign="baseline" width="42">
+		<img src="../BMP/img.gif" width="18" height="18" hspace="12" alt="bullet"></td>
+		<td valign="top" width="100%"><font size='2' face='Verdana'>
+Show Excess Items only, Obsolete Items only, or Both
+</font><!--msimagelist--></td>
+	</tr>
+	<!--msimagelist--></table>
+<blockquote>
+<p><font size='2' face='Verdana'>
+You may request to see items which are Excess only, items which are Obsolete only, or both, on the same report.
+</font></p>
+</blockquote>
+<!--msimagelist--><table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<!--msimagelist--><tr>
+		<!--msimagelist--><td valign="baseline" width="42">
+		<img src="../BMP/img.gif" width="18" height="18" hspace="12" alt="bullet"></td>
+		<td valign="top" width="100%"><font size='2' face='Verdana'>
+Include Plans in Calculations
+</font><!--msimagelist--></td>
+	</tr>
+	<!--msimagelist--></table>
+<blockquote>
+<p><font size='2' face='Verdana'>
+You may optionally include Plan Data for Supply and/or Demand statistics used to calculate the Excess/Obsolete values. Be sure to have run MRP Update recently if you select this option, since MRP update re-calculates MRP plans and component commitments based upon real-time inventory status. Also note that if an item is missing critical MRP data, it might not have plans generated for it, or commitments generated for it's components, and this might have in impact on an item's excess or obsolete categorization.
+</font></p>
+</blockquote>
+<!--msimagelist--><table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<!--msimagelist--><tr>
+		<!--msimagelist--><td valign="baseline" width="42">
+		<img src="../BMP/img.gif" width="18" height="18" hspace="12" alt="bullet"></td>
+		<td valign="top" width="100%"><font size='2' face='Verdana'>
+Exclude Items in non-MRP Warehouses
+</font><!--msimagelist--></td>
+	</tr>
+	<!--msimagelist--></table>
+<blockquote>
+<p><font size='2' face='Verdana'>
+You may optionally exclude all Supply & Demand data that is associated with warehouses which are marked as Non-MRP Warehouses. If selected, then On Hand, MTD Shipment, On Order, Planned, and Component Commitment quantities in Non-MRP warehouses will be ignored. Also, forecasts for markets that are associated with Non-MRP warehouses will also be ignored.
+</font></p>
+</blockquote>
+<!--msimagelist--><table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<!--msimagelist--><tr>
+		<!--msimagelist--><td valign="baseline" width="42">
+		<img src="../BMP/img.gif" width="18" height="18" hspace="12" alt="bullet"></td>
+		<td valign="top" width="100%"><font size='2' face='Verdana'>
+Sort Items by Excess/Obsolete Value
+</font><!--msimagelist--></td>
+	</tr>
+	<!--msimagelist--></table>
+<blockquote>
+<p><font size='2' face='Verdana'>
+Items are normally listed alphanumerically, by Item Code, within the last sort level you choose. However, you may optionally have the items sorted (in descending order) by Excess/Obsolete Value.
+
+</font></p>
+</blockquote>
+<!--msimagelist--><table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<!--msimagelist--><tr>
+		<!--msimagelist--><td valign="baseline" width="42">
+		<img src="../BMP/img.gif" width="18" height="18" hspace="12" alt="bullet"></td>
+		<td valign="top" width="100%"><font size='2' face='Verdana'>
+Reduce Excess Invty by Reserves, if Any
+</font><!--msimagelist--></td>
+	</tr>
+	<!--msimagelist--></table>
+<blockquote>
+<p><font size='2' face='Verdana'>
+You may optionally have the Quantity on Hand reduced by the Reserve Percentage, if present in the Item Master. This will have the effect of reducing the Excess Inventory for an item by the Reserve, which theoretically is a financial acknowledgement of Excess/Obsolete Inventory. Most of the time, the Reserve Percentage will be 0 or 100, so the effect of using this option is to remove items from the report if they have been financially written down already.
+</font></p>
+</blockquote>
+<!--msimagelist--><table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<!--msimagelist--><tr>
+		<!--msimagelist--><td valign="baseline" width="42">
+		<img src="../BMP/img.gif" width="18" height="18" hspace="12" alt="bullet"></td>
+		<td valign="top" width="100%"><font size='2' face='Verdana'>
+Select the Exc/Obs Ind at the point in the sequence where ..
+</font><!--msimagelist--></td>
+	</tr>
+	<!--msimagelist--></table>
+<blockquote>
+<p><font size='2' face='Verdana'>
+Select the Exc/Obs Indicator at the point in the sort sequence where you want sub-totals by Excess and Obsolete categories.
+</font></p>
+</blockquote>
+<!--msimagelist--><table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<!--msimagelist--><tr>
+		<!--msimagelist--><td valign="baseline" width="42">
+		<img src="../BMP/img.gif" width="18" height="18" hspace="12" alt="bullet"></td>
+		<td valign="top" width="100%"><font size='2' face='Verdana'>
+Use SCP Cost (not Std)
+</font><!--msimagelist--></td>
+	</tr>
+	<!--msimagelist--></table>
+<blockquote>
+<p><font size='2' face='Verdana'>
+Click this option to use the SCP cost to extend quantities instead of using the Standard Cost
+</font></p>
+</blockquote>
+</body>
+</html>
