@@ -1,4 +1,5 @@
 Imports Infragistics.Win
+Imports System.Configuration
 Imports System.Threading
 
 Public Class ASFMAIN1
@@ -34,7 +35,7 @@ Public Class ASFMAIN1
     Public MODULE_ID As String
     Public loadSplash As ASFFLOAD
     Dim MODULE_IDs As String = ""
- 
+
     Public FormToShow As ASFBASE1
 
     Private Sub StartSplash()
@@ -53,6 +54,7 @@ Public Class ASFMAIN1
 
 
     Private Sub ASFMAIN1_Activated(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Activated
+
     End Sub
 
     Private Sub ASFMAIN1_FormClosing(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosingEventArgs) Handles Me.FormClosing
@@ -193,7 +195,7 @@ Public Class ASFMAIN1
             .Columns.Add("ITEM_KEY")
             .Columns.Add("ITEM_TEXT")
             .Columns.Add("ITEM_TOOLTIPTEXT")
-            .PrimaryKey = New DataColumn() {.Columns("ITEM_KEY")}
+            .PrimaryKey = New DataColumn() { .Columns("ITEM_KEY")}
         End With
 
         'NotifyIcon1.Icon = Me.Icon
@@ -293,6 +295,12 @@ Public Class ASFMAIN1
 
         load_DLLs.Abort()
         load_DLLs = Nothing
+
+
+        If ASCMAIN1.Running_in_VS Then
+            Dim x As New secrets
+            x.Set_SecretS()
+        End If
 
         ' Check for Single Execution
         Dim AppEXEName As String = My.Application.Info.AssemblyName
@@ -473,7 +481,7 @@ Public Class ASFMAIN1
     End Sub
 
     Private Sub UltraToolbarsManager1_ToolClick _
-    (ByVal sender As System.Object, _
+    (ByVal sender As System.Object,
      ByVal e As Infragistics.Win.UltraWinToolbars.ToolClickEventArgs) Handles UltraToolbarsManager1.ToolClick
 
 
@@ -620,7 +628,7 @@ Public Class ASFMAIN1
                 Dim PRINTER_NAMEs As String = ""
                 PRINTER_NAMEs &= vbCrLf & "Session ID from API: " & CStr(ASCMAIN1.WTS_SESSION_ID)
 
-                For Each PRINTER_NAME As String In _
+                For Each PRINTER_NAME As String In
                 System.Drawing.Printing.PrinterSettings.InstalledPrinters
                     PRINTER_NAMEs &= vbCrLf & PRINTER_NAME
                 Next
@@ -882,7 +890,7 @@ Public Class ASFMAIN1
                         Dim MODULE_ID As String = Mid(MENU_ITEM_OBJECT, 1, 2)
                         For Each open_form As System.Windows.Forms.Form In ASCMAIN1.ABS_FORMS
                             If open_form.Name.StartsWith(MODULE_ID) Then
-                                MsgBox("You Must First Log Out of All Forms belonging to the " & MODULE_ID & " Module", _
+                                MsgBox("You Must First Log Out of All Forms belonging to the " & MODULE_ID & " Module",
                                        MsgBoxStyle.OkOnly, "Cannot Perform Requested Action")
                                 Exit Sub
                             End If
@@ -1134,9 +1142,9 @@ Public Class ASFMAIN1
         Add_Menu_to_ExplorerBar("MAIN", "M" & Chr(1) & "MAIN" & Chr(0), tblASTMENU1)
     End Sub
 
-    Sub Add_Menu_to_ExplorerBar( _
-        ByVal MENU_ID As String, _
-        ByVal KEY_PREFIX As String, _
+    Sub Add_Menu_to_ExplorerBar(
+        ByVal MENU_ID As String,
+        ByVal KEY_PREFIX As String,
         ByRef tblASTMENU1 As DataTable)
 
         Dim KEY As String
@@ -1170,10 +1178,10 @@ Public Class ASFMAIN1
             ASCMAIN1.Add_Menu_to_Tree(row.Item("MENU_ITEM_OBJECT"), KEY_PREFIX & KEY & Chr(0), tvw, 0, tblASTMENU1)
         Next
 
- 
+
         ' now add the favorites
         ASCMAIN1.Add_Menu_to_Tree("*", KP, tvwFavorites, 0, tblASTMENU1)
-         
+
 
     End Sub
 
@@ -1358,8 +1366,8 @@ Public Class ASFMAIN1
                     If ASCMAIN1.Running_in_VS Then ' probably don't want people having this kind of power - ODG does this with Ralph at 2AM, so there is an exception
                         If MsgBox("Users are still logged into applications" _
                               & vbCr & " which conflict with running Period End Initialization" & vbCr _
-                              & vbCr & "Would you like to Clear Multi-Task Conflicts?", _
-                              MsgBoxStyle.YesNo, _
+                              & vbCr & "Would you like to Clear Multi-Task Conflicts?",
+                              MsgBoxStyle.YesNo,
                               "There are Multi-Tasking Conflicts") = MsgBoxResult.Yes Then
                             Dim f As New ASFMTSK1
                             f.ShowDialog()
@@ -1672,9 +1680,9 @@ Public Class ASFMAIN1
 
     End Sub
 
-    Sub WriteNodes(ByVal MENU_ID As String, _
-    ByVal MENU_DESC As String, _
-    ByVal chmWriter As System.IO.StreamWriter, _
+    Sub WriteNodes(ByVal MENU_ID As String,
+    ByVal MENU_DESC As String,
+    ByVal chmWriter As System.IO.StreamWriter,
     ByVal lvl As Integer)
 
         Dim vbQuo As String = Chr(34)
@@ -1725,9 +1733,9 @@ Public Class ASFMAIN1
     End Sub
 
 
-    Sub Write_Nodes(ByVal anode As Infragistics.Win.UltraWinTree.UltraTreeNode, _
-    ByVal T As Infragistics.Win.UltraWinTree.UltraTree, _
-    ByVal chmWriter As System.IO.StreamWriter, _
+    Sub Write_Nodes(ByVal anode As Infragistics.Win.UltraWinTree.UltraTreeNode,
+    ByVal T As Infragistics.Win.UltraWinTree.UltraTree,
+    ByVal chmWriter As System.IO.StreamWriter,
     ByVal lvl As Integer)
 
 
@@ -1865,10 +1873,10 @@ Public Class ASFMAIN1
         Return MyImage
     End Function
 
-    <System.Runtime.InteropServices.DllImport("gdi32.DLL", EntryPoint:="BitBlt", _
-    SetLastError:=True, CharSet:=System.Runtime.InteropServices.CharSet.Unicode, _
-    ExactSpelling:=True, _
-    CallingConvention:=System.Runtime.InteropServices.CallingConvention.StdCall)> _
+    <System.Runtime.InteropServices.DllImport("gdi32.DLL", EntryPoint:="BitBlt",
+    SetLastError:=True, CharSet:=System.Runtime.InteropServices.CharSet.Unicode,
+    ExactSpelling:=True,
+    CallingConvention:=System.Runtime.InteropServices.CallingConvention.StdCall)>
     Private Shared Function BitBlt(ByVal hdcDest As IntPtr, ByVal nXDest As Integer, ByVal nYDest As Integer, ByVal nWidth As Integer, ByVal nHeight As Integer, ByVal hdcSrc As IntPtr, ByVal nXSrc As Integer, ByVal nYSrc As Integer, ByVal dwRop As System.Int32) As Boolean
 
         ' Leave function empty - DLLImport attribute forwards calls to MoveFile to
@@ -1876,7 +1884,7 @@ Public Class ASFMAIN1
     End Function
 
     Private Sub pd_QueryPageSettings(ByVal sender _
-    As Object, ByVal e As  _
+    As Object, ByVal e As _
     System.Drawing.Printing.QueryPageSettingsEventArgs) _
     Handles pd.QueryPageSettings
         e.PageSettings.Landscape = True
@@ -2058,5 +2066,6 @@ Public Class ASFMAIN1
     End Sub
 
 #End Region
+
 
 End Class
